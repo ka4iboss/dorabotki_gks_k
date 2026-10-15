@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e6bce9f-b6f9-40a2-852e-f5e095b8ab7e">
+  <producedTypes>
+    <objectType typeId="cbff100c-3d5b-4dcf-b44c-77715181eab2" valueTypeId="d4e8de84-dc67-432a-b619-9764f94fcfa3"/>
+    <managerType typeId="6a275152-ad73-4a84-aba9-e805ce541ae8" valueTypeId="f9e5b6f7-7835-4905-a4a0-635413fe3540"/>
+  </producedTypes>
+  <name>ППГД_АнализЗапросовМодулей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ запросов модулей</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ППГД_АнализЗапросовМодулей.Form.Форма</defaultForm>
+  <attributes uuid="5498c067-7583-4380-a49d-68539e335e6b">
+    <name>КаталогМодулей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог с текстами модулей</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="bdfbfd2e-a11d-4073-ac66-0e5dd66f5f23">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Анализ запросов модулей</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

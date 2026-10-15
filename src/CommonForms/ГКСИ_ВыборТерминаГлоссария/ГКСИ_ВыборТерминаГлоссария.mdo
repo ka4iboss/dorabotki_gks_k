@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonForm xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="719c3ebc-7026-4463-b352-8a9420bca95b">
+  <name>ГКСИ_ВыборТерминаГлоссария</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Выбор термина глоссария</value>
+  </synonym>
+  <usePurposes>PersonalComputer</usePurposes>
+  <usePurposes>MobileDevice</usePurposes>
+</mdclass:CommonForm>

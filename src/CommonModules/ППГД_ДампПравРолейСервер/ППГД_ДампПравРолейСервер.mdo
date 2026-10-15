@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ad824cee-ee32-419b-ae0a-d3d5c5b6354c">
+  <name>ППГД_ДампПравРолейСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дамп прав ролей (сервер)</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

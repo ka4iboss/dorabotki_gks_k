@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b7535143-71cd-4c98-9ec6-87e34c98ba39">
+  <name>ППГД_АнализЗапросовСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ запросов модулей (сервер)</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

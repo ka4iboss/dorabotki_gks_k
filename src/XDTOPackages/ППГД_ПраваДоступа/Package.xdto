@@ -1,0 +1,73 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://rules">
+	<objectType name="Профиль">
+		<property name="Наименование" type="xs:string" upperBound="150" form="Attribute"/>
+		<property name="Родитель" type="xs:string" lowerBound="0" upperBound="150" nillable="true" form="Attribute"/>
+		<property xmlns:d3p1="http://rules" name="Роли" type="d3p1:Роли" lowerBound="0"/>
+		<property xmlns:d3p1="http://rules" name="ВидыДоступа" type="d3p1:ВидыДоступа" lowerBound="0"/>
+		<property xmlns:d3p1="http://rules" name="ЗначенияДоступа" type="d3p1:ЗначенияДоступа" lowerBound="0" form="Element"/>
+		<property xmlns:d3p1="http://rules" name="Назначение" type="d3p1:Назначение" lowerBound="0"/>
+	</objectType>
+	<objectType name="ПрофильГруппа">
+		<property name="Наименование" type="xs:string" upperBound="150" form="Attribute"/>
+		<property name="Родитель" type="xs:string" lowerBound="0" upperBound="150" nillable="true" form="Attribute"/>
+	</objectType>
+	<objectType name="РолиСтрока" open="true" sequenced="false">
+		<property name="Роль" type="xs:string" upperBound="150" form="Attribute"/>
+	</objectType>
+	<objectType name="ВидыДоступаСтрока" open="true">
+		<property name="ВидДоступа" type="xs:string" form="Attribute"/>
+		<property name="ВсеРазрешены" type="xs:boolean" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType name="ГруппаДоступа" sequenced="true">
+		<property name="Профиль" type="xs:string" upperBound="150" form="Attribute"/>
+		<property xmlns:d3p1="http://rules" name="ЗначенияДоступа" type="d3p1:ЗначенияДоступа" lowerBound="0" upperBound="1" nillable="false"/>
+		<property name="Родитель" type="xs:string" lowerBound="0" upperBound="150" nillable="true" form="Attribute"/>
+		<property name="Наименование" type="xs:string" upperBound="150" form="Attribute"/>
+		<property xmlns:d3p1="http://rules" name="ВидыДоступа" type="d3p1:ВидыДоступа" lowerBound="0"/>
+	</objectType>
+	<objectType name="ГруппаДоступаГруппа">
+		<property name="Наименование" type="xs:string" upperBound="150" form="Attribute"/>
+		<property name="Родитель" type="xs:string" lowerBound="0" upperBound="150" nillable="true" form="Attribute"/>
+	</objectType>
+	<objectType name="ЗначенияДоступаСтрока" open="true" sequenced="true">
+		<property name="ВидДоступа" type="xs:string" form="Attribute"/>
+		<property name="ЗначениеДоступа" type="xs:string" lowerBound="0" upperBound="250" nillable="true" form="Attribute"/>
+		<property name="ВключаяНижестоящие" type="xs:boolean" form="Attribute"/>
+	</objectType>
+	<objectType name="ЗначенияДоступа">
+		<property xmlns:d3p1="http://rules" name="Строка" type="d3p1:ЗначенияДоступаСтрока" lowerBound="0" upperBound="-1" nillable="false"/>
+	</objectType>
+	<objectType name="Роли">
+		<property xmlns:d3p1="http://rules" name="Строка" type="d3p1:РолиСтрока" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="ВидыДоступа">
+		<property xmlns:d3p1="http://rules" name="Строка" type="d3p1:ВидыДоступаСтрока" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Назначение">
+		<property xmlns:d3p1="http://rules" name="Строка" type="d3p1:НазначениеСтрока" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="НазначениеСтрока" open="true" sequenced="true">
+		<property name="ТипПользователей" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType name="СоставГруппыПользователей">
+		<property xmlns:d3p1="http://rules" name="Строка" type="d3p1:СоставГруппыПользователейСтрока" lowerBound="1" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СоставГруппыПользователейСтрока">
+		<property name="Пользователь" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Пользователь">
+		<property name="Наименование" type="xs:string"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="ПолноеНаименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ЭтоГруппа" type="xs:boolean"/>
+		<property name="Код" type="xs:string" lowerBound="0" upperBound="0" nillable="true"/>
+		<property name="Родитель" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="ГруппаПользователей">
+		<property name="Наименование" type="xs:string"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="ЭтоГруппа" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Родитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://rules" name="Состав" type="d3p1:СоставГруппыПользователей" lowerBound="0" upperBound="1" nillable="true"/>
+	</objectType>
+</package>

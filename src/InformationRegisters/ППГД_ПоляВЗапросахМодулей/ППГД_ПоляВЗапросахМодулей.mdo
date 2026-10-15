@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="74928136-fc6e-4441-a308-a517a8b134e8">
+  <producedTypes>
+    <selectionType typeId="adaf92de-4170-457d-9bb0-3609c34f7222" valueTypeId="d0599b1d-7f16-41de-901c-3fa3c9c30f48"/>
+    <listType typeId="7fb9681e-53c3-4919-bd5f-70ac306dd749" valueTypeId="72eb8810-61e4-41ff-898d-c413b9f34ab6"/>
+    <managerType typeId="8db2494b-da76-4342-baed-62b069a2e81b" valueTypeId="4f1e9364-ac4c-419a-ac98-422b84c78e5e"/>
+    <recordSetType typeId="d7cf8e61-adad-44c8-89d2-fe08806b010e" valueTypeId="feb40dca-5e58-460c-890f-9c25af0b1bb6"/>
+    <recordKeyType typeId="2613e296-5238-4bbd-9878-f1aceea2daf0" valueTypeId="35b69a81-682e-401d-8975-852ee8b64028"/>
+    <recordType typeId="c3a21ff0-dc52-4f89-923e-85b314bd34f4" valueTypeId="b2ebaf5d-086c-4f15-8de1-802e25066a47"/>
+    <recordManagerType typeId="c36469f6-b4cb-4a64-82fa-b9d42fc0f6d6" valueTypeId="b650c776-e130-49cf-ae38-d1220004de4b"/>
+  </producedTypes>
+  <name>ППГД_ПоляВЗапросахМодулей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поля в запросах модулей</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Поле в запросах модулей</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Поля в запросах модулей</value>
+  </listPresentation>
+  <resources uuid="6364d9cf-a299-4077-a78d-ea67a106abe5">
+    <name>КоличествоЗапросов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество запросов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f9623d46-41d2-439a-8601-e7e3da624376">
+    <name>СписокМодулей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список модулей</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="7d746ccf-1cd0-49c3-9bf5-ec9c3e793deb">
+    <name>Метаданные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект метаданных</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8ba64a43-25c6-4188-a0c1-0c9401cbb80e">
+    <name>Поле</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поле</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ff58914-0e97-4cd4-af8d-01b8155635f3">
+  <name>ГКСК_ВерсииОбъектов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Версии объектов</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>DataProcessor.ГКСК_ПросмотрВерсийОбъектов</content>
+  <content>CommonModule.ГКСК_ВерсииОбъектовСервер</content>
+</mdclass:Subsystem>

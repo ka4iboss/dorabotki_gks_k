@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="ba82ad48-ac69-4aa6-abaa-1d4d33d1576f" extendedConfigurationObject="d0106f3a-8490-4277-a278-75c318ec252c">
+  <producedTypes>
+    <objectType typeId="b47c4089-2a1a-463b-b75f-34bd82e7c62a" valueTypeId="3eaa03bb-c2ac-4308-9a8f-9a7d6349e052"/>
+    <refType typeId="8499bb24-07af-4d0e-a433-3f2664f5b9e6" valueTypeId="67b3a03a-d87d-4483-ad2a-fa2f1569a25d"/>
+    <selectionType typeId="b9b14613-5017-445b-91e1-5af3b37cc587" valueTypeId="68fdd0a7-2fed-40e6-b555-152d568cb04c"/>
+    <listType typeId="35e40885-2396-45cd-b0a9-1da995da246c" valueTypeId="03383496-3d0e-46f9-bea8-6c20e716fc09"/>
+    <managerType typeId="d615b5a0-9c9e-4a96-938d-e0520a84328d" valueTypeId="1985b5d8-e404-480c-9ae0-2b283f773ff4"/>
+  </producedTypes>
+  <name>ГруппыДоступа</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <hierarchical>Checked</hierarchical>
+    <hierarchyType>Checked</hierarchyType>
+    <descriptionLength>Checked</descriptionLength>
+  </extension>
+  <hierarchical>true</hierarchical>
+  <descriptionLength>150</descriptionLength>
+</mdclass:Catalog>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="8174b99a-4395-4815-8878-ac1fcae73ef7" extendedConfigurationObject="f31f3dab-5796-47ac-a54d-3081f8cad817">
+  <producedTypes>
+    <objectType typeId="a300f7e3-c8eb-4f55-9d5e-396e96944b8c" valueTypeId="c60e3f79-0059-4a22-82ac-4c282cd67217"/>
+    <refType typeId="dabefc8a-1d4a-40bb-a2a3-4b5ea8fe8ce5" valueTypeId="6f9b68d1-bdc6-415c-8b7d-947b9fbb2466"/>
+    <selectionType typeId="2596d36b-e7f1-43b5-ab2d-b31a934306f8" valueTypeId="1eead73a-4358-4a4b-85ea-611083c422d2"/>
+    <listType typeId="57e209d9-4030-4b71-b3f8-5d1efdabdd53" valueTypeId="4052d2c1-f893-4238-8953-92136cfaa49f"/>
+    <managerType typeId="22b75a1b-6c46-4896-93cb-fe3b49c11454" valueTypeId="0f4a2a3c-d63a-490b-b921-9b0496a60746"/>
+  </producedTypes>
+  <name>ПрофилиГруппДоступа</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <objectModule>Extended</objectModule>
+    <hierarchical>Checked</hierarchical>
+    <descriptionLength>Checked</descriptionLength>
+  </extension>
+  <hierarchical>true</hierarchical>
+  <descriptionLength>150</descriptionLength>
+  <attributes uuid="4bb76bc4-6de5-473d-b45c-5f17ed8694d8" extendedConfigurationObject="139c001c-7b07-465a-9187-399ad32d294f">
+    <name>Комментарий</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers/>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="70f62123-2c9c-47fc-bf98-50d06adf7e37">
+    <name>ППГД_ОтложенныеРолиДобавление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отложенные роли добавление</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <synonym>Extended</synonym>
+      <choiceForm>Extended</choiceForm>
+    </extension>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ff8fd52e-3c05-4e6a-a7da-51ffc5de9b51">
+    <name>ППГД_ТекстовыеРолиКРодительским</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовые роли к родительским</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <synonym>Extended</synonym>
+      <choiceForm>Extended</choiceForm>
+    </extension>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9e1dcd42-59f8-4519-ba00-a697a7621031">
+    <name>ППГД_ОтложенныеРолиУдаление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отложенные роли удаление</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <synonym>Extended</synonym>
+      <choiceForm>Extended</choiceForm>
+    </extension>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="298b7009-7cab-44cc-92f6-70ab1bfbb46f">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <synonym>Extended</synonym>
+      <choiceForm>Extended</choiceForm>
+    </extension>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="091d0ae6-d4de-4052-ad11-f4d3e532172c">
+    <name>ДатаСоздания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <synonym>Extended</synonym>
+      <choiceForm>Extended</choiceForm>
+    </extension>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="abe8f939-2dd7-4172-ac65-fca8325e2401">
+    <name>ДатаПоследнегоИзменения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата последнего изменения</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <synonym>Extended</synonym>
+      <choiceForm>Extended</choiceForm>
+    </extension>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="cf419d06-a113-4908-bd0f-20fc151f83ee" extendedConfigurationObject="5d228ce4-069e-4f98-beed-b8e1de17c3d9">
+    <producedTypes>
+      <objectType typeId="cd78da67-8cc6-4d79-88b0-f44805698f4c" valueTypeId="86ed7f63-b8bb-4eb6-a544-8a22f5e95c2a"/>
+      <rowType typeId="22cc9811-da7b-450d-88d6-d333f6bbf8a4" valueTypeId="3c7db595-f6e2-47f0-bdfa-687d565b513d"/>
+    </producedTypes>
+    <name>Роли</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="22c05056-355b-482c-b2b0-63ba996416ee" extendedConfigurationObject="9770fc09-87bf-4fce-9b0d-410efd30edae">
+      <name>Роль</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>AnyRef</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="f223e5e3-2cae-44c7-af31-a449fa3ae9ad" extendedConfigurationObject="763a16c3-a728-4b65-a485-705990310b4a">
+    <producedTypes>
+      <objectType typeId="d263126c-ff97-42fd-9762-6033be1397f5" valueTypeId="05862049-0c08-45a2-83cc-fdb80d38473f"/>
+      <rowType typeId="08891ec2-0e4f-4c9e-8d84-771fc10292d5" valueTypeId="b9001d1e-bb53-4bf6-bc12-d85e09844dc5"/>
+    </producedTypes>
+    <name>ЗначенияДоступа</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="c3634577-383f-4ea6-8f47-7f52708ac1a4" extendedConfigurationObject="2aedb1ac-caf1-45c7-913e-82a36637d5d4">
+      <name>ЗначениеДоступа</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DefinedType.ЗначениеДоступа</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+    <attributes uuid="2705a21c-d342-4ca5-9a7f-23261f073d15" extendedConfigurationObject="65f3ad72-ed03-482b-a2f1-05053eef408a">
+      <name>ВключаяНижестоящие</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>Boolean</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="fa125a6f-0c9a-4523-9575-28e982bc5ab0" extendedConfigurationObject="3d73d5ff-995e-40ed-a401-cec2a3d12c8f">
+    <producedTypes>
+      <objectType typeId="ad79c312-901b-4504-84ee-bcdc2a05f56a" valueTypeId="7f794575-4705-4001-ac2b-f68944fb4653"/>
+      <rowType typeId="14e2837b-d239-4a53-8e54-6d1c7a8c6a00" valueTypeId="d9b1a888-7a6a-492b-bd87-5f1fe8815c97"/>
+    </producedTypes>
+    <name>ВидыДоступа</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="a15def8b-d5bc-4996-833b-724df777dbef">
+    <producedTypes>
+      <objectType typeId="e8890249-c45d-4af5-8712-2bcc73ea6631" valueTypeId="28fc9ab4-b886-45eb-83f4-d7138a30ee07"/>
+      <rowType typeId="0386e738-5106-4c83-9d26-883749b8a933" valueTypeId="4dc6fae8-a16d-4c95-9a7c-d00563bf19ef"/>
+    </producedTypes>
+    <name>ППГД_Объекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>ППГД объекты</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <synonym>Extended</synonym>
+    </extension>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="59ce1cfb-8f8c-42f6-8f9e-d5652c25e264">
+      <name>ОбъектМетаданных</name>
+      <synonym>
+        <key>ru</key>
+        <value>Объект метаданных</value>
+      </synonym>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <synonym>Extended</synonym>
+        <choiceForm>Extended</choiceForm>
+      </extension>
+      <type>
+        <types>CatalogRef.ИдентификаторыОбъектовРасширений</types>
+        <types>CatalogRef.ИдентификаторыОбъектовМетаданных</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="10f7c48e-988d-4fb8-8362-da1ce690001d">
+    <producedTypes>
+      <objectType typeId="1ff2525b-7572-411b-84d8-ec0a1fa358be" valueTypeId="aa853a17-34a9-4b0e-bfdf-eedff4fd60ae"/>
+      <rowType typeId="975d5ca9-3c2f-47d5-b875-2f7035b06d30" valueTypeId="29e0a48f-f5a5-4e55-ab44-b7c76d4dceec"/>
+    </producedTypes>
+    <name>ППГД_РодительскиеПрофили</name>
+    <synonym>
+      <key>ru</key>
+      <value>Родительские профили</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <synonym>Extended</synonym>
+    </extension>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="51643f89-196c-46d3-b580-27916abf9f75">
+      <name>Профиль</name>
+      <synonym>
+        <key>ru</key>
+        <value>Профиль</value>
+      </synonym>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <synonym>Extended</synonym>
+        <choiceForm>Extended</choiceForm>
+      </extension>
+      <type>
+        <types>CatalogRef.ПрофилиГруппДоступа</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="c2860345-a71a-43b5-bfd6-e3f491680875" extendedConfigurationObject="56177464-5e9f-4598-96bc-eb311993c503">
+    <name>ФормаЭлемента</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
+  <forms uuid="675b2406-2be9-483d-8448-5a5a4ec3481e" extendedConfigurationObject="c2308e60-2844-4bd8-bc8a-c9c20e5fc62d">
+    <name>ФормаСписка</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
+</mdclass:Catalog>

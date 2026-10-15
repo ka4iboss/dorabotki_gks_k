@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="721b9248-e545-4138-aa62-67945fe6a5d1">
+  <producedTypes>
+    <objectType typeId="b29d22d4-66cf-4d39-a6d9-0ab406d21ab0" valueTypeId="66d36dd0-1b26-4634-a5ff-04e982df53c4"/>
+    <refType typeId="31fc3680-825a-49bc-90b1-10bda806edfe" valueTypeId="ec832562-2e2f-45b8-bf20-c8c97dc2c30d"/>
+    <selectionType typeId="13a5af74-19b8-4b54-a419-f6873692e4b5" valueTypeId="17764028-422b-4b28-b221-610f460f465d"/>
+    <listType typeId="a90887c0-3d8c-4d19-a964-0720d7d64fdf" valueTypeId="b5612044-3a08-44dd-929a-41296edb33b5"/>
+    <managerType typeId="e597991e-e6c6-42ee-9a88-e68a71a9527f" valueTypeId="282b8b47-869f-48e3-91e2-9dd053876139"/>
+  </producedTypes>
+  <name>ГКСИ_ФайлыИнструкций</name>
+  <synonym>
+    <key></key>
+    <value>ГКСИ файлы инструкций</value>
+  </synonym>
+  <comment>Хранилище изображений и файлов для инструкций</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ГКСИ_ФайлыИнструкций.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ГКСИ_ФайлыИнструкций.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Файлы инструкций</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>36</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="85b1821f-a30c-42f1-8b31-fe2438e99411">
+    <name>Файл</name>
+    <synonym>
+      <key></key>
+      <value>Файл</value>
+    </synonym>
+    <comment>Двоичные данные файла</comment>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d8811e75-a990-4100-9e9d-d2e2cedf21e1">
+    <name>Расширение</name>
+    <synonym>
+      <key></key>
+      <value>Расширение</value>
+    </synonym>
+    <comment>Расширение файла без точки (png, jpg, gif и т.д.)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dab0c294-55d9-4a0c-a695-add034c61491">
+    <name>Описание</name>
+    <synonym>
+      <key></key>
+      <value>Описание</value>
+    </synonym>
+    <comment>Краткое описание файла</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7a4e61c7-3edd-4e79-bfe6-5c2b0198aa29">
+    <name>ХешSHA256</name>
+    <synonym>
+      <key>ru</key>
+      <value>SHA-256 от двоичных данных файла в hex. Используется для дедупликации.</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

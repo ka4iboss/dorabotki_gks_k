@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="674f466c-02ac-4327-a21a-968ae89dabfd" extendedConfigurationObject="22eba3bf-759c-463a-bb08-f0d1b4910ac9">
+  <producedTypes>
+    <refType typeId="4ce8ec97-b782-48f5-9841-421119d37a00" valueTypeId="e72a7f4c-1f05-4cd8-8228-99981856b0e1"/>
+    <listType typeId="aeb0ccae-7e05-4559-95c4-17bb5e2c743a" valueTypeId="e1e741d7-28f9-4f94-abbc-cff25485bf8f"/>
+    <managerType typeId="e5085db6-5528-4c34-a88c-4471ec95a718" valueTypeId="2e615e93-61ab-477d-90ad-007556964cab"/>
+  </producedTypes>
+  <name>СтатусыЗаявокНаРасходованиеДенежныхСредств</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:EnumExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+</mdclass:Enum>

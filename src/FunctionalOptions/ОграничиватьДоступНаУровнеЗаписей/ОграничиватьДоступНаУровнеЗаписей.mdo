@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="c975a233-ff1e-4a72-83c2-4abc41a99d9f" extendedConfigurationObject="2233ce53-b8a8-4c83-97a2-683c8575462a">
+  <name>ОграничиватьДоступНаУровнеЗаписей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:FunctionalOptionExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <location>Checked</location>
+  </extension>
+  <location>Constant.ОграничиватьДоступНаУровнеЗаписей</location>
+</mdclass:FunctionalOption>

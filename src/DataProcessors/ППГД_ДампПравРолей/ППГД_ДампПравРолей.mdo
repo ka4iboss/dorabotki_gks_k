@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f488ada4-aaa1-43b2-867e-0d33771ea8fc">
+  <producedTypes>
+    <objectType typeId="02343860-ba9c-4378-9379-b7aeb442dc07" valueTypeId="e8723644-ce1a-430c-83f1-dd26241a338c"/>
+    <managerType typeId="8dbea816-e296-4eef-952c-493947ebc977" valueTypeId="6849431f-4a33-4c1a-aae3-c1b6f60264b1"/>
+  </producedTypes>
+  <name>ППГД_ДампПравРолей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дамп прав ролей</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ППГД_ДампПравРолей.Form.Форма</defaultForm>
+  <attributes uuid="23e6e7ab-dde0-49ea-ab2b-2737224c075a">
+    <name>КаталогВыгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог выгрузки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="f7ea3379-2a32-4276-a961-f78c045bc686">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дамп прав ролей</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

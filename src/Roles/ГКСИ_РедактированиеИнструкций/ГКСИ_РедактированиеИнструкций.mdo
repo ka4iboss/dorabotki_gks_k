@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d3bd1cf4-9507-461a-95bb-fe285e8d6450">
+  <name>ГКСИ_РедактированиеИнструкций</name>
+  <synonym>
+    <key></key>
+    <value>ГКСИ редактирование инструкций</value>
+  </synonym>
+</mdclass:Role>

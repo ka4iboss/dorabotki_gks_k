@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="7b7cd74b-480f-402c-8095-8a1f133d67bd" extendedConfigurationObject="f480ac52-e2f1-4ed0-a0b1-20a622f77302">
+  <producedTypes>
+    <objectType typeId="dbf7ecbb-3538-49ba-8c18-0386c4a006b6" valueTypeId="b3c1d395-d6c1-4f12-9a5c-0b44f5db48b8"/>
+    <managerType typeId="1520efdd-5f81-4d2e-9099-58451981f6c7" valueTypeId="4500fbe6-2e28-4c24-b933-ab2cf3e87dbd"/>
+  </producedTypes>
+  <name>ЖурналРегистрации</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DataProcessorExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <forms uuid="9c9828a3-cb69-4f50-8765-9c2a586a6982" extendedConfigurationObject="5c63e7cd-ecdb-45ae-a589-f6c38f5a8e76">
+    <name>ЖурналРегистрации</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
+  <forms uuid="c88c47a4-8b8c-4c7a-912c-edcad6870842" extendedConfigurationObject="b9b0fbdc-8fda-46d1-bb3e-561a03604971">
+    <name>ОтборЖурналаРегистрации</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
+  <forms uuid="ca1f7a70-5064-44c1-8791-030ac6149e76" extendedConfigurationObject="eadfdbe3-bc85-4084-aef6-4cfd258ee6f1">
+    <name>РедакторСоставаСвойства</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
+  <forms uuid="22e9081d-b7af-4d9b-8455-7fc54f3726a7" extendedConfigurationObject="672c2936-9771-4e32-a970-7ac7f12a21e8">
+    <name>Событие</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
+  <forms uuid="fa7162f0-fbfe-4a2d-94b9-53fb202c6068" extendedConfigurationObject="73afaad8-dfa9-43e3-bdaf-543c3545d788">
+    <name>РазделениеДанныхСеанса</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
+  <commands uuid="83fcbbda-f88a-4fb5-aee9-c33168704dc2" extendedConfigurationObject="c264441d-4805-4968-baa2-37b8970049c7">
+    <name>ЖурналРегистрации</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicCommandExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <group>Checked</group>
+      <commandParameterTypeExtension/>
+    </extension>
+    <group>NavigationPanelOrdinary</group>
+  </commands>
+</mdclass:DataProcessor>

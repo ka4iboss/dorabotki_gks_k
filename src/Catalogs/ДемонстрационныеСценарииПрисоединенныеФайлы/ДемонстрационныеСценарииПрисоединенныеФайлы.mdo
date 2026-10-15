@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="372edc39-4083-4182-9a77-800bd9777020" extendedConfigurationObject="1743c050-217e-4bd0-b2eb-fee7ebbe7444">
+  <producedTypes>
+    <objectType typeId="04dbdaba-02af-449f-a466-b499dae78c08" valueTypeId="26b962f0-f6ce-4f4e-ab3f-165c1c5af02b"/>
+    <refType typeId="c6a6b3f4-3cba-4ac9-b266-ff3083ae9d54" valueTypeId="87c4f5ad-3303-48ee-a767-2517ed49e68a"/>
+    <selectionType typeId="da108e7f-f657-4e23-940b-371a9ef81790" valueTypeId="41af2f6d-c11b-4b86-9097-9acdf37388a4"/>
+    <listType typeId="819c2063-849e-442d-864f-f12b540aedc1" valueTypeId="eb20393f-584a-4a4d-8a47-ae36abc70acd"/>
+    <managerType typeId="acc8ccff-cb87-4d39-ace6-a18432b1e721" valueTypeId="d7074e10-b94b-43be-96de-a213b093c8fd"/>
+  </producedTypes>
+  <name>ДемонстрационныеСценарииПрисоединенныеФайлы</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+</mdclass:Catalog>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ca899151-e07f-4ba0-b8fb-75c7befb8a07">
+  <producedTypes>
+    <selectionType typeId="f6342b5a-a82e-464e-8dda-214e46c461fb" valueTypeId="1c2932c1-1edc-4d2e-9c0e-8caf686c089a"/>
+    <listType typeId="5c5e4552-7cde-4008-9dae-c9c0e663fd24" valueTypeId="126a82ec-9f7b-4481-8926-a7242f46fd87"/>
+    <managerType typeId="a754d34c-2532-4531-9a24-04d2b18bd4fb" valueTypeId="0c8bcfe9-b3fa-4043-9a4d-14fb4f30c0d4"/>
+    <recordSetType typeId="b1c86368-c348-4dc6-9bc7-c039949c55a2" valueTypeId="14a427ba-78d0-4902-98d0-3d8367fb9e94"/>
+    <recordKeyType typeId="b0d0f596-9fe8-4e4c-941f-5d57558b50bd" valueTypeId="49198029-7193-4556-965a-748952a7b79c"/>
+    <recordType typeId="b7fdf224-3419-47de-9790-9de62495440c" valueTypeId="211d5b52-b93e-4c10-8b86-c88429c254a6"/>
+    <recordManagerType typeId="767f17a2-5b06-416c-a97b-81d27d7b9e4a" valueTypeId="222dce3b-f6b0-4feb-a16c-b68d927fda91"/>
+  </producedTypes>
+  <name>ГКСИ_ГруппыСценариев</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Группы сценариев</value>
+  </synonym>
+  <comment>Связь сценариев с группами (многие ко многим). Денормализованное поле ПолныйКодКонтекстный — кеш полного кода сценария в контексте конкретной группы.</comment>
+  <resources uuid="4c8a9da7-194c-4d85-8069-5a370cf7d236">
+    <name>ПолныйКодКонтекстный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Полный код контекстный</value>
+    </synonym>
+    <comment>Полный код сценария в контексте данной группы. Кеш, пересчитывается при изменении иерархии группы или самого сценария.
+
+Если коды в форме списка выглядят неправильно (например, «001» вместо «001.005.NNN»), вызови в EDT / Консоли кода: ГКСИ_ГруппыСценариевСервер.ГКСИ_ПересчитатьВсеКодыВРегистре(). Один вызов пересчитает все записи регистра по парам (Сценарий, Группа).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="970592d1-1001-459c-9ee6-169997cb6295">
+    <name>КодВКонтексте</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1b0add98-f0f9-41ac-8e7d-ee1fa900ccb0">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДемонстрационныеСценарии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bb1661c6-3304-485d-854f-ab9bdb265fae">
+    <name>Группа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДемонстрационныеСценарии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="c4f18ed7-b9bf-4c3a-9cd5-99b7a01787f1">
+    <name>КореньИнструкции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Корень инструкции</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДемонстрационныеСценарии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

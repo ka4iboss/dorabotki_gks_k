@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="c3934286-a432-4a06-bdfe-94038f363ca6" extendedConfigurationObject="4062674a-4a81-494d-82bc-4984cd7c7903">
+  <producedTypes>
+    <objectType typeId="2cd09b38-b32d-4539-ba24-352722578889" valueTypeId="928aee2b-1be8-471d-b6c9-56480a042a30"/>
+    <refType typeId="275170ab-7840-448a-9945-889965324a83" valueTypeId="99570b83-86c4-45c9-8929-ad0fb6756728"/>
+    <selectionType typeId="c1934bda-e1ef-4102-842a-9be4dc1e0311" valueTypeId="2b85fba6-bec3-4257-b145-091bc138a6f5"/>
+    <listType typeId="170e9ef8-682c-4727-9ac6-9ebc3f763624" valueTypeId="dfbf3216-ae9e-4eb8-85d9-732e5e0f370c"/>
+    <managerType typeId="d0cbac01-6dd6-402a-9493-55c6dce8cf17" valueTypeId="097784cd-02af-42a7-b577-6433974f3a80"/>
+  </producedTypes>
+  <name>ИдентификаторыОбъектовМетаданных</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="3b0aa5ab-4011-480d-8237-0d8ee3e2831f" extendedConfigurationObject="93a73123-d98c-4286-9269-7bfcedd115e8">
+    <name>Имя</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="04539acb-767b-41bb-88cb-d7f336a6e8c8" extendedConfigurationObject="993ce747-cdc9-445f-ad7d-daf53cd5f7e9">
+    <name>ПолноеИмя</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>430</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="38c9f8a8-2708-453e-9ca6-7777ae4353a1" extendedConfigurationObject="a010bbf4-d547-4576-9797-28e3096ffed3">
+    <name>КлючОбъектаМетаданных</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>ValueStorage</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+</mdclass:Catalog>

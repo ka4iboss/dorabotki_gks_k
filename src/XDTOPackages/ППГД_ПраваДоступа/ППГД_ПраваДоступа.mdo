@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:XDTOPackage xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="17025ca6-d32a-4b3a-8aaa-24040c0af767">
+  <name>ППГД_ПраваДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Права доступа (ТБ)</value>
+  </synonym>
+  <namespace>http://rules</namespace>
+</mdclass:XDTOPackage>

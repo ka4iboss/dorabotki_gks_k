@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b0016b3c-b10f-417b-a312-d067aa70368f">
+  <producedTypes>
+    <objectType typeId="f724dda0-f820-4ce4-9044-38519449529f" valueTypeId="33660f24-b4f3-4ed5-a402-21b030a1278f"/>
+    <managerType typeId="2565b644-1607-4b7d-93b4-fc3daa6ff972" valueTypeId="528411bf-c696-4d86-8ebc-4aaa65639ae7"/>
+  </producedTypes>
+  <name>ГКСК_СопоставлениеОплатПоЗаявкам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сопоставление оплат по заявкам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСК_СопоставлениеОплатПоЗаявкам.Form.Форма</defaultForm>
+  <forms uuid="5c61112c-d2af-44fb-8c35-cfe3e669c6e9">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сопоставление оплат по заявкам</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

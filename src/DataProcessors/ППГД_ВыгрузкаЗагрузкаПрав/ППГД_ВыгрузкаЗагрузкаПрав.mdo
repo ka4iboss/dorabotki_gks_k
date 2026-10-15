@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6669a6d9-78bb-4074-9cf7-57344ff0357d">
+  <producedTypes>
+    <objectType typeId="80ea4d61-487a-4e44-949d-1a7409dbf958" valueTypeId="073c8088-000e-480d-8b97-97d3d95c6451"/>
+    <managerType typeId="9e4a5dd7-83ab-45d3-98df-2e62369b09cd" valueTypeId="3a99f8a5-dac0-4494-9d79-72d9e557eff0"/>
+  </producedTypes>
+  <name>ППГД_ВыгрузкаЗагрузкаПрав</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгрузка загрузка прав</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ППГД_ВыгрузкаЗагрузкаПрав.Form.Форма</defaultForm>
+  <tabularSections uuid="3b72ff2e-2d6b-4400-a52e-64e8d994f290">
+    <producedTypes>
+      <objectType typeId="a074a7d8-162e-4f17-9828-65dcb0141425" valueTypeId="b4e68e83-005a-428e-94e5-950a9d46ecae"/>
+      <rowType typeId="3e86bf13-6a71-4a85-9164-5bd31136627c" valueTypeId="50589a34-9c5f-467b-b184-8e9f7dff8dff"/>
+    </producedTypes>
+    <name>ЗагрузкаТаблицаСопоставления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка таблица сопоставления</value>
+    </synonym>
+    <attributes uuid="7bed1d43-017f-4de0-90cd-7d306604a01e">
+      <name>ПрофильДоступаИзФайла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Профиль доступа из файла</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="924c2da0-cf24-4ea9-ad86-441d306ab653">
+      <name>РольИзФайла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Роль из файла</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="321ccc5d-4149-48cd-81b0-d6d93899f530">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

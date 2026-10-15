@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="a511afaa-9a2c-41d8-bdca-321c2c3ac863" extendedConfigurationObject="a2782760-dd4c-44d2-a785-814d6f610455">
+  <producedTypes>
+    <objectType typeId="2966a895-1626-4cc6-b8a3-68540d560fb9" valueTypeId="bae79d9e-3653-4a5d-89ab-59a76b2a03cb"/>
+    <refType typeId="ab2c0198-7818-4670-9c17-54063be559de" valueTypeId="fd192f1d-388e-4296-81e7-5d306921bee5"/>
+    <selectionType typeId="ad581e07-8104-46b6-9c33-801aa86795a8" valueTypeId="590d1953-5c0e-4688-9f61-4b5381a7cb56"/>
+    <listType typeId="5eee8606-0217-4fd0-b7b7-d547dd3cd32d" valueTypeId="ee924bd8-c9f7-4a02-94f2-bdc52ac3234b"/>
+    <managerType typeId="3df384b3-a287-4715-9816-bc13fa0ac60f" valueTypeId="46cc85be-544b-4932-9530-0ecb826ff3d9"/>
+  </producedTypes>
+  <name>ГруппыПользователей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <hierarchical>Checked</hierarchical>
+    <hierarchyType>Checked</hierarchyType>
+    <codeLength>Extended</codeLength>
+    <descriptionLength>Extended</descriptionLength>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+  <hierarchical>true</hierarchical>
+  <hierarchyType>HierarchyOfItems</hierarchyType>
+  <descriptionLength>150</descriptionLength>
+</mdclass:Catalog>

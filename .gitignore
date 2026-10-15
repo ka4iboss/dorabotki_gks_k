@@ -1,0 +1,13 @@
+# Сборка EDT
+bin/
+build/
+target/
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Окружение разработчика
+.metadata/
+.DS_Store
+Thumbs.db

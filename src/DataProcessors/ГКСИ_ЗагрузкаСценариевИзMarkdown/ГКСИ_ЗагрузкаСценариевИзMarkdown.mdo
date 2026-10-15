@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8e88897c-cfca-4fc6-9765-ac72158e98b9">
+  <producedTypes>
+    <objectType typeId="8f4fddd3-e6fd-40ca-ba31-b71c1f21f729" valueTypeId="d7402e17-aded-4108-9084-6d36f28739f6"/>
+    <managerType typeId="e8e99a82-0de7-4e93-b0e3-5b873f1833e3" valueTypeId="d892d475-d8c3-4f2d-a51c-0094cfcbb32e"/>
+  </producedTypes>
+  <name>ГКСИ_ЗагрузкаСценариевИзMarkdown</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка сценариев из Markdown</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСИ_ЗагрузкаСценариевИзMarkdown.Form.Форма</defaultForm>
+  <forms uuid="dc2e8554-283b-4865-a636-d79e02f7d828">
+    <name>Форма</name>
+  </forms>
+  <forms uuid="0a751293-6691-4046-a306-e2a22b3e9792">
+    <name>ФормаРазрешенияКонфликтов</name>
+  </forms>
+</mdclass:DataProcessor>

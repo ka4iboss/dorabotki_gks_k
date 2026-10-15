@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c5d08bb0-d9e3-4db4-8d1b-208285e59171">
+  <producedTypes>
+    <objectType typeId="93169ebd-e852-4a67-8808-da9587b50a7d" valueTypeId="9194b15c-8830-46da-be06-e1ce66b26aa4"/>
+    <managerType typeId="b5302a26-0785-482e-b0d7-2cb3b7507b19" valueTypeId="236b4ba9-b953-4e00-81ea-88a5d5a4e2bf"/>
+  </producedTypes>
+  <name>ППГД_ПросмотрПрав</name>
+  <synonym>
+    <key>ru</key>
+    <value>Просмотр и редактирование прав</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ППГД_ПросмотрПрав.Form.Форма</defaultForm>
+  <tabularSections uuid="e52cd847-de25-4108-9317-aec4c5fa338e">
+    <producedTypes>
+      <objectType typeId="b8b09cc3-39c1-4737-a19b-f213c3773169" valueTypeId="ca968a1c-2be5-43af-a5cb-96608341a5d7"/>
+      <rowType typeId="0192475a-0ddc-4028-898f-dc4e6c1c72e1" valueTypeId="d3e05474-50f1-44e8-80db-453e8be88b83"/>
+    </producedTypes>
+    <name>ТЧМетаданные</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТЧ Метаданные</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b0eaccd0-57d5-44c1-a6d1-2610e4368628">
+      <name>Флаг</name>
+      <synonym>
+        <key>ru</key>
+        <value>Флаг</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9ea95474-aaf8-410d-b070-3303bb37c227">
+      <name>СтрМетаданные</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стр метаданные</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="fe265d90-a80d-451e-8bc3-18d8b8ad870b">
+      <name>СтрНаименование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стр наименование</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="173f4f18-09ec-4b81-b349-1b1469f3a9b9">
+    <producedTypes>
+      <objectType typeId="23a63193-12cd-41dc-8892-eababf15a3a2" valueTypeId="35087f80-7f1b-45b5-96aa-b23aa729833b"/>
+      <rowType typeId="07abf5d1-7864-4923-8b89-f4a75d799bf7" valueTypeId="363da837-1174-4ccd-a982-97b0b55fd490"/>
+    </producedTypes>
+    <name>ТЧРоли</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТЧРоли</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="58b45346-d5b6-410b-88af-75e1c55b4858">
+      <name>Флаг</name>
+      <synonym>
+        <key>ru</key>
+        <value>Флаг</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="73853dc0-170f-4dfb-8d03-693497f78c3a">
+      <name>Роль</name>
+      <synonym>
+        <key>ru</key>
+        <value>Роль</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="89893a86-70c6-4071-a3d9-00bc8f491e5d">
+    <producedTypes>
+      <objectType typeId="011fce87-d17a-48fc-8cc2-1c33121adf99" valueTypeId="03ce7709-e2ac-415a-af18-8e27be0111aa"/>
+      <rowType typeId="a5f56cac-ca84-4c69-b841-d3f319271a6f" valueTypeId="09b850f2-4bdd-454b-87e4-11d2bda45f07"/>
+    </producedTypes>
+    <name>ТЧПрофили</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТЧПрофили</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c9f366d6-5e82-42b4-be1a-609976b3776b">
+      <name>Флаг</name>
+      <synonym>
+        <key>ru</key>
+        <value>Флаг</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c5f64030-226d-447f-9330-68cb3ac7cbbd">
+      <name>Профиль</name>
+      <synonym>
+        <key>ru</key>
+        <value>Профиль</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПрофилиГруппДоступа</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="83a7e3f8-b158-4b4c-9d4f-564c2a254bad">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="1f28e0ab-c5b4-4099-8cfe-86f0a1cddc91">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

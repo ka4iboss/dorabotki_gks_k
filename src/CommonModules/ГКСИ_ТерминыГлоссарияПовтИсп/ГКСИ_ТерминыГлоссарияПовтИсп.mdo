@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4f1f23d3-47b1-492f-89ca-3253d14302f6">
+  <name>ГКСИ_ТерминыГлоссарияПовтИсп</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Термины глоссария (повт. исп.)</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+  <returnValuesReuse>DuringSession</returnValuesReuse>
+</mdclass:CommonModule>

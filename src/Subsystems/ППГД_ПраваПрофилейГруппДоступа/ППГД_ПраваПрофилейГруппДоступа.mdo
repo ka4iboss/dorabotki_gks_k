@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8e655662-35c3-4244-9312-611f3bc2aadc">
+  <name>ППГД_ПраваПрофилейГруппДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Права</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ППГД_ИконкаПодсистемы</picture>
+  </picture>
+  <content>Catalog.ГруппыДоступа</content>
+  <content>Catalog.ИдентификаторыОбъектовМетаданных</content>
+  <content>Catalog.ИдентификаторыОбъектовРасширений</content>
+  <content>Catalog.ПрофилиГруппДоступа</content>
+  <content>Constant.ОграничиватьДоступНаУровнеЗаписей</content>
+  <content>DataProcessor.ППГД_ГенерацияГруппДоступа</content>
+  <content>DataProcessor.ППГД_ПодборРолейДляПрофиляГруппДоступа</content>
+  <content>DataProcessor.ППГД_ВыгрузкаЗагрузкаПрав</content>
+  <content>InformationRegister.ППГД_ЖурналЗагрузки</content>
+  <content>Catalog.Пользователи</content>
+  <content>DataProcessor.ППГД_ЗапускОтИмениПользователя</content>
+  <content>DataProcessor.ППГД_ПросмотрПрав</content>
+  <content>CommonCommand.ППГД_ОткрытьЖурналРегистрации</content>
+</mdclass:Subsystem>

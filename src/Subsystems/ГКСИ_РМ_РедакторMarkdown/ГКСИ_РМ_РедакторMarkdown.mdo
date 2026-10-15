@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="4aea0b85-00c5-4656-bdab-fa83caaa2e90">
+  <name>ГКСИ_РМ_РедакторMarkdown</name>
+  <synonym>
+    <key>ru</key>
+    <value>Редактор markdown</value>
+  </synonym>
+  <extension xsi:type="mdclassExtension:SubsystemExtension">
+    <commandInterface>Extended</commandInterface>
+  </extension>
+  <includeHelpInContents>true</includeHelpInContents>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ГКСИ_Markdown</picture>
+  </picture>
+  <content>DataProcessor.ГКСИ_РедакторMarkdownПример</content>
+  <content>CommonModule.ГКСИ_MarkdownСерверВызовСервера</content>
+  <content>CommonModule.ГКСИ_MarkdownКлиент</content>
+  <content>CommonModule.ГКСИ_MarkdownКлиентСервер</content>
+  <content>CommonPicture.ГКСИ_Скрепка</content>
+  <content>CommonPicture.ГКСИ_ВставитьКартинкуИзБуфера</content>
+  <content>CommonPicture.ГКСИ_ЗаголовокH1</content>
+  <content>CommonPicture.ГКСИ_Жирный</content>
+  <content>CommonPicture.ГКСИ_Зачеркнутый</content>
+  <content>CommonPicture.ГКСИ_Курсив</content>
+  <content>CommonPicture.ГКСИ_МаркерыСписок</content>
+  <content>CommonPicture.ГКСИ_НумерованныйСписок</content>
+  <content>CommonPicture.ГКСИ_Цитата</content>
+  <content>CommonPicture.ГКСИ_ЗаголовокH2</content>
+  <content>CommonPicture.ГКСИ_ЗаголовокH3</content>
+  <content>CommonPicture.ГКСИ_Markdown</content>
+  <content>CommonPicture.ГКСИ_Ссылка</content>
+  <content>CommonPicture.ГКСИ_ПрограммныйКод</content>
+  <content>CommonPicture.ГКСИ_СписокЗадач</content>
+  <content>CommonPicture.ГКСИ_Таблица</content>
+  <content>CommonModule.ГКСИ_БуферОбменаКлиент</content>
+  <content>CommonModule.ГКСИ_MarkdownПереопределяемый</content>
+  <content>CommonModule.ГКСИ_MarkdownКлиентПереопределяемый</content>
+  <content>CommonForm.ГКСИ_MarkdownСинтаксис</content>
+  <content>CommonTemplate.ГКСИ_КомпонентаДляРаботыСБуферомОбмена</content>
+  <content>CommonTemplate.ГКСИ_ВариантыПодсветки</content>
+  <content>CommonTemplate.ГКСИ_highligthjs</content>
+  <content>CommonTemplate.ГКСИ_showdown</content>
+  <content>CommonPicture.ГКСИ_Синтаксис</content>
+</mdclass:Subsystem>

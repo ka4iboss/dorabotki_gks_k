@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="32eb279f-b9bf-4b9c-b706-27192fcea897">
+  <producedTypes>
+    <objectType typeId="3361e684-35d8-4454-88a5-cf5cad59173c" valueTypeId="93e6e0e4-6729-4d39-8ae8-3c71c99aba36"/>
+    <managerType typeId="d824f8da-afbc-4c2a-a25e-a63ff76274c8" valueTypeId="7ba349df-1038-4dad-ab8a-1b8207ebd208"/>
+  </producedTypes>
+  <name>ГКСИ_ВыгрузкаСценариевВMarkdown</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгрузка сценариев в Markdown</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСИ_ВыгрузкаСценариевВMarkdown.Form.Форма</defaultForm>
+  <forms uuid="b15339fc-253a-4a6f-a592-692b1123b94a">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выгрузка сценариев в Markdown</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

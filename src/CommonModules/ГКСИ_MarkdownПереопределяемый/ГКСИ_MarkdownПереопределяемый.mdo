@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="61bae0b5-639f-49ce-909b-0348bc1f07b3">
+  <name>ГКСИ_MarkdownПереопределяемый</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ markdown переопределяемый</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

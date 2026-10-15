@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="f26765bd-6303-44fa-bcd5-50a43b75e79a">
+  <name>ГКСИ_ИнструкцииОписанияДемонстраций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Инструкции и описания демонстраций</value>
+  </synonym>
+  <extension xsi:type="mdclassExtension:SubsystemExtension">
+    <commandInterface>Extended</commandInterface>
+  </extension>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ГКСИ_ИконкаПодсистемы</picture>
+  </picture>
+  <content>Catalog.ГКСИ_ФайлыИнструкций</content>
+  <content>Catalog.ДемонстрационныеСценарии</content>
+  <content>InformationRegister.ГКСИ_ГруппыСценариев</content>
+  <content>DataProcessor.ГКСИ_ЗагрузкаСценариевИзMarkdown</content>
+  <content>CommonModule.ГКСИ_ЗагрузкаСценариевИзMarkdown</content>
+  <content>DataProcessor.ГКСИ_ВыгрузкаСценариевВMarkdown</content>
+  <content>CommonModule.ГКСИ_ВыгрузкаСценариевВMarkdown</content>
+  <content>CommonModule.ГКСИ_ВыгрузкаСценариевВMarkdownДлительныеОперации</content>
+</mdclass:Subsystem>

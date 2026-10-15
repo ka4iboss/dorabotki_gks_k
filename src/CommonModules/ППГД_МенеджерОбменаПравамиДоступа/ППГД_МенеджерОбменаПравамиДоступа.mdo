@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="38b6673b-9f60-48d2-8600-681fab27eb03">
+  <name>ППГД_МенеджерОбменаПравамиДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>ППГД менеджер обмена правами доступа</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

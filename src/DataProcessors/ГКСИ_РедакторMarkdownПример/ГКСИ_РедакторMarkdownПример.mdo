@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9f29e431-3617-449d-93ba-2fed6c0da920">
+  <producedTypes>
+    <objectType typeId="1143f870-a8ad-41fc-ae11-a46770fe40bb" valueTypeId="98286659-48eb-49d8-89f6-98f32e046f32"/>
+    <managerType typeId="5c8770c8-20d6-4862-94b3-f123262bd3d6" valueTypeId="e6d81d73-65df-4bc9-9494-930914ddcdda"/>
+  </producedTypes>
+  <name>ГКСИ_РедакторMarkdownПример</name>
+  <synonym>
+    <key>ru</key>
+    <value>Редактор markdown пример</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСИ_РедакторMarkdownПример.Form.Форма</defaultForm>
+  <attributes uuid="c9c959fe-60ca-4ae5-b8b4-8c06689b553e">
+    <name>ТекстМД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст МД</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="a42a8230-5e11-11ea-a89e-e86a6452d1f2">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

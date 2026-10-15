@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1134dc0c-d948-4d6a-884f-938627b8661c">
+  <producedTypes>
+    <objectType typeId="67b53800-c030-41fd-a330-a5ad37bad513" valueTypeId="fc36b5ca-37d9-4c30-82d5-c2033c59d60c"/>
+    <managerType typeId="19b3cbaa-9a13-42ed-bf65-8ce5e9e1579c" valueTypeId="abce3658-2a69-46d7-93ea-40cbde398b3c"/>
+  </producedTypes>
+  <name>ППГД_ГенерацияГруппДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Генерация групп доступа</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ППГД_ГенерацияГруппДоступа.Form.Форма</defaultForm>
+  <attributes uuid="312a4aad-5dc6-48e5-9e05-c7eeff59f591">
+    <name>ПрофильГруппыДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Профиль группы доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПрофилиГруппДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7d3013d5-bc8d-4098-91b9-2d73061aa8b6">
+    <name>Родитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Родитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>Folders</choiceFoldersAndItems>
+  </attributes>
+  <forms uuid="2f5f4eda-4682-43cd-ae03-01018b41150f">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="50f9e5ce-4761-4eb7-afe3-f0b387164fdc">
+    <name>СписокЗначений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список значений</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

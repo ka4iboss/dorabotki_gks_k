@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonPicture xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4179f304-b6e4-4318-8a38-21f4db413db3">
+  <name>ППГД_ОформлениеФлажки</name>
+  <synonym>
+    <key>ru</key>
+    <value>пд Оформление флажки</value>
+  </synonym>
+  <availabilityForChoice>true</availabilityForChoice>
+  <availabilityForAppearance>true</availabilityForAppearance>
+</mdclass:CommonPicture>

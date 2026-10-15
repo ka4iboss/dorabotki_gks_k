@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ceb6a97f-328a-43a0-9ac1-fcd59f484481">
+  <producedTypes>
+    <selectionType typeId="675c0c41-73b9-4a27-87d8-9a41260d8bb1" valueTypeId="36f13089-5f2a-41fe-aecf-882b570a8237"/>
+    <listType typeId="f2c1ea6d-b009-49d4-869a-08773870c442" valueTypeId="d25989ec-a8b6-41d9-8524-f9944fd2cb3f"/>
+    <managerType typeId="f39d977b-b5ce-4bd5-83c4-c4d743c2b76c" valueTypeId="2e5a580a-8a20-4290-9755-a2ee5cb62bfc"/>
+    <recordSetType typeId="d587ec56-0927-4e01-b2e9-686cc8f5f545" valueTypeId="99e4ace5-c1b1-45b9-a4df-88d775152936"/>
+    <recordKeyType typeId="814ac5c5-4982-47e8-91d7-2d92468dafa0" valueTypeId="4eb69e9d-fe8f-4d67-9b33-deb553e56b2d"/>
+    <recordType typeId="4fdea1fb-45fb-4870-b3b0-0b08bb4c1e7b" valueTypeId="a3bcf011-6c4d-43ae-81e4-3d1cebfb23c2"/>
+    <recordManagerType typeId="5f9a2d03-e15b-42a8-8764-f07cf7faa62f" valueTypeId="0381871e-cbdf-432b-81b1-31d8990be260"/>
+  </producedTypes>
+  <name>ППГД_ЖурналЗагрузки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал загрузки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ППГД_ЖурналЗагрузки.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Запись журнала загрузки прав</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Журнал загрузки прав</value>
+  </listPresentation>
+  <resources uuid="50ebaa28-ce03-4ab9-90e0-1f5f00f7b03d">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="8488b055-af96-417c-8372-506388a61a13">
+    <name>ИмяОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="061a7ac1-6870-42d3-844d-d65c71d99ef8">
+    <name>ДатаСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата события</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="8e57423f-95c1-4ce1-867d-5b23de5a0d1a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="7fd393bf-d47d-42ad-9652-3af05c29efb1">
+    <name>ЖурналЗагрузкиПрав</name>
+    <synonym>
+      <key>ru</key>
+      <value>Журнал загрузки прав</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>
