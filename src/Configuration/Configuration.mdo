@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.3.0</version>
+  <version>1.0.3.1</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -126,7 +126,6 @@
   <commonForms>CommonForm.ГКСИ_MarkdownСинтаксис</commonForms>
   <commonForms>CommonForm.ГКСИ_ВыборТерминаГлоссария</commonForms>
   <commonForms>CommonForm.КонструкторФормул</commonForms>
-  <commonForms>CommonForm.ГКСИ_ВыборУзлаСсылки</commonForms>
   <catalogs>Catalog.ГруппыДоступа</catalogs>
   <catalogs>Catalog.ГКСИ_ФайлыИнструкций</catalogs>
   <catalogs>Catalog.ГруппыПользователей</catalogs>
