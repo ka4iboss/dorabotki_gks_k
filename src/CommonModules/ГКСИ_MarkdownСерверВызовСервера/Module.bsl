@@ -242,7 +242,7 @@
 	СтрокиJS.Добавить("    var links = String(html).split('gksi-link').length - 1;");
 	СтрокиJS.Добавить("    var div = document.createElement('div');");
 	СтрокиJS.Добавить("    div.style.cssText = 'font:11px monospace;color:#b73535;border-top:1px dotted #b73535;margin-top:8px;padding-top:4px';");
-	СтрокиJS.Добавить("    div.textContent = '[GKSI-DEBUG] карта=' + (L ? L.length : 'НЕТ')");
+	СтрокиJS.Добавить("    div.textContent = '[GKSI-DEBUG v=" + ГКСК_Версии.ВерсияГКСИ() + "] карта=' + (L ? L.length : 'НЕТ')");
 	СтрокиJS.Добавить("      + '; [[ в тексте=' + opens");
 	СтрокиJS.Добавить("      + '; gksi-link в HTML=' + links");
 	СтрокиJS.Добавить("      + '; fn=' + (typeof gksiPreprocessLinks);");
