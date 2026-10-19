@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.2.0</version>
+  <version>1.0.3.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -115,6 +115,7 @@
   <commonModules>CommonModule.ГКСК_Версии</commonModules>
   <commonModules>CommonModule.ГКСК_ВерсииОбъектовСервер</commonModules>
   <commonModules>CommonModule.ГКСК_СопоставлениеОплатПоЗаявкамСервер</commonModules>
+  <commonModules>CommonModule.ГКСИ_СсылкиСценариев</commonModules>
   <xDTOPackages>XDTOPackage.ППГД_ПраваДоступа</xDTOPackages>
   <functionalOptions>FunctionalOption.ОграничиватьДоступНаУровнеЗаписей</functionalOptions>
   <definedTypes>DefinedType.ЗначениеДоступа</definedTypes>
@@ -125,6 +126,7 @@
   <commonForms>CommonForm.ГКСИ_MarkdownСинтаксис</commonForms>
   <commonForms>CommonForm.ГКСИ_ВыборТерминаГлоссария</commonForms>
   <commonForms>CommonForm.КонструкторФормул</commonForms>
+  <commonForms>CommonForm.ГКСИ_ВыборУзлаСсылки</commonForms>
   <catalogs>Catalog.ГруппыДоступа</catalogs>
   <catalogs>Catalog.ГКСИ_ФайлыИнструкций</catalogs>
   <catalogs>Catalog.ГруппыПользователей</catalogs>

@@ -25,15 +25,22 @@
 //  ВариантПодсветкиСинтаксиса - Строка - имя варианта подсветки синтаксиса.
 //  ШиринаКартинок - Строка - CSS-ширина картинок.
 //  КодЯзыка - Строка - код языка для обогащения терминами глоссария.
+//  СсылкиJSON - Строка - JSON-массив карты вики-ссылок на группы и шаги
+//               (см. ГКСИ_СсылкиСценариев.СсылкиJSONДляКлиента). Пустая
+//               строка или "[]" - вики-ссылки в предпросмотре не разбираются.
 //
 // Возвращаемое значение:
 //  Строка - HTML-документ.
-Функция СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок = "", КодЯзыка = "") Экспорт
+Функция СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок = "", КодЯзыка = "", СсылкиJSON = "[]") Экспорт
 	БиблиотекаТекст=ПолучитьТекстКомпонентыShowodwn();
 	ТекстРазукрашивателя=ПолучитьТекстКомпонентыHighligthjs();
 	СтильПодсветкиСинтаксиса=ТекстСтиляПодсветкиСинтаксиса(ВариантПодсветкиСинтаксиса);
 	СтильКартинок = ГКСИ_MarkdownПереопределяемый.СтильИзображений(ШиринаКартинок);
 	ТерминыJSON = ГКСИ_Глоссарий.ТерминыДляПревьюJSON(КодЯзыка);
+	ТекстБитойСсылки = НСтр("ru = 'Ссылка не найдена: %1'");
+	Если ПустаяСтрока(СсылкиJSON) Тогда
+		СсылкиJSON = "[]";
+	КонецЕсли;
 	СтрокиJS = Новый Массив;
 	СтрокиJS.Добавить("function escapeRegExp(s){return s.replace(/[.*+?^${}()|[\]\\]/g, '\\\\$&');}");
 	СтрокиJS.Добавить("function enrichTerms(){");
@@ -131,6 +138,60 @@
 	СтрокиJS.Добавить("    });");
 	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][alerts] preprocess error:', _e.message); } catch(_){} return text; }");
 	СтрокиJS.Добавить("}");
+	// Вики-ссылки [[Имя]] / [[Имя|Текст]] на группы и шаги демонстрационных
+	// сценариев. Карта ссылок приходит из ГКСИ_СсылкиСценариев и кладётся в
+	// window.__gksiLinks. Разбор синтаксиса полностью повторяет серверную
+	// функцию ГКСИ_СсылкиСценариев.ПодставитьСсылкиВТекст, включая пропуск
+	// картинок ![[...]] и разметку ссылки (порядок атрибутов class, href,
+	// data-gksi-anchor важен: на него опирается альбом процессов).
+	СтрокиJS.Добавить("var gksiLinkBrokenTemplate = '" + ТекстБитойСсылки + "';");
+	СтрокиJS.Добавить("function gksiEsc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/""/g,'&quot;'); }");
+	СтрокиJS.Добавить("function gksiPreprocessLinks(text){");
+	СтрокиJS.Добавить("  try {");
+	СтрокиJS.Добавить("    var L = window.__gksiLinks;");
+	СтрокиJS.Добавить("    if (!L || L.length === 0) return text;");
+	СтрокиJS.Добавить("    var byName = Object.create(null);");
+	СтрокиJS.Добавить("    var byCode = Object.create(null);");
+	СтрокиJS.Добавить("    for (var i = 0; i < L.length; i++){");
+	СтрокиJS.Добавить("      var e = L[i];");
+	СтрокиJS.Добавить("      if (e.code && byCode[e.code] === undefined) byCode[e.code] = e;");
+	СтрокиJS.Добавить("      if (e.name){");
+	СтрокиJS.Добавить("        var key = e.name.toUpperCase();");
+	СтрокиJS.Добавить("        if (byName[key] === undefined) byName[key] = e;");
+	СтрокиJS.Добавить("        else if (byName[key] !== e) byName[key] = false;");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("    }");
+	СтрокиJS.Добавить("    var out = '';");
+	СтрокиJS.Добавить("    var pos = 0;");
+	СтрокиJS.Добавить("    var len = text.length;");
+	СтрокиJS.Добавить("    while (pos < len){");
+	СтрокиJS.Добавить("      var open = text.indexOf('[[', pos);");
+	СтрокиJS.Добавить("      if (open < 0){ out += text.substring(pos); break; }");
+	СтрокиJS.Добавить("      if (open > 0 && text.charAt(open - 1) === '!'){ out += text.substring(pos, open + 1); pos = open + 2; continue; }");
+	СтрокиJS.Добавить("      var close = text.indexOf(']]', open + 2);");
+	СтрокиJS.Добавить("      if (close < 0){ out += text.substring(pos); break; }");
+	СтрокиJS.Добавить("      var inner = text.substring(open + 2, close);");
+	СтрокиJS.Добавить("      if (inner.indexOf('[') >= 0 || inner.indexOf(String.fromCharCode(10)) >= 0 || inner.indexOf(String.fromCharCode(13)) >= 0){");
+	СтрокиJS.Добавить("        out += text.substring(pos, close + 2); pos = close + 2; continue;");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("      var parts = inner.split('|');");
+	СтрокиJS.Добавить("      var target = parts[0].replace(/^\s+|\s+$/g, '');");
+	СтрокиJS.Добавить("      var label = parts.length > 1 ? parts[1].replace(/^\s+|\s+$/g, '') : target;");
+	СтрокиJS.Добавить("      if (label === '') label = target;");
+	СтрокиJS.Добавить("      out += text.substring(pos, open);");
+	СтрокиJS.Добавить("      var found = byCode[target];");
+	СтрокиJS.Добавить("      if (!found) found = byName[target.toUpperCase()];");
+	СтрокиJS.Добавить("      if (!found){");
+	СтрокиJS.Добавить("        out += '<span class=""gksi-link-broken"" title=""' + gksiEsc(gksiLinkBrokenTemplate.replace('%1', target)) + '"">' + gksiEsc(label) + '</span>';");
+	СтрокиJS.Добавить("      } else {");
+	СтрокиJS.Добавить("        var href = found.href ? found.href : ('#' + found.anchor);");
+	СтрокиJS.Добавить("        out += '<a class=""gksi-link"" href=""' + gksiEsc(href) + '"" data-gksi-anchor=""' + found.anchor + '"">' + gksiEsc(label) + '</a>';");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("      pos = close + 2;");
+	СтрокиJS.Добавить("    }");
+	СтрокиJS.Добавить("    return out;");
+	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][links] preprocess error:', _e.message); } catch(_){} return text; }");
+	СтрокиJS.Добавить("}");
 	JSОбогащение = СтрСоединить(СтрокиJS, Символы.ПС);
 	СтильCSS=
 "
@@ -141,6 +202,22 @@
 |}
 |.gksi-term:hover {
 |    background-color: #fffbe6;
+|}
+|/***** Ссылки на группы и шаги сценария [[Имя]] *****/
+|.gksi-link {
+|    color: #2f6fb5;
+|    text-decoration: none;
+|    border-bottom: 1px solid rgba(47, 111, 181, 0.4);
+|    cursor: pointer;
+|}
+|.gksi-link:hover {
+|    background-color: #eef5fd;
+|    border-bottom-color: #2f6fb5;
+|}
+|.gksi-link-broken {
+|    color: #b73535;
+|    border-bottom: 1px dashed #b73535;
+|    cursor: help;
 |}
 |h2, .wiki h1 {font-size: 20px;}
 	|h3, .wiki h2 {font-size: 16px;}
@@ -337,7 +414,8 @@
 |            newdiv.className = 'wiki';
 |            newdiv.id = key;
 |
-|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(text) : text);
+|            var pre = typeof gksiPreprocessLinks === 'function' ? gksiPreprocessLinks(text) : text;
+|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(pre) : pre);
 |            html = typeof gksiPostprocessAlerts === 'function' ? gksiPostprocessAlerts(html) : html;
 |            newdiv.innerHTML = html;
 |
@@ -345,7 +423,8 @@
 |    	   }
 |
 |		 function mdToHtml(text){
-|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(text) : text);
+|            var pre = typeof gksiPreprocessLinks === 'function' ? gksiPreprocessLinks(text) : text;
+|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(pre) : pre);
 |            return typeof gksiPostprocessAlerts === 'function' ? gksiPostprocessAlerts(html) : html;
 |    	   }
 	|		 function htmlToMd(text){
@@ -375,6 +454,7 @@
 |    </script>
 |    <script type=""text/javascript"">__JSОБОГАЩЕНИЕ__</script>
 |    <script type=""text/javascript"">window.__gksiTerms = __ТерминыJSON__;</script>
+|    <script type=""text/javascript"">window.__gksiLinks = __СсылкиJSON__;</script>
 |    <style>
 |    html {
 |		word-break: break-all;
@@ -395,6 +475,7 @@
 |";
 
 	ТекстHTML = СтрЗаменить(ТекстHTML, "__ТерминыJSON__", ТерминыJSON);
+	ТекстHTML = СтрЗаменить(ТекстHTML, "__СсылкиJSON__", СсылкиJSON);
 	ТекстHTML = СтрЗаменить(ТекстHTML, "__JSОБОГАЩЕНИЕ__", JSОбогащение);
 
 	Возврат ТекстHTML;
@@ -459,10 +540,22 @@
 //  ВариантПодсветкиСинтаксиса - Строка - имя варианта подсветки синтаксиса.
 //  ТолькоПросмотр - Булево - признак режима только просмотра.
 //  ШиринаКартинок - Строка - CSS-ширина картинок.
-Процедура ВставитьПолеРедактированияТекстаНаФорму(Форма, ГруппаЭлементовТекста, ПутьКДанным,
+//  СсылкаУзла - CatalogRef.ДемонстрационныеСценарии, Неопределено - узел
+//               демонстрационного сценария, которому принадлежит текст. Если
+//               заполнен, в предпросмотре разбираются вики-ссылки [[...]] на
+//               группы и шаги той же инструкции.
+Процедура ВставитьПолеРедактированияТекстаНаФорму(Форма, ГруппаЭлементовТекста, ПутьКДанным, СсылкаУзла,
 	ВариантПодсветкиСинтаксиса = "ones", ТолькоПросмотр=Ложь, ШиринаКартинок = "") Экспорт
 
 	ОписаниеТиповСтрока = Новый ОписаниеТипов("Строка");
+
+	// Карта вики-ссылок на группы и шаги сценария — для кликабельных [[...]]
+	// в предпросмотре Markdown. Если узел не передан, карта не строится и
+	// вики-ссылки остаются обычным текстом.
+	КартаСсылок = Неопределено;
+	Если ЗначениеЗаполнено(СсылкаУзла) Тогда
+		КартаСсылок = ГКСИ_СсылкиСценариев.КартаСсылокДляУзла(СсылкаУзла);
+	КонецЕсли;
 
 	ПутьКДаннымБезЛишнего=ГКСИ_MarkdownКлиентСервер.ПолучитьПутьКДаннымБезЛишнего(ПутьКДанным);
 	ПравильныйПутьКДанным=ПутьКДанным;
@@ -569,7 +662,8 @@
 
 	Форма.ИзменитьРеквизиты(МассивДобавляемыхРеквизитов, );
 
-	Форма[ПутьКПолюПросмотра]=СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок, ТекущийЯзык().КодЯзыка);
+	Форма[ПутьКПолюПросмотра]=СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок, ТекущийЯзык().КодЯзыка,
+		ГКСИ_СсылкиСценариев.СсылкиJSONДляКлиента(КартаСсылок));
 	
 	//5.2. Поле формы просмтра
 	ОписаниеЭлемента=НовыйОписаниеРеквизитаЭлемента();
@@ -671,6 +765,9 @@
 		БиблиотекаКартинок.ГКСИ_Синтаксис, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);	
 
 	ДобавитьКомандуНаКоманднуюПанельРедактированияMarkdown("КомандаMDГлоссарий", "Термин глоссария",
+		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
+
+	ДобавитьКомандуНаКоманднуюПанельРедактированияMarkdown("КомандаMDСсылкаНаУзел", "Ссылка на группу или шаг",
 		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
 
 	// подменю для вставки
