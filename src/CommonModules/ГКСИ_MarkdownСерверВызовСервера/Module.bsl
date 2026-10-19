@@ -154,7 +154,10 @@
 	СтрокиJS.Добавить("    var byCode = Object.create(null);");
 	СтрокиJS.Добавить("    for (var i = 0; i < L.length; i++){");
 	СтрокиJS.Добавить("      var e = L[i];");
-	СтрокиJS.Добавить("      if (e.code && byCode[e.code] === undefined) byCode[e.code] = e;");
+	СтрокиJS.Добавить("      var codes = (e.codes && e.codes.length) ? e.codes : (e.code ? [e.code] : []);");
+	СтрокиJS.Добавить("      for (var j = 0; j < codes.length; j++){");
+	СтрокиJS.Добавить("        if (byCode[codes[j]] === undefined) byCode[codes[j]] = e;");
+	СтрокиJS.Добавить("      }");
 	СтрокиJS.Добавить("      if (e.name){");
 	СтрокиJS.Добавить("        var key = e.name.toUpperCase();");
 	СтрокиJS.Добавить("        if (byName[key] === undefined) byName[key] = e;");
@@ -181,6 +184,7 @@
 	СтрокиJS.Добавить("      out += text.substring(pos, open);");
 	СтрокиJS.Добавить("      var found = byCode[target];");
 	СтрокиJS.Добавить("      if (!found) found = byName[target.toUpperCase()];");
+	СтрокиJS.Добавить("      if (!found && label !== target) found = byName[label.toUpperCase()];");
 	СтрокиJS.Добавить("      if (!found){");
 	СтрокиJS.Добавить("        out += '<span class=""gksi-link-broken"" title=""' + gksiEsc(gksiLinkBrokenTemplate.replace('%1', target)) + '"">' + gksiEsc(label) + '</span>';");
 	СтрокиJS.Добавить("      } else {");
