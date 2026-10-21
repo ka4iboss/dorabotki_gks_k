@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b4018720-0c20-447e-acc4-ea0616ab2da4">
+  <name>ГКСИ_СсылкиСценариев</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Ссылки сценариев</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

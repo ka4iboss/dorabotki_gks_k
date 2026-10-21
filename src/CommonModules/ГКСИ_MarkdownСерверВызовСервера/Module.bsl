@@ -19,21 +19,64 @@
 	Возврат БиблиотекаТекст;
 КонецФункции
 
+// Возвращает фрагмент Markdown-ссылки на термин глоссария.
+//
+// Ссылка ведёт на элемент справочника Глоссарий навигационной ссылкой: в
+// предпросмотре Markdown и в HTML сценария такой переход открывает карточку
+// термина (клиентский обработчик нажатия в поле HTML документа открывает
+// адреса с префиксом "e1cib" штатным переходом).
+//
+// Параметры:
+//  СтрокаСсылки - Строка - XML-представление ссылки на элемент справочника
+//                 Глоссарий (результат формы выбора термина).
+//
+// Возвращаемое значение:
+//  Строка - фрагмент "[Наименование](<навигационная ссылка>)"; пустая строка,
+//           если ссылку разобрать не удалось.
+//
+Функция ФрагментСсылкиНаТерминГлоссария(СтрокаСсылки) Экспорт
+
+	Попытка
+		Ссылка = XMLЗначение(Тип("СправочникСсылка.Глоссарий"), СтрокаСсылки);
+	Исключение
+		Возврат "";
+	КонецПопытки;
+
+	Если Не ЗначениеЗаполнено(Ссылка) Тогда
+		Возврат "";
+	КонецЕсли;
+
+	Наименование = ГКСИ_Глоссарий.НаименованиеТерминаПоЯзыку(Ссылка, ГКСИ_Глоссарий.ТекущийКодЯзыка());
+	Если ПустаяСтрока(Наименование) Тогда
+		Возврат "";
+	КонецЕсли;
+
+	Возврат "[" + Наименование + "](" + ПолучитьНавигационнуюСсылку(Ссылка) + ")";
+
+КонецФункции
+
 // Формирует HTML-документ для предпросмотра текста Markdown.
 //
 // Параметры:
 //  ВариантПодсветкиСинтаксиса - Строка - имя варианта подсветки синтаксиса.
 //  ШиринаКартинок - Строка - CSS-ширина картинок.
 //  КодЯзыка - Строка - код языка для обогащения терминами глоссария.
+//  СсылкиJSON - Строка - JSON-массив карты вики-ссылок на группы и шаги
+//               (см. ГКСИ_СсылкиСценариев.СсылкиJSONДляКлиента). Пустая
+//               строка или "[]" - вики-ссылки в предпросмотре не разбираются.
 //
 // Возвращаемое значение:
 //  Строка - HTML-документ.
-Функция СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок = "", КодЯзыка = "") Экспорт
+Функция СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок = "", КодЯзыка = "", СсылкиJSON = "[]") Экспорт
 	БиблиотекаТекст=ПолучитьТекстКомпонентыShowodwn();
 	ТекстРазукрашивателя=ПолучитьТекстКомпонентыHighligthjs();
 	СтильПодсветкиСинтаксиса=ТекстСтиляПодсветкиСинтаксиса(ВариантПодсветкиСинтаксиса);
 	СтильКартинок = ГКСИ_MarkdownПереопределяемый.СтильИзображений(ШиринаКартинок);
 	ТерминыJSON = ГКСИ_Глоссарий.ТерминыДляПревьюJSON(КодЯзыка);
+	ТекстБитойСсылки = НСтр("ru = 'Ссылка не найдена: %1'");
+	Если ПустаяСтрока(СсылкиJSON) Тогда
+		СсылкиJSON = "[]";
+	КонецЕсли;
 	СтрокиJS = Новый Массив;
 	СтрокиJS.Добавить("function escapeRegExp(s){return s.replace(/[.*+?^${}()|[\]\\]/g, '\\\\$&');}");
 	СтрокиJS.Добавить("function enrichTerms(){");
@@ -131,6 +174,131 @@
 	СтрокиJS.Добавить("    });");
 	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][alerts] preprocess error:', _e.message); } catch(_){} return text; }");
 	СтрокиJS.Добавить("}");
+	// Вики-ссылки [[Имя]] / [[Имя|Текст]] на группы и шаги демонстрационных
+	// сценариев. Карта ссылок приходит из ГКСИ_СсылкиСценариев и кладётся в
+	// window.__gksiLinks. Разбор синтаксиса полностью повторяет серверную
+	// функцию ГКСИ_СсылкиСценариев.ПодставитьСсылкиВТекст, включая пропуск
+	// картинок ![[...]] и разметку ссылки (порядок атрибутов class, href,
+	// data-gksi-anchor важен: на него опирается альбом процессов).
+	СтрокиJS.Добавить("var gksiLinkBrokenTemplate = '" + ТекстБитойСсылки + "';");
+	СтрокиJS.Добавить("function gksiEsc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/""/g,'&quot;'); }");
+	СтрокиJS.Добавить("function gksiPreprocessLinks(text){");
+	СтрокиJS.Добавить("  try {");
+	СтрокиJS.Добавить("    var L = window.__gksiLinks;");
+	СтрокиJS.Добавить("    if (!L || L.length === 0) return text;");
+	СтрокиJS.Добавить("    var byName = Object.create(null);");
+	СтрокиJS.Добавить("    var byCode = Object.create(null);");
+	СтрокиJS.Добавить("    for (var i = 0; i < L.length; i++){");
+	СтрокиJS.Добавить("      var e = L[i];");
+	СтрокиJS.Добавить("      var codes = (e.codes && e.codes.length) ? e.codes : (e.code ? [e.code] : []);");
+	СтрокиJS.Добавить("      for (var j = 0; j < codes.length; j++){");
+	СтрокиJS.Добавить("        if (byCode[codes[j]] === undefined) byCode[codes[j]] = e;");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("      if (e.name){");
+	СтрокиJS.Добавить("        var key = e.name.toUpperCase();");
+	СтрокиJS.Добавить("        if (byName[key] === undefined) byName[key] = e;");
+	СтрокиJS.Добавить("        else if (byName[key] !== e) byName[key] = false;");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("    }");
+	СтрокиJS.Добавить("    var out = '';");
+	СтрокиJS.Добавить("    var pos = 0;");
+	СтрокиJS.Добавить("    var len = text.length;");
+	СтрокиJS.Добавить("    while (pos < len){");
+	СтрокиJS.Добавить("      var open = text.indexOf('[[', pos);");
+	СтрокиJS.Добавить("      if (open < 0){ out += text.substring(pos); break; }");
+	СтрокиJS.Добавить("      if (open > 0 && text.charAt(open - 1) === '!'){ out += text.substring(pos, open + 1); pos = open + 2; continue; }");
+	СтрокиJS.Добавить("      var close = text.indexOf(']]', open + 2);");
+	СтрокиJS.Добавить("      if (close < 0){ out += text.substring(pos); break; }");
+	СтрокиJS.Добавить("      var inner = text.substring(open + 2, close);");
+	СтрокиJS.Добавить("      if (inner.indexOf('[') >= 0 || inner.indexOf(String.fromCharCode(10)) >= 0 || inner.indexOf(String.fromCharCode(13)) >= 0){");
+	СтрокиJS.Добавить("        out += text.substring(pos, close + 2); pos = close + 2; continue;");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("      var parts = inner.split('|');");
+	СтрокиJS.Добавить("      var target = parts[0].replace(/^\s+|\s+$/g, '');");
+	СтрокиJS.Добавить("      var label = parts.length > 1 ? parts[1].replace(/^\s+|\s+$/g, '') : target;");
+	СтрокиJS.Добавить("      if (label === '') label = target;");
+	СтрокиJS.Добавить("      out += text.substring(pos, open);");
+	СтрокиJS.Добавить("      var found = byCode[target];");
+	СтрокиJS.Добавить("      if (!found) found = byName[target.toUpperCase()];");
+	СтрокиJS.Добавить("      if (!found && label !== target) found = byName[label.toUpperCase()];");
+	СтрокиJS.Добавить("      if (!found){");
+	СтрокиJS.Добавить("        out += '<span class=""gksi-link-broken"" title=""' + gksiEsc(gksiLinkBrokenTemplate.replace('%1', target)) + '"">' + gksiEsc(label) + '</span>';");
+	СтрокиJS.Добавить("      } else {");
+	СтрокиJS.Добавить("        var href = found.href ? found.href : ('#' + found.anchor);");
+	СтрокиJS.Добавить("        out += '<a class=""gksi-link"" href=""' + gksiEsc(href) + '"" data-gksi-anchor=""' + found.anchor + '"">' + gksiEsc(label) + '</a>';");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("      pos = close + 2;");
+	СтрокиJS.Добавить("    }");
+	СтрокиJS.Добавить("    return out;");
+	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][links] preprocess error:', _e.message); } catch(_){} return text; }");
+	СтрокиJS.Добавить("}");
+	// Видео !video(<путь>) -> HTML5-плеер с запасной ссылкой на открытие
+	// внешним проигрывателем (data-gksi-video). Нормализация пути и снятие
+	// обрамляющих кавычек повторяют серверные функции модуля ГКСИ_Видео.
+	СтрокиJS.Добавить("function gksiTrimVideo(s){");
+	СтрокиJS.Добавить("  var t = String(s);");
+	СтрокиJS.Добавить("  while (t.length > 0 && t.charCodeAt(0) <= 32) t = t.substring(1);");
+	СтрокиJS.Добавить("  while (t.length > 0 && t.charCodeAt(t.length - 1) <= 32) t = t.substring(0, t.length - 1);");
+	СтрокиJS.Добавить("  return t;");
+	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiUnquoteVideo(s){");
+	СтрокиJS.Добавить("  var Q = String.fromCharCode(34);");
+	СтрокиJS.Добавить("  var SQ = String.fromCharCode(39);");
+	СтрокиJS.Добавить("  var LQ = String.fromCharCode(171), RQ = String.fromCharCode(187);");
+	СтрокиJS.Добавить("  var LD = String.fromCharCode(8220), RD = String.fromCharCode(8221);");
+	СтрокиJS.Добавить("  var t = gksiTrimVideo(String(s));");
+	СтрокиJS.Добавить("  var go = true;");
+	СтрокиJS.Добавить("  while (go && t.length >= 2) {");
+	СтрокиJS.Добавить("    go = false;");
+	СтрокиJS.Добавить("    var a = t.charAt(0), b = t.charAt(t.length - 1);");
+	СтрокиJS.Добавить("    if ((a === Q && b === Q) || (a === SQ && b === SQ) || (a === LQ && b === RQ) || (a === LD && b === RD)) {");
+	СтрокиJS.Добавить("      t = gksiTrimVideo(t.substring(1, t.length - 1));");
+	СтрокиJS.Добавить("      go = true;");
+	СтрокиJS.Добавить("    }");
+	СтрокиJS.Добавить("  }");
+	СтрокиJS.Добавить("  return t;");
+	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiNormalizeVideoUrl(url){");
+	СтрокиJS.Добавить("  var BS = String.fromCharCode(92);");
+	СтрокиJS.Добавить("  var u = gksiUnquoteVideo(url).split(BS).join('/');");
+	СтрокиJS.Добавить("  var lc = u.toLowerCase();");
+	СтрокиJS.Добавить("  if (lc.indexOf('http://') === 0 || lc.indexOf('https://') === 0 || lc.indexOf('file://') === 0) return u;");
+	СтрокиJS.Добавить("  if (u.indexOf('//') === 0) return 'file:' + u;");
+	СтрокиJS.Добавить("  if (u.charAt(0) === '/') return 'file://' + u;");
+	СтрокиJS.Добавить("  return 'file:///' + u;");
+	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiVideoEsc(s){");
+	СтрокиJS.Добавить("  var Q = String.fromCharCode(34);");
+	СтрокиJS.Добавить("  return String(s).split('&').join('&amp;').split(Q).join('&quot;').split('<').join('&lt;').split('>').join('&gt;');");
+	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiPreprocessVideo(text){");
+	СтрокиJS.Добавить("  try {");
+	СтрокиJS.Добавить("    if (String(text).indexOf('!video(') < 0) return text;");
+	СтрокиJS.Добавить("    var Q = String.fromCharCode(34);");
+	СтрокиJS.Добавить("    var NL = String.fromCharCode(10);");
+	СтрокиJS.Добавить("    var CR = String.fromCharCode(13);");
+	СтрокиJS.Добавить("    var re = new RegExp('!video[(]([^)' + NL + CR + ']*)[)]', 'g');");
+	СтрокиJS.Добавить("    return String(text).replace(re, function(m, path){");
+	СтрокиJS.Добавить("      var p = gksiUnquoteVideo(path);");
+	СтрокиJS.Добавить("      if (p === '') return m;");
+	СтрокиJS.Добавить("      var url = gksiNormalizeVideoUrl(p);");
+	СтрокиJS.Добавить("      return '<div class=' + Q + 'gksi-video' + Q + '>'");
+	СтрокиJS.Добавить("        + '<div class=' + Q + 'gksi-video-frame' + Q");
+	СтрокиJS.Добавить("        + ' style=' + Q + 'position:relative;display:inline-block;width:100%;line-height:0;' + Q + '>'");
+	СтрокиJS.Добавить("        + '<video controls=' + Q + 'controls' + Q + ' preload=' + Q + 'metadata' + Q");
+	СтрокиJS.Добавить("        + ' style=' + Q + 'display:block;width:100%;height:auto;max-width:100%;' + Q + '>'");
+	СтрокиJS.Добавить("        + '<source src=' + Q + gksiVideoEsc(url) + Q + ' />'");
+	СтрокиJS.Добавить("        + 'Ваш браузер не поддерживает воспроизведение видео.'");
+	СтрокиJS.Добавить("        + '</video>'");
+	СтрокиJS.Добавить("        + '</div>'");
+	СтрокиJS.Добавить("        + '<div class=' + Q + 'gksi-video-caption' + Q + '>'");
+	СтрокиJS.Добавить("        + '<a class=' + Q + 'gksi-video-open' + Q + ' href=' + Q + '#' + Q");
+	СтрокиJS.Добавить("        + ' data-gksi-video=' + Q + gksiVideoEsc(p) + Q + '>'");
+	СтрокиJS.Добавить("        + 'Открыть во внешнем плеере</a></div>'");
+	СтрокиJS.Добавить("        + '</div>';");
+	СтрокиJS.Добавить("    });");
+	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][video] preprocess error:', _e.message); } catch(_){} return text; }");
+	СтрокиJS.Добавить("}");
 	JSОбогащение = СтрСоединить(СтрокиJS, Символы.ПС);
 	СтильCSS=
 "
@@ -141,6 +309,43 @@
 |}
 |.gksi-term:hover {
 |    background-color: #fffbe6;
+|}
+|/***** Ссылки на группы и шаги сценария [[Имя]] *****/
+|.gksi-link {
+|    color: #2f6fb5;
+|    text-decoration: none;
+|    border-bottom: 1px solid rgba(47, 111, 181, 0.4);
+|    cursor: pointer;
+|}
+|.gksi-link:hover {
+|    background-color: #eef5fd;
+|    border-bottom-color: #2f6fb5;
+|}
+|.gksi-link-broken {
+|    color: #b73535;
+|    border-bottom: 1px dashed #b73535;
+|    cursor: help;
+|}
+|/***** Видео !video(<путь>) *****/
+|.gksi-video {
+|    margin: 8px 0;
+|}
+|.gksi-video video {
+|    max-width: 100%;
+|    height: auto;
+|}
+|.gksi-video-caption {
+|    font-size: 0.85em;
+|    margin-top: 4px;
+|}
+|.gksi-video-open {
+|    color: #2f6fb5;
+|    text-decoration: none;
+|    border-bottom: 1px solid rgba(47, 111, 181, 0.4);
+|    cursor: pointer;
+|}
+|.gksi-video-open:hover {
+|    background-color: #eef5fd;
 |}
 |h2, .wiki h1 {font-size: 20px;}
 	|h3, .wiki h2 {font-size: 16px;}
@@ -241,7 +446,8 @@
 	"|    <script>
 	|        function setImageMaxWidth(width){
 	|            var styleEl = document.getElementById('rm-img-style');
-	|            var css = '.wiki img, img { max-width: ' + width + '; height: auto; }';
+	|            var css = '.wiki img, img { max-width: ' + width + '; height: auto; }'
+	|                + ' .gksi-video-frame { max-width: ' + width + '; min-width: ' + width + '; }';
 	|            if (!styleEl){
 	|                styleEl = document.createElement('style');
 	|                styleEl.id = 'rm-img-style';
@@ -337,7 +543,9 @@
 |            newdiv.className = 'wiki';
 |            newdiv.id = key;
 |
-|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(text) : text);
+|            var pre = typeof gksiPreprocessLinks === 'function' ? gksiPreprocessLinks(text) : text;
+|            pre = typeof gksiPreprocessVideo === 'function' ? gksiPreprocessVideo(pre) : pre;
+|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(pre) : pre);
 |            html = typeof gksiPostprocessAlerts === 'function' ? gksiPostprocessAlerts(html) : html;
 |            newdiv.innerHTML = html;
 |
@@ -345,7 +553,9 @@
 |    	   }
 |
 |		 function mdToHtml(text){
-|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(text) : text);
+|            var pre = typeof gksiPreprocessLinks === 'function' ? gksiPreprocessLinks(text) : text;
+|            pre = typeof gksiPreprocessVideo === 'function' ? gksiPreprocessVideo(pre) : pre;
+|            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(pre) : pre);
 |            return typeof gksiPostprocessAlerts === 'function' ? gksiPostprocessAlerts(html) : html;
 |    	   }
 	|		 function htmlToMd(text){
@@ -375,6 +585,7 @@
 |    </script>
 |    <script type=""text/javascript"">__JSОБОГАЩЕНИЕ__</script>
 |    <script type=""text/javascript"">window.__gksiTerms = __ТерминыJSON__;</script>
+|    <script type=""text/javascript"">window.__gksiLinks = __СсылкиJSON__;</script>
 |    <style>
 |    html {
 |		word-break: break-all;
@@ -395,6 +606,7 @@
 |";
 
 	ТекстHTML = СтрЗаменить(ТекстHTML, "__ТерминыJSON__", ТерминыJSON);
+	ТекстHTML = СтрЗаменить(ТекстHTML, "__СсылкиJSON__", СсылкиJSON);
 	ТекстHTML = СтрЗаменить(ТекстHTML, "__JSОБОГАЩЕНИЕ__", JSОбогащение);
 
 	Возврат ТекстHTML;
@@ -456,13 +668,28 @@
 //  Форма - ФормаКлиентскогоПриложения - форма.
 //  ГруппаЭлементовТекста - Произвольный - группа формы для размещения поля.
 //  ПутьКДанным - Строка - путь к данным поля.
+//  РазбиратьСсылки - Булево - Истина, если в предпросмотре нужно разбирать
+//                    вики-ссылки [[...]] на группы и шаги демонстрационных
+//                    сценариев. Для форм с текстом, не относящимся к сценариям
+//                    (например, справка по синтаксису), карта ссылок не строится.
 //  ВариантПодсветкиСинтаксиса - Строка - имя варианта подсветки синтаксиса.
 //  ТолькоПросмотр - Булево - признак режима только просмотра.
 //  ШиринаКартинок - Строка - CSS-ширина картинок.
-Процедура ВставитьПолеРедактированияТекстаНаФорму(Форма, ГруппаЭлементовТекста, ПутьКДанным,
+//
+Процедура ВставитьПолеРедактированияТекстаНаФорму(Форма, ГруппаЭлементовТекста, ПутьКДанным, РазбиратьСсылки,
 	ВариантПодсветкиСинтаксиса = "ones", ТолькоПросмотр=Ложь, ШиринаКартинок = "") Экспорт
 
 	ОписаниеТиповСтрока = Новый ОписаниеТипов("Строка");
+
+	// Карта вики-ссылок на группы и шаги сценария — для кликабельных [[...]]
+	// в предпросмотре Markdown. Ссылаться можно на любой узел любой инструкции
+	// (форма вставки ссылки предлагает узлы всех инструкций, а один и тот же шаг
+	// может входить в несколько инструкций), поэтому карта строится по всему
+	// справочнику. Ссылки, не разрешённые по карте, показываются как «битые».
+	КартаСсылок = Неопределено;
+	Если РазбиратьСсылки Тогда
+		КартаСсылок = ГКСИ_СсылкиСценариев.КартаСсылокСценариев();
+	КонецЕсли;
 
 	ПутьКДаннымБезЛишнего=ГКСИ_MarkdownКлиентСервер.ПолучитьПутьКДаннымБезЛишнего(ПутьКДанным);
 	ПравильныйПутьКДанным=ПутьКДанным;
@@ -569,7 +796,8 @@
 
 	Форма.ИзменитьРеквизиты(МассивДобавляемыхРеквизитов, );
 
-	Форма[ПутьКПолюПросмотра]=СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок, ТекущийЯзык().КодЯзыка);
+	Форма[ПутьКПолюПросмотра]=СформироватьТекстHTMLДляТекстаMarkdown(ВариантПодсветкиСинтаксиса, ШиринаКартинок, ТекущийЯзык().КодЯзыка,
+		ГКСИ_СсылкиСценариев.СсылкиJSONДляКлиента(КартаСсылок));
 	
 	//5.2. Поле формы просмтра
 	ОписаниеЭлемента=НовыйОписаниеРеквизитаЭлемента();
@@ -671,6 +899,12 @@
 		БиблиотекаКартинок.ГКСИ_Синтаксис, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);	
 
 	ДобавитьКомандуНаКоманднуюПанельРедактированияMarkdown("КомандаMDГлоссарий", "Термин глоссария",
+		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
+
+	ДобавитьКомандуНаКоманднуюПанельРедактированияMarkdown("КомандаMDСсылкаНаУзел", "Ссылка на группу или шаг",
+		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
+
+	ДобавитьКомандуНаКоманднуюПанельРедактированияMarkdown("КомандаMDВидео", "Видео",
 		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
 
 	// подменю для вставки

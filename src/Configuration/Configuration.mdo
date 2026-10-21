@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.1.3</version>
+  <version>1.0.8.1</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -42,6 +42,7 @@
   <subsystems>Subsystem.ГКСИ_РМ_РедакторMarkdown</subsystems>
   <subsystems>Subsystem.ГКСК_ВерсииОбъектов</subsystems>
   <styleItems>StyleItem.ШрифтЗаголовкаВсплывающейГруппы</styleItems>
+  <styleItems>StyleItem.ПоясняющийТекст</styleItems>
   <commonPictures>CommonPicture.ППГД_ОформлениеФлажки</commonPictures>
   <commonPictures>CommonPicture.ГКСИ_Markdown</commonPictures>
   <commonPictures>CommonPicture.ГКСИ_ВставитьКартинкуИзБуфера</commonPictures>
@@ -68,6 +69,8 @@
   <commonPictures>CommonPicture.ППГД_ЧекБокс</commonPictures>
   <commonPictures>CommonPicture.КоллекцияВидыСобытийЖурналаРегистрации</commonPictures>
   <commonPictures>CommonPicture.ППГД_ИконкаПодсистемы</commonPictures>
+  <commonPictures>CommonPicture.КоллекцияПиктограммКонструктораФормул</commonPictures>
+  <commonPictures>CommonPicture.РасчетПоФормуле</commonPictures>
   <roles>Role.ППГД_ОсновнаяРоль</roles>
   <roles>Role.ГКСИ_РедактированиеИнструкций</roles>
   <roles>Role.ГКСИ_ЧтениеИнструкций</roles>
@@ -112,6 +115,8 @@
   <commonModules>CommonModule.ГКСК_Версии</commonModules>
   <commonModules>CommonModule.ГКСК_ВерсииОбъектовСервер</commonModules>
   <commonModules>CommonModule.ГКСК_СопоставлениеОплатПоЗаявкамСервер</commonModules>
+  <commonModules>CommonModule.ГКСИ_СсылкиСценариев</commonModules>
+  <commonModules>CommonModule.ГКСИ_Видео</commonModules>
   <xDTOPackages>XDTOPackage.ППГД_ПраваДоступа</xDTOPackages>
   <functionalOptions>FunctionalOption.ОграничиватьДоступНаУровнеЗаписей</functionalOptions>
   <definedTypes>DefinedType.ЗначениеДоступа</definedTypes>
@@ -121,6 +126,7 @@
   <constants>Constant.ОграничиватьДоступНаУровнеЗаписей</constants>
   <commonForms>CommonForm.ГКСИ_MarkdownСинтаксис</commonForms>
   <commonForms>CommonForm.ГКСИ_ВыборТерминаГлоссария</commonForms>
+  <commonForms>CommonForm.КонструкторФормул</commonForms>
   <catalogs>Catalog.ГруппыДоступа</catalogs>
   <catalogs>Catalog.ГКСИ_ФайлыИнструкций</catalogs>
   <catalogs>Catalog.ГруппыПользователей</catalogs>

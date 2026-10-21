@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="92c173ea-e87e-49a1-8725-6bc60b04b4a7">
+  <name>ГКСИ_Видео</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Видео</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>
