@@ -64,6 +64,7 @@
       <dataPath xsi:type="form:DataPath">
         <segments>ШиринаКартинокЧисло</segments>
       </dataPath>
+      <titleLocation>None</titleLocation>
       <toolTip>
         <key>ru</key>
         <value>Размер картинок и видео в описаниях альбома</value>
@@ -115,6 +116,7 @@
       <dataPath xsi:type="form:DataPath">
         <segments>ШиринаКартинокЕдиница</segments>
       </dataPath>
+      <titleLocation>None</titleLocation>
       <toolTip>
         <key>ru</key>
         <value>Единица измерения размера: px, %, em, rem, vw, vh</value>
@@ -237,26 +239,6 @@
       <types>String</types>
       <stringQualifiers>
         <length>4</length>
-      </stringQualifiers>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
-    <name>ШиринаКартинокДиапазон</name>
-    <title>
-      <key>ru</key>
-      <value>Диапазон слайдера</value>
-    </title>
-    <id>1000005</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers>
-        <length>30</length>
       </stringQualifiers>
     </valueType>
     <view>
