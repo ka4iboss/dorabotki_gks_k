@@ -284,7 +284,7 @@
 	СтрокиJS.Добавить("      var url = gksiNormalizeVideoUrl(p);");
 	СтрокиJS.Добавить("      return '<div class=' + Q + 'gksi-video' + Q + '>'");
 	СтрокиJS.Добавить("        + '<div class=' + Q + 'gksi-video-frame' + Q");
-	СтрокиJS.Добавить("        + ' style=' + Q + 'position:relative;display:inline-block;width:100%;max-width:100%;line-height:0;' + Q + '>'");
+	СтрокиJS.Добавить("        + ' style=' + Q + 'position:relative;display:inline-block;width:100%;line-height:0;' + Q + '>'");
 	СтрокиJS.Добавить("        + '<video controls=' + Q + 'controls' + Q + ' preload=' + Q + 'metadata' + Q");
 	СтрокиJS.Добавить("        + ' style=' + Q + 'display:block;width:100%;height:auto;max-width:100%;' + Q + '>'");
 	СтрокиJS.Добавить("        + '<source src=' + Q + gksiVideoEsc(url) + Q + ' />'");
@@ -299,9 +299,6 @@
 	СтрокиJS.Добавить("    });");
 	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][video] preprocess error:', _e.message); } catch(_){} return text; }");
 	СтрокиJS.Добавить("}");
-	// Изменение размера плеера мышью: тот же код, что добавляется в сохранённый
-	// HTML описания (ГКСИ_Видео.ДобавитьСкриптИзмененияРазмера).
-	СтрокиJS.Добавить(ГКСИ_Видео.СкриптИзмененияРазмераВидео());
 	JSОбогащение = СтрСоединить(СтрокиJS, Символы.ПС);
 	СтильCSS=
 "
@@ -449,7 +446,8 @@
 	"|    <script>
 	|        function setImageMaxWidth(width){
 	|            var styleEl = document.getElementById('rm-img-style');
-	|            var css = '.wiki img, img { max-width: ' + width + '; height: auto; }';
+	|            var css = '.wiki img, img { max-width: ' + width + '; height: auto; }'
+	|                + ' .gksi-video-frame { max-width: ' + width + '; min-width: ' + width + '; }';
 	|            if (!styleEl){
 	|                styleEl = document.createElement('style');
 	|                styleEl.id = 'rm-img-style';
@@ -582,7 +580,6 @@
 |				hljs.highlightBlock(elems[i]);
 |			}
 |			if (typeof enrichTerms === 'function') enrichTerms();
-|			if (typeof gksiVideoInitResize === 'function') gksiVideoInitResize();
 |        }
 |
 |    </script>

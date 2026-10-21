@@ -342,7 +342,8 @@
 		Возврат;
 	КонецЕсли;
 
-	НовыйCSS = "img { max-width: " + ШиринаCSS + " !important; max-height: " + ШиринаCSS + " !important; }";
+	НовыйCSS = "img { max-width: " + ШиринаCSS + " !important; max-height: " + ШиринаCSS + " !important; }"
+		+ " .gksi-video-frame { max-width: " + ШиринаCSS + " !important; min-width: " + ШиринаCSS + " !important; }";
 
 	Попытка
 		HTMLПоле = Элементы.ТекстHTML;

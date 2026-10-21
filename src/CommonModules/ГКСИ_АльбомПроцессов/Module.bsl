@@ -1313,7 +1313,9 @@
 		ШиринаКартинок = "100%";
 	КонецЕсли;
 	СтильКартинок = "img { max-width: " + ШиринаКартинок
-		+ " !important; max-height: " + ШиринаКартинок + " !important; }";
+		+ " !important; max-height: " + ШиринаКартинок + " !important; }"
+		+ " .gksi-video-frame { max-width: " + ШиринаКартинок
+		+ " !important; min-width: " + ШиринаКартинок + " !important; }";
 
 	Стили =
 		"<style>
