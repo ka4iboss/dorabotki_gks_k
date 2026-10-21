@@ -9,98 +9,6 @@
     <value>Process album</value>
   </title>
   <items xsi:type="form:FormField">
-    <name>ШиринаКартинокЧисло</name>
-    <id>7</id>
-    <title>
-      <key>ru</key>
-      <value>Размер картинок и видео</value>
-    </title>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>ШиринаКартинокЧисло</segments>
-    </dataPath>
-    <extendedTooltip>
-      <name>ШиринаКартинокЧислоРасширеннаяПодсказка</name>
-      <id>9</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
-      <name>ШиринаКартинокЧислоКонтекстноеМеню</name>
-      <id>8</id>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>TrackBarField</type>
-    <editMode>Enter</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:TrackBarFieldExtInfo">
-      <width>32</width>
-      <autoMaxWidth>true</autoMaxWidth>
-      <height>2</height>
-      <autoMaxHeight>true</autoMaxHeight>
-      <horizontalStretch>true</horizontalStretch>
-      <maxValue>100</maxValue>
-      <step>1</step>
-      <largeStep>10</largeStep>
-      <markingStep>5</markingStep>
-      <markingAppearance>BottomRight</markingAppearance>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormField">
-    <name>ШиринаКартинокЕдиница</name>
-    <id>10</id>
-    <title>
-      <key>ru</key>
-      <value>Единица</value>
-    </title>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>ШиринаКартинокЕдиница</segments>
-    </dataPath>
-    <extendedTooltip>
-      <name>ШиринаКартинокЕдиницаРасширеннаяПодсказка</name>
-      <id>12</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
-      <name>ШиринаКартинокЕдиницаКонтекстноеМеню</name>
-      <id>11</id>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>InputField</type>
-    <editMode>Enter</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:InputFieldExtInfo">
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <wrap>true</wrap>
-      <chooseType>true</chooseType>
-      <typeDomainEnabled>true</typeDomainEnabled>
-      <textEdit>true</textEdit>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormField">
     <name>ТекстHTML</name>
     <id>1</id>
     <visible>true</visible>
@@ -138,6 +46,134 @@
       <verticalStretch>true</verticalStretch>
     </extInfo>
   </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаРазмера</name>
+    <id>17</id>
+    <items xsi:type="form:FormField">
+      <name>ШиринаКартинокЧисло</name>
+      <id>7</id>
+      <title>
+        <key>ru</key>
+        <value>Размер картинок и видео</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ШиринаКартинокЧисло</segments>
+      </dataPath>
+      <toolTip>
+        <key>ru</key>
+        <value>Размер картинок и видео в описаниях альбома</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ШиринаКартинокЧислоРасширеннаяПодсказка</name>
+        <id>9</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ШиринаКартинокЧислоКонтекстноеМеню</name>
+        <id>8</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>TrackBarField</type>
+      <editMode>Enter</editMode>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:TrackBarFieldExtInfo">
+        <width>32</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>2</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <maxValue>100</maxValue>
+        <step>1</step>
+        <largeStep>10</largeStep>
+        <markingStep>5</markingStep>
+        <markingAppearance>BottomRight</markingAppearance>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ШиринаКартинокЕдиница</name>
+      <id>10</id>
+      <title>
+        <key>ru</key>
+        <value>Единица</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ШиринаКартинокЕдиница</segments>
+      </dataPath>
+      <toolTip>
+        <key>ru</key>
+        <value>Единица измерения размера: px, %, em, rem, vw, vh</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ШиринаКартинокЕдиницаРасширеннаяПодсказка</name>
+        <id>12</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ШиринаКартинокЕдиницаКонтекстноеМеню</name>
+        <id>11</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>ГруппаРазмераРасширеннаяПодсказка</name>
+      <id>18</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
+      <behavior>Auto</behavior>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
@@ -149,7 +185,6 @@
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
-  <showTitle>true</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>ГруппыДляАльбомаАдрес</name>
