@@ -233,17 +233,34 @@
 	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][links] preprocess error:', _e.message); } catch(_){} return text; }");
 	СтрокиJS.Добавить("}");
 	// Видео !video(<путь>) -> HTML5-плеер с запасной ссылкой на открытие
-	// внешним проигрывателем (data-gksi-video). Нормализация пути повторяет
-	// серверную функцию ГКСИ_Видео.НормализоватьПутьКВидео.
+	// внешним проигрывателем (data-gksi-video). Нормализация пути и снятие
+	// обрамляющих кавычек повторяют серверные функции модуля ГКСИ_Видео.
 	СтрокиJS.Добавить("function gksiTrimVideo(s){");
 	СтрокиJS.Добавить("  var t = String(s);");
 	СтрокиJS.Добавить("  while (t.length > 0 && t.charCodeAt(0) <= 32) t = t.substring(1);");
 	СтрокиJS.Добавить("  while (t.length > 0 && t.charCodeAt(t.length - 1) <= 32) t = t.substring(0, t.length - 1);");
 	СтрокиJS.Добавить("  return t;");
 	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiUnquoteVideo(s){");
+	СтрокиJS.Добавить("  var Q = String.fromCharCode(34);");
+	СтрокиJS.Добавить("  var SQ = String.fromCharCode(39);");
+	СтрокиJS.Добавить("  var LQ = String.fromCharCode(171), RQ = String.fromCharCode(187);");
+	СтрокиJS.Добавить("  var LD = String.fromCharCode(8220), RD = String.fromCharCode(8221);");
+	СтрокиJS.Добавить("  var t = gksiTrimVideo(String(s));");
+	СтрокиJS.Добавить("  var go = true;");
+	СтрокиJS.Добавить("  while (go && t.length >= 2) {");
+	СтрокиJS.Добавить("    go = false;");
+	СтрокиJS.Добавить("    var a = t.charAt(0), b = t.charAt(t.length - 1);");
+	СтрокиJS.Добавить("    if ((a === Q && b === Q) || (a === SQ && b === SQ) || (a === LQ && b === RQ) || (a === LD && b === RD)) {");
+	СтрокиJS.Добавить("      t = gksiTrimVideo(t.substring(1, t.length - 1));");
+	СтрокиJS.Добавить("      go = true;");
+	СтрокиJS.Добавить("    }");
+	СтрокиJS.Добавить("  }");
+	СтрокиJS.Добавить("  return t;");
+	СтрокиJS.Добавить("}");
 	СтрокиJS.Добавить("function gksiNormalizeVideoUrl(url){");
 	СтрокиJS.Добавить("  var BS = String.fromCharCode(92);");
-	СтрокиJS.Добавить("  var u = gksiTrimVideo(url).split(BS).join('/');");
+	СтрокиJS.Добавить("  var u = gksiUnquoteVideo(url).split(BS).join('/');");
 	СтрокиJS.Добавить("  var lc = u.toLowerCase();");
 	СтрокиJS.Добавить("  if (lc.indexOf('http://') === 0 || lc.indexOf('https://') === 0 || lc.indexOf('file://') === 0) return u;");
 	СтрокиJS.Добавить("  if (u.indexOf('//') === 0) return 'file:' + u;");
@@ -262,7 +279,7 @@
 	СтрокиJS.Добавить("    var CR = String.fromCharCode(13);");
 	СтрокиJS.Добавить("    var re = new RegExp('!video[(]([^)' + NL + CR + ']*)[)]', 'g');");
 	СтрокиJS.Добавить("    return String(text).replace(re, function(m, path){");
-	СтрокиJS.Добавить("      var p = gksiTrimVideo(path);");
+	СтрокиJS.Добавить("      var p = gksiUnquoteVideo(path);");
 	СтрокиJS.Добавить("      if (p === '') return m;");
 	СтрокиJS.Добавить("      var url = gksiNormalizeVideoUrl(p);");
 	СтрокиJS.Добавить("      return '<div class=' + Q + 'gksi-video' + Q + '>'");
