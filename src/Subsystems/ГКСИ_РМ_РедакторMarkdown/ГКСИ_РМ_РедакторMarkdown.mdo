@@ -42,4 +42,5 @@
   <content>CommonTemplate.ГКСИ_showdown</content>
   <content>CommonPicture.ГКСИ_Синтаксис</content>
   <content>CommonModule.ГКСИ_СсылкиСценариев</content>
+  <content>CommonModule.ГКСИ_Видео</content>
 </mdclass:Subsystem>

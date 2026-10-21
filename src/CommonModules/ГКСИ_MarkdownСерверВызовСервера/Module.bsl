@@ -232,6 +232,53 @@
 	СтрокиJS.Добавить("    return out;");
 	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][links] preprocess error:', _e.message); } catch(_){} return text; }");
 	СтрокиJS.Добавить("}");
+	// Видео !video(<путь>) -> HTML5-плеер с запасной ссылкой на открытие
+	// внешним проигрывателем (data-gksi-video). Нормализация пути повторяет
+	// серверную функцию ГКСИ_Видео.НормализоватьПутьКВидео.
+	СтрокиJS.Добавить("function gksiTrimVideo(s){");
+	СтрокиJS.Добавить("  var t = String(s);");
+	СтрокиJS.Добавить("  while (t.length > 0 && t.charCodeAt(0) <= 32) t = t.substring(1);");
+	СтрокиJS.Добавить("  while (t.length > 0 && t.charCodeAt(t.length - 1) <= 32) t = t.substring(0, t.length - 1);");
+	СтрокиJS.Добавить("  return t;");
+	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiNormalizeVideoUrl(url){");
+	СтрокиJS.Добавить("  var BS = String.fromCharCode(92);");
+	СтрокиJS.Добавить("  var u = gksiTrimVideo(url).split(BS).join('/');");
+	СтрокиJS.Добавить("  var lc = u.toLowerCase();");
+	СтрокиJS.Добавить("  if (lc.indexOf('http://') === 0 || lc.indexOf('https://') === 0 || lc.indexOf('file://') === 0) return u;");
+	СтрокиJS.Добавить("  if (u.indexOf('//') === 0) return 'file:' + u;");
+	СтрокиJS.Добавить("  if (u.charAt(0) === '/') return 'file://' + u;");
+	СтрокиJS.Добавить("  return 'file:///' + u;");
+	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiVideoEsc(s){");
+	СтрокиJS.Добавить("  var Q = String.fromCharCode(34);");
+	СтрокиJS.Добавить("  return String(s).split('&').join('&amp;').split(Q).join('&quot;').split('<').join('&lt;').split('>').join('&gt;');");
+	СтрокиJS.Добавить("}");
+	СтрокиJS.Добавить("function gksiPreprocessVideo(text){");
+	СтрокиJS.Добавить("  try {");
+	СтрокиJS.Добавить("    if (String(text).indexOf('!video(') < 0) return text;");
+	СтрокиJS.Добавить("    var Q = String.fromCharCode(34);");
+	СтрокиJS.Добавить("    var NL = String.fromCharCode(10);");
+	СтрокиJS.Добавить("    var CR = String.fromCharCode(13);");
+	СтрокиJS.Добавить("    var re = new RegExp('!video[(]([^)' + NL + CR + ']*)[)]', 'g');");
+	СтрокиJS.Добавить("    return String(text).replace(re, function(m, path){");
+	СтрокиJS.Добавить("      var p = gksiTrimVideo(path);");
+	СтрокиJS.Добавить("      if (p === '') return m;");
+	СтрокиJS.Добавить("      var url = gksiNormalizeVideoUrl(p);");
+	СтрокиJS.Добавить("      return '<div class=' + Q + 'gksi-video' + Q + '>'");
+	СтрокиJS.Добавить("        + '<video controls=' + Q + 'controls' + Q + ' preload=' + Q + 'metadata' + Q");
+	СтрокиJS.Добавить("        + ' style=' + Q + 'max-width:100%;height:auto;' + Q + '>'");
+	СтрокиJS.Добавить("        + '<source src=' + Q + gksiVideoEsc(url) + Q + ' />'");
+	СтрокиJS.Добавить("        + 'Ваш браузер не поддерживает воспроизведение видео.'");
+	СтрокиJS.Добавить("        + '</video>'");
+	СтрокиJS.Добавить("        + '<div class=' + Q + 'gksi-video-caption' + Q + '>'");
+	СтрокиJS.Добавить("        + '<a class=' + Q + 'gksi-video-open' + Q + ' href=' + Q + '#' + Q");
+	СтрокиJS.Добавить("        + ' data-gksi-video=' + Q + gksiVideoEsc(p) + Q + '>'");
+	СтрокиJS.Добавить("        + 'Открыть во внешнем плеере</a></div>'");
+	СтрокиJS.Добавить("        + '</div>';");
+	СтрокиJS.Добавить("    });");
+	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][video] preprocess error:', _e.message); } catch(_){} return text; }");
+	СтрокиJS.Добавить("}");
 	JSОбогащение = СтрСоединить(СтрокиJS, Символы.ПС);
 	СтильCSS=
 "
@@ -258,6 +305,27 @@
 |    color: #b73535;
 |    border-bottom: 1px dashed #b73535;
 |    cursor: help;
+|}
+|/***** Видео !video(<путь>) *****/
+|.gksi-video {
+|    margin: 8px 0;
+|}
+|.gksi-video video {
+|    max-width: 100%;
+|    height: auto;
+|}
+|.gksi-video-caption {
+|    font-size: 0.85em;
+|    margin-top: 4px;
+|}
+|.gksi-video-open {
+|    color: #2f6fb5;
+|    text-decoration: none;
+|    border-bottom: 1px solid rgba(47, 111, 181, 0.4);
+|    cursor: pointer;
+|}
+|.gksi-video-open:hover {
+|    background-color: #eef5fd;
 |}
 |h2, .wiki h1 {font-size: 20px;}
 	|h3, .wiki h2 {font-size: 16px;}
@@ -455,6 +523,7 @@
 |            newdiv.id = key;
 |
 |            var pre = typeof gksiPreprocessLinks === 'function' ? gksiPreprocessLinks(text) : text;
+|            pre = typeof gksiPreprocessVideo === 'function' ? gksiPreprocessVideo(pre) : pre;
 |            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(pre) : pre);
 |            html = typeof gksiPostprocessAlerts === 'function' ? gksiPostprocessAlerts(html) : html;
 |            newdiv.innerHTML = html;
@@ -464,6 +533,7 @@
 |
 |		 function mdToHtml(text){
 |            var pre = typeof gksiPreprocessLinks === 'function' ? gksiPreprocessLinks(text) : text;
+|            pre = typeof gksiPreprocessVideo === 'function' ? gksiPreprocessVideo(pre) : pre;
 |            var html = converter.makeHtml(typeof gksiPreprocessAlerts === 'function' ? gksiPreprocessAlerts(pre) : pre);
 |            return typeof gksiPostprocessAlerts === 'function' ? gksiPostprocessAlerts(html) : html;
 |    	   }
@@ -811,6 +881,9 @@
 		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
 
 	ДобавитьКомандуНаКоманднуюПанельРедактированияMarkdown("КомандаMDСсылкаНаУзел", "Ссылка на группу или шаг",
+		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
+
+	ДобавитьКомандуНаКоманднуюПанельРедактированияMarkdown("КомандаMDВидео", "Видео",
 		БиблиотекаКартинок.ГКСИ_Ссылка, Форма, КоманднаяПанель, ПутьКДаннымРедактирования);
 
 	// подменю для вставки
