@@ -12,6 +12,12 @@
 //
 // Путь в разметке может быть обрамлён кавычками (путь копируют из проводника
 // Windows) - обрамляющие кавычки снимаются.
+//
+// Размер плеера можно менять мышью, потянув за ручку на стороне или углу: ручки
+// создаёт скрипт из СкриптИзмененияРазмераВидео(). В предпросмотре редактора скрипт
+// приходит из общего блока скриптов, в сохранённый HTML описания его добавляет
+// ДобавитьСкриптИзмененияРазмера - там CSS проекта нет, поэтому скрипт задаёт
+// ручкам инлайновые стили. Без скрипта плеер просто занимает всю ширину описания.
 
 #Область ПрограммныйИнтерфейс
 
@@ -21,39 +27,134 @@
 //  Текст - Строка - текст Markdown, возможно содержащий разметку !video(...).
 //
 // Возвращаемое значение:
-//  Строка - текст, в котором разметка видео заменена на HTML5-плеер.
+//  Строка - текст, в котором разметка видео заменена на HTML5-плеер,
+//           а при наличии плеера добавлен скрипт изменения размера.
 //
 Функция РазметкуВидеоВHTML(Текст) Экспорт
 
 	Маркер = "!video(";
-	Если ПустаяСтрока(Текст) ИЛИ СтрНайти(Текст, Маркер) = 0 Тогда
-		Возврат Текст;
+	Результат = Текст;
+
+	Если НЕ ПустаяСтрока(Текст) И СтрНайти(Текст, Маркер) > 0 Тогда
+
+		Вхождения = СтрНайтиВсеПоРегулярномуВыражению(Результат, "!video\(([^)\r\n]*)\)");
+
+		// Заменяем с конца, чтобы позиции предыдущих вхождений не сдвигались.
+		Для Индекс = Вхождения.Количество() - 1 По 0 Цикл
+
+			Вхождение = Вхождения[Индекс];
+			Путь = Сред(Вхождение.Значение,
+				СтрДлина(Маркер) + 1,
+				СтрДлина(Вхождение.Значение) - СтрДлина(Маркер) - 1);
+			Путь = УбратьОбрамляющиеКавычки(Путь);
+
+			Если ПустаяСтрока(Путь) Тогда
+				Продолжить;
+			КонецЕсли;
+
+			Замена = ШаблонПлеера(НормализоватьПутьКВидео(Путь), Путь);
+			Результат = Лев(Результат, Вхождение.НачальнаяПозиция - 1)
+				+ Замена
+				+ Сред(Результат, Вхождение.НачальнаяПозиция + Вхождение.Длина);
+
+		КонецЦикла;
+
 	КонецЕсли;
 
-	Результат = Текст;
-	Вхождения = СтрНайтиВсеПоРегулярномуВыражению(Результат, "!video\(([^)\r\n]*)\)");
+	Возврат ДобавитьСкриптИзмененияРазмера(Результат);
 
-	// Заменяем с конца, чтобы позиции предыдущих вхождений не сдвигались.
-	Для Индекс = Вхождения.Количество() - 1 По 0 Цикл
+КонецФункции
 
-		Вхождение = Вхождения[Индекс];
-		Путь = Сред(Вхождение.Значение,
-			СтрДлина(Маркер) + 1,
-			СтрДлина(Вхождение.Значение) - СтрДлина(Маркер) - 1);
-		Путь = УбратьОбрамляющиеКавычки(Путь);
+// Возвращает код JavaScript, делающий плеер изменяемым по размеру мышью.
+//
+// Скрипт не хранит состояние между обработчиками (требование ПолеHTMLДокумента),
+// сам создаёт ручки по сторонам и углам плеера и задаёт им инлайновые стили -
+// поэтому не зависит от CSS документа. Код возвращается одной строкой: сохранённый
+// HTML описания разбирается построчно, а строка со скриптом должна попасть в
+// разметку целиком.
+//
+// Возвращаемое значение:
+//  Строка - код JavaScript без обрамляющих тегов script.
+//
+Функция СкриптИзмененияРазмераВидео() Экспорт
 
-		Если ПустаяСтрока(Путь) Тогда
-			Продолжить;
-		КонецЕсли;
+	Код =
+	"function gksiVideoInitResize(){"
+	+ "try{"
+	+ "var b=document.querySelectorAll('.gksi-video');"
+	+ "if(!b){return;}"
+	+ "for(var i=0;i<b.length;i++){gksiVideoMakeResizable(b[i]);}"
+	+ "}catch(e){try{console.log('[GKSI][video] resize init error:',e.message);}catch(x){}}"
+	+ "}"
+	+ "function gksiVideoMakeResizable(box){"
+	+ "if(!box||box.getAttribute('data-gksi-resize')==='1'){return;}"
+	+ "var frame=box.querySelector('.gksi-video-frame');"
+	+ "if(!frame){return;}"
+	+ "box.setAttribute('data-gksi-resize','1');"
+	+ "var dirs=['nw','n','ne','e','se','s','sw','w'];"
+	+ "for(var i=0;i<dirs.length;i++){"
+	+ "var h=document.createElement('span');"
+	+ "h.setAttribute('data-dir',dirs[i]);"
+	+ "gksiVideoStyleHandle(h,dirs[i]);"
+	+ "h.onmousedown=function(ev){return gksiVideoStartResize(ev,this,frame);};"
+	+ "frame.appendChild(h);"
+	+ "}"
+	+ "}"
+	+ "function gksiVideoCursor(dir){"
+	+ "var c={nw:'nw-resize',n:'n-resize',ne:'ne-resize',e:'e-resize',se:'se-resize',"
+	+ "s:'s-resize',sw:'sw-resize',w:'w-resize'};"
+	+ "return c[dir]||'default';"
+	+ "}"
+	+ "function gksiVideoStyleHandle(h,dir){"
+	+ "var s=h.style;"
+	+ "s.position='absolute';s.width='10px';s.height='10px';"
+	+ "s.background='rgba(47,111,181,0.5)';s.border='1px solid #ffffff';"
+	+ "s.opacity='0.35';s.zIndex='5';"
+	+ "if(dir.indexOf('n')>=0){s.top='0';}else if(dir.indexOf('s')>=0){s.bottom='0';}"
+	+ "else{s.top='50%';s.marginTop='-5px';}"
+	+ "if(dir.indexOf('w')>=0){s.left='0';}else if(dir.indexOf('e')>=0){s.right='0';}"
+	+ "else{s.left='50%';s.marginLeft='-5px';}"
+	+ "s.cursor=gksiVideoCursor(dir);"
+	+ "h.onmouseover=function(){this.style.opacity='1';};"
+	+ "h.onmouseout=function(){this.style.opacity='0.35';};"
+	+ "}"
+	+ "function gksiVideoStartResize(ev,handle,frame){"
+	+ "var e=ev||window.event;"
+	+ "if(!e||!handle||!frame){return;}"
+	+ "var dir=handle.getAttribute('data-dir')||'';"
+	+ "var startW=frame.offsetWidth;"
+	+ "var startH=frame.offsetHeight;"
+	+ "if(!startW||!startH){return;}"
+	+ "var ratio=startW/startH;"
+	+ "var startX=e.clientX;var startY=e.clientY;"
+	+ "frame.style.width=startW+'px';frame.style.maxWidth='none';"
+	+ "document.body.style.cursor=gksiVideoCursor(dir);"
+	+ "function onMove(mv){"
+	+ "var dx=mv.clientX-startX;var dy=mv.clientY-startY;"
+	+ "var d=0;var axes=0;"
+	+ "if(dir.indexOf('e')>=0){d=d+dx;axes=axes+1;}"
+	+ "if(dir.indexOf('w')>=0){d=d-dx;axes=axes+1;}"
+	+ "if(dir.indexOf('s')>=0){d=d+dy*ratio;axes=axes+1;}"
+	+ "if(dir.indexOf('n')>=0){d=d-dy*ratio;axes=axes+1;}"
+	+ "if(axes>1){d=d/axes;}"
+	+ "var w=Math.round(startW+d);"
+	+ "if(w<160){w=160;}if(w>4000){w=4000;}"
+	+ "frame.style.width=w+'px';"
+	+ "if(mv.preventDefault){mv.preventDefault();}"
+	+ "return false;"
+	+ "}"
+	+ "function onUp(){"
+	+ "document.removeEventListener('mousemove',onMove,true);"
+	+ "document.removeEventListener('mouseup',onUp,true);"
+	+ "document.body.style.cursor='';"
+	+ "}"
+	+ "document.addEventListener('mousemove',onMove,true);"
+	+ "document.addEventListener('mouseup',onUp,true);"
+	+ "if(e.preventDefault){e.preventDefault();}"
+	+ "return false;"
+	+ "}";
 
-		Замена = ШаблонПлеера(НормализоватьПутьКВидео(Путь), Путь);
-		Результат = Лев(Результат, Вхождение.НачальнаяПозиция - 1)
-			+ Замена
-			+ Сред(Результат, Вхождение.НачальнаяПозиция + Вхождение.Длина);
-
-	КонецЦикла;
-
-	Возврат Результат;
+	Возврат СтрЗаменить(Код, Символы.ПС, "");
 
 КонецФункции
 
@@ -101,6 +202,10 @@
 
 // Формирует HTML-фрагмент встроенного плеера с запасной ссылкой.
 //
+// Видео обёрнуто в div.gksi-video-frame - по нему скрипт изменения размера
+// считает текущую ширину плеера. Стили заданы инлайново: в сохранённом HTML
+// описания CSS проекта нет, а плеер должен занимать всю ширину описания и там.
+//
 // Параметры:
 //  URL - Строка - нормализованный URL видео для атрибута src.
 //  Оригинал - Строка - исходный путь, как его ввёл пользователь.
@@ -112,11 +217,14 @@
 
 	Шаблон =
 	"<div class=""gksi-video"">" + Символы.ПС
+	+ "<div class=""gksi-video-frame"""
+	+ " style=""position:relative;display:inline-block;width:100%;max-width:100%;line-height:0;"">"
 	+ "<video controls=""controls"" preload=""metadata"""
-	+ " style=""max-width:100%;height:auto;"">"
+	+ " style=""display:block;width:100%;height:auto;max-width:100%;"">"
 	+ "<source src=""" + ЭкранироватьЗначениеАтрибута(URL) + """ />"
 	+ "Ваш браузер не поддерживает воспроизведение видео."
-	+ "</video>" + Символы.ПС
+	+ "</video>"
+	+ "</div>" + Символы.ПС
 	+ "<div class=""gksi-video-caption"">"
 	+ "<a class=""gksi-video-open"" href=""#"""
 	+ " data-gksi-video=""" + ЭкранироватьЗначениеАтрибута(Оригинал) + """>"
@@ -126,6 +234,31 @@
 
 	Возврат Шаблон;
 
+КонецФункции
+
+// Добавляет в HTML описания скрипт изменения размера плеера мышью.
+//
+// Скрипт нужен в сохранённом HTML (типовые поля «Текст сценария» и альбом
+// процессов): своего блока скриптов там нет, поэтому он добавляется в конец
+// разметки. Добавляется один раз и только если в тексте есть плеер.
+//
+// Параметры:
+//  Текст - Строка - HTML описания.
+//
+// Возвращаемое значение:
+//  Строка - HTML описания со скриптом изменения размера.
+//
+Функция ДобавитьСкриптИзмененияРазмера(Текст)
+	
+	Если ПустаяСтрока(Текст)
+		ИЛИ СтрНайти(Текст, "gksi-video") = 0
+		ИЛИ СтрНайти(Текст, "gksiVideoInitResize") > 0 Тогда
+		Возврат Текст;
+	КонецЕсли;
+	
+	Возврат Текст + Символы.ПС
+		+ "<script type=""text/javascript"">" + СкриптИзмененияРазмераВидео() + "</script>";
+	
 КонецФункции
 
 // Снимает обрамляющие кавычки с пути и обрезает пробелы по краям.
