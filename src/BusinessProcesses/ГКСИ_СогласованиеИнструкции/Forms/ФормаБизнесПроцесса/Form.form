@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form" xmlns:schema="http://g5.1c.ru/v8/dt/data-composition-system/schema">
   <items xsi:type="form:FormField">
     <name>Состояние</name>
     <id>168</id>
@@ -30,18 +30,17 @@
       <id>169</id>
       <autoFill>true</autoFill>
     </contextMenu>
-    <type>InputField</type>
+    <type>LabelField</type>
     <editMode>Enter</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:InputFieldExtInfo">
+    <extInfo xsi:type="form:LabelFieldExtInfo">
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
-      <wrap>true</wrap>
-      <chooseType>true</chooseType>
-      <typeDomainEnabled>true</typeDomainEnabled>
-      <textEdit>true</textEdit>
+      <border xsi:type="core:BorderDef">
+        <width>1</width>
+      </border>
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
@@ -824,7 +823,6 @@
           <name>НачальникиКоманднаяПанель</name>
           <id>49</id>
           <horizontalAlign>Left</horizontalAlign>
-          <autoFill>true</autoFill>
         </autoCommandBar>
         <searchStringAddition>
           <name>НачальникиСтрокаПоиска</name>
@@ -912,7 +910,6 @@
           <id>48</id>
           <autoFill>true</autoFill>
         </contextMenu>
-        <changeRowSet>true</changeRowSet>
         <changeRowOrder>true</changeRowOrder>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -925,7 +922,6 @@
         <verticalScrollBar>AutoUse</verticalScrollBar>
         <horizontalLines>true</horizontalLines>
         <verticalLines>true</verticalLines>
-        <autoInsertNewRow>true</autoInsertNewRow>
         <searchOnInput>Auto</searchOnInput>
         <initialListView>Auto</initialListView>
         <horizontalStretch>true</horizontalStretch>
@@ -1179,7 +1175,6 @@
           <name>ПодчинённыеКоманднаяПанель</name>
           <id>79</id>
           <horizontalAlign>Left</horizontalAlign>
-          <autoFill>true</autoFill>
         </autoCommandBar>
         <searchStringAddition>
           <name>ПодчинённыеСтрокаПоиска</name>
@@ -1267,7 +1262,6 @@
           <id>78</id>
           <autoFill>true</autoFill>
         </contextMenu>
-        <changeRowSet>true</changeRowSet>
         <changeRowOrder>true</changeRowOrder>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -1280,7 +1274,6 @@
         <verticalScrollBar>AutoUse</verticalScrollBar>
         <horizontalLines>true</horizontalLines>
         <verticalLines>true</verticalLines>
-        <autoInsertNewRow>true</autoInsertNewRow>
         <searchOnInput>Auto</searchOnInput>
         <initialListView>Auto</initialListView>
         <horizontalStretch>true</horizontalStretch>
@@ -1320,7 +1313,7 @@
       <id>105</id>
       <items xsi:type="form:Table">
         <name>ХодСогласования</name>
-        <id>109</id>
+        <id>197</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -1331,19 +1324,19 @@
         </dataPath>
         <titleLocation>None</titleLocation>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияХодСогласования</name>
-          <id>122</id>
+          <name>ХодСогласованияДатаСогласования</name>
+          <id>210</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.КолонкаЭтап</segments>
+            <segments>ХодСогласования.ДатаСогласования</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияХодСогласованияРасширеннаяПодсказка</name>
-            <id>124</id>
+            <name>ХодСогласованияДатаСогласованияРасширеннаяПодсказка</name>
+            <id>212</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1352,38 +1345,34 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияХодСогласованияКонтекстноеМеню</name>
-            <id>123</id>
+            <name>ХодСогласованияДатаСогласованияКонтекстноеМеню</name>
+            <id>211</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияХодСогласования1</name>
-          <id>125</id>
+          <name>ХодСогласованияКомментарий</name>
+          <id>213</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.КолонкаУчастник</segments>
+            <segments>ХодСогласования.Комментарий</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияХодСогласования1РасширеннаяПодсказка</name>
-            <id>127</id>
+            <name>ХодСогласованияКомментарийРасширеннаяПодсказка</name>
+            <id>215</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1392,38 +1381,34 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияХодСогласования1КонтекстноеМеню</name>
-            <id>126</id>
+            <name>ХодСогласованияКомментарийКонтекстноеМеню</name>
+            <id>214</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияХодСогласования2</name>
-          <id>128</id>
+          <name>ХодСогласованияСотрудник</name>
+          <id>216</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.КолонкаРезультат</segments>
+            <segments>ХодСогласования.Сотрудник</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияХодСогласования2РасширеннаяПодсказка</name>
-            <id>130</id>
+            <name>ХодСогласованияСотрудникРасширеннаяПодсказка</name>
+            <id>218</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1432,38 +1417,34 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияХодСогласования2КонтекстноеМеню</name>
-            <id>129</id>
+            <name>ХодСогласованияСотрудникКонтекстноеМеню</name>
+            <id>217</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияХодСогласования3</name>
-          <id>131</id>
+          <name>ХодСогласованияНомерВерсии</name>
+          <id>219</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.КолонкаКомментарий</segments>
+            <segments>ХодСогласования.НомерВерсии</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияХодСогласования3РасширеннаяПодсказка</name>
-            <id>133</id>
+            <name>ХодСогласованияНомерВерсииРасширеннаяПодсказка</name>
+            <id>221</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1472,38 +1453,34 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияХодСогласования3КонтекстноеМеню</name>
-            <id>132</id>
+            <name>ХодСогласованияНомерВерсииКонтекстноеМеню</name>
+            <id>220</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияХодСогласования4</name>
-          <id>134</id>
+          <name>ХодСогласованияРезультатСогласования</name>
+          <id>222</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.КолонкаДатаСогласования</segments>
+            <segments>ХодСогласования.РезультатСогласования</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияХодСогласования4РасширеннаяПодсказка</name>
-            <id>136</id>
+            <name>ХодСогласованияРезультатСогласованияРасширеннаяПодсказка</name>
+            <id>224</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1512,38 +1489,34 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияХодСогласования4КонтекстноеМеню</name>
-            <id>135</id>
+            <name>ХодСогласованияРезультатСогласованияКонтекстноеМеню</name>
+            <id>223</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияХодСогласования5</name>
-          <id>137</id>
+          <name>ХодСогласованияЭтап</name>
+          <id>225</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.КолонкаНомерВерсии</segments>
+            <segments>ХодСогласования.Этап</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияХодСогласования5РасширеннаяПодсказка</name>
-            <id>139</id>
+            <name>ХодСогласованияЭтапРасширеннаяПодсказка</name>
+            <id>227</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1552,36 +1525,35 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияХодСогласования5КонтекстноеМеню</name>
-            <id>138</id>
+            <name>ХодСогласованияЭтапКонтекстноеМеню</name>
+            <id>226</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <autoCommandBar>
           <name>ХодСогласованияКоманднаяПанель</name>
-          <id>110</id>
+          <id>198</id>
           <horizontalAlign>Left</horizontalAlign>
-          <autoFill>true</autoFill>
         </autoCommandBar>
+        <handlers>
+          <event>Selection</event>
+          <name>ХодСогласованияВыбор</name>
+        </handlers>
         <searchStringAddition>
           <name>ХодСогласованияСтрокаПоиска</name>
-          <id>113</id>
+          <id>201</id>
           <extendedTooltip>
             <name>ХодСогласованияСтрокаПоискаРасширеннаяПодсказка</name>
-            <id>115</id>
+            <id>203</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1591,7 +1563,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ХодСогласованияСтрокаПоискаКонтекстноеМеню</name>
-            <id>114</id>
+            <id>202</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <source>ХодСогласования</source>
@@ -1601,10 +1573,10 @@
         </searchStringAddition>
         <viewStatusAddition>
           <name>ХодСогласованияСостояниеПросмотра</name>
-          <id>119</id>
+          <id>207</id>
           <extendedTooltip>
             <name>ХодСогласованияСостояниеПросмотраРасширеннаяПодсказка</name>
-            <id>121</id>
+            <id>209</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1614,7 +1586,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ХодСогласованияСостояниеПросмотраКонтекстноеМеню</name>
-            <id>120</id>
+            <id>208</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>ViewStatusAddition</type>
@@ -1625,10 +1597,10 @@
         </viewStatusAddition>
         <searchControlAddition>
           <name>ХодСогласованияУправлениеПоиском</name>
-          <id>116</id>
+          <id>204</id>
           <extendedTooltip>
             <name>ХодСогласованияУправлениеПоискомРасширеннаяПодсказка</name>
-            <id>118</id>
+            <id>206</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1638,7 +1610,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ХодСогласованияУправлениеПоискомКонтекстноеМеню</name>
-            <id>117</id>
+            <id>205</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>SearchControlAddition</type>
@@ -1649,7 +1621,7 @@
         </searchControlAddition>
         <extendedTooltip>
           <name>ХодСогласованияРасширеннаяПодсказка</name>
-          <id>112</id>
+          <id>200</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -1659,9 +1631,10 @@
         </extendedTooltip>
         <contextMenu>
           <name>ХодСогласованияКонтекстноеМеню</name>
-          <id>111</id>
+          <id>199</id>
           <autoFill>true</autoFill>
         </contextMenu>
+        <representation>HierarchicalList</representation>
         <changeRowSet>true</changeRowSet>
         <changeRowOrder>true</changeRowOrder>
         <autoMaxWidth>true</autoMaxWidth>
@@ -1676,15 +1649,21 @@
         <horizontalLines>true</horizontalLines>
         <verticalLines>true</verticalLines>
         <useAlternationRowColor>true</useAlternationRowColor>
-        <autoInsertNewRow>true</autoInsertNewRow>
         <searchOnInput>Auto</searchOnInput>
         <initialListView>Auto</initialListView>
         <horizontalStretch>true</horizontalStretch>
         <verticalStretch>true</verticalStretch>
-        <enableStartDrag>true</enableStartDrag>
-        <enableDrag>true</enableDrag>
         <fileDragMode>AsFileRef</fileDragMode>
-        <rowFilter xsi:type="core:UndefinedValue"/>
+        <extInfo xsi:type="form:DynamicListTableExtInfo">
+          <autoRefreshPeriod>60</autoRefreshPeriod>
+          <period>
+            <startDate>0001-01-01T00:00:00</startDate>
+            <endDate>0001-01-01T00:00:00</endDate>
+          </period>
+          <topLevelParent xsi:type="core:UndefinedValue"/>
+          <showRoot>true</showRoot>
+          <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
+        </extInfo>
       </items>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -1716,7 +1695,7 @@
       <id>107</id>
       <items xsi:type="form:Table">
         <name>ЗадачиПроцесса</name>
-        <id>140</id>
+        <id>228</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -1727,19 +1706,19 @@
         </dataPath>
         <titleLocation>None</titleLocation>
         <items xsi:type="form:FormField">
-          <name>ЗадачиПроцессаЗадачиПроцесса</name>
-          <id>153</id>
+          <name>ЗадачиПроцессаВыполнена</name>
+          <id>241</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ЗадачиПроцесса.КолонкаЭтап</segments>
+            <segments>ЗадачиПроцесса.Выполнена</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ЗадачиПроцессаЗадачиПроцессаРасширеннаяПодсказка</name>
-            <id>155</id>
+            <name>ЗадачиПроцессаВыполненаРасширеннаяПодсказка</name>
+            <id>243</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1748,128 +1727,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ЗадачиПроцессаЗадачиПроцессаКонтекстноеМеню</name>
-            <id>154</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>EnterOnInput</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormField">
-          <name>ЗадачиПроцессаЗадачиПроцесса1</name>
-          <id>156</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>ЗадачиПроцесса.КолонкаИсполнитель</segments>
-          </dataPath>
-          <extendedTooltip>
-            <name>ЗадачиПроцессаЗадачиПроцесса1РасширеннаяПодсказка</name>
-            <id>158</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>ЗадачиПроцессаЗадачиПроцесса1КонтекстноеМеню</name>
-            <id>157</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>EnterOnInput</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormField">
-          <name>ЗадачиПроцессаЗадачиПроцесса2</name>
-          <id>159</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>ЗадачиПроцесса.КолонкаСрокИсполнения</segments>
-          </dataPath>
-          <extendedTooltip>
-            <name>ЗадачиПроцессаЗадачиПроцесса2РасширеннаяПодсказка</name>
-            <id>161</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>ЗадачиПроцессаЗадачиПроцесса2КонтекстноеМеню</name>
-            <id>160</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>EnterOnInput</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormField">
-          <name>ЗадачиПроцессаЗадачиПроцесса3</name>
-          <id>162</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>ЗадачиПроцесса.КолонкаВыполнена</segments>
-          </dataPath>
-          <extendedTooltip>
-            <name>ЗадачиПроцессаЗадачиПроцесса3РасширеннаяПодсказка</name>
-            <id>164</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>ЗадачиПроцессаЗадачиПроцесса3КонтекстноеМеню</name>
-            <id>163</id>
+            <name>ЗадачиПроцессаВыполненаКонтекстноеМеню</name>
+            <id>242</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>CheckBoxField</type>
@@ -1880,19 +1739,19 @@
           <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
         </items>
         <items xsi:type="form:FormField">
-          <name>ЗадачиПроцессаЗадачиПроцесса4</name>
-          <id>165</id>
+          <name>ЗадачиПроцессаДата</name>
+          <id>244</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ЗадачиПроцесса.КолонкаДатаИсполнения</segments>
+            <segments>ЗадачиПроцесса.Дата</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ЗадачиПроцессаЗадачиПроцесса4РасширеннаяПодсказка</name>
-            <id>167</id>
+            <name>ЗадачиПроцессаДатаРасширеннаяПодсказка</name>
+            <id>246</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1901,36 +1760,107 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ЗадачиПроцессаЗадачиПроцесса4КонтекстноеМеню</name>
-            <id>166</id>
+            <name>ЗадачиПроцессаДатаКонтекстноеМеню</name>
+            <id>245</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ЗадачиПроцессаЗадача</name>
+          <id>247</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ЗадачиПроцесса.Задача</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЗадачиПроцессаЗадачаРасширеннаяПодсказка</name>
+            <id>249</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗадачиПроцессаЗадачаКонтекстноеМеню</name>
+            <id>248</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ЗадачиПроцессаЭтап</name>
+          <id>250</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ЗадачиПроцесса.Этап</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЗадачиПроцессаЭтапРасширеннаяПодсказка</name>
+            <id>252</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗадачиПроцессаЭтапКонтекстноеМеню</name>
+            <id>251</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
           </extInfo>
         </items>
         <autoCommandBar>
           <name>ЗадачиПроцессаКоманднаяПанель</name>
-          <id>141</id>
+          <id>229</id>
           <horizontalAlign>Left</horizontalAlign>
-          <autoFill>true</autoFill>
         </autoCommandBar>
+        <handlers>
+          <event>Selection</event>
+          <name>ЗадачиПроцессаВыбор</name>
+        </handlers>
         <searchStringAddition>
           <name>ЗадачиПроцессаСтрокаПоиска</name>
-          <id>144</id>
+          <id>232</id>
           <extendedTooltip>
             <name>ЗадачиПроцессаСтрокаПоискаРасширеннаяПодсказка</name>
-            <id>146</id>
+            <id>234</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1940,7 +1870,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ЗадачиПроцессаСтрокаПоискаКонтекстноеМеню</name>
-            <id>145</id>
+            <id>233</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <source>ЗадачиПроцесса</source>
@@ -1950,10 +1880,10 @@
         </searchStringAddition>
         <viewStatusAddition>
           <name>ЗадачиПроцессаСостояниеПросмотра</name>
-          <id>150</id>
+          <id>238</id>
           <extendedTooltip>
             <name>ЗадачиПроцессаСостояниеПросмотраРасширеннаяПодсказка</name>
-            <id>152</id>
+            <id>240</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1963,7 +1893,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ЗадачиПроцессаСостояниеПросмотраКонтекстноеМеню</name>
-            <id>151</id>
+            <id>239</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>ViewStatusAddition</type>
@@ -1974,10 +1904,10 @@
         </viewStatusAddition>
         <searchControlAddition>
           <name>ЗадачиПроцессаУправлениеПоиском</name>
-          <id>147</id>
+          <id>235</id>
           <extendedTooltip>
             <name>ЗадачиПроцессаУправлениеПоискомРасширеннаяПодсказка</name>
-            <id>149</id>
+            <id>237</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1987,7 +1917,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ЗадачиПроцессаУправлениеПоискомКонтекстноеМеню</name>
-            <id>148</id>
+            <id>236</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>SearchControlAddition</type>
@@ -1998,7 +1928,7 @@
         </searchControlAddition>
         <extendedTooltip>
           <name>ЗадачиПроцессаРасширеннаяПодсказка</name>
-          <id>143</id>
+          <id>231</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -2008,9 +1938,10 @@
         </extendedTooltip>
         <contextMenu>
           <name>ЗадачиПроцессаКонтекстноеМеню</name>
-          <id>142</id>
+          <id>230</id>
           <autoFill>true</autoFill>
         </contextMenu>
+        <representation>HierarchicalList</representation>
         <changeRowSet>true</changeRowSet>
         <changeRowOrder>true</changeRowOrder>
         <autoMaxWidth>true</autoMaxWidth>
@@ -2025,15 +1956,21 @@
         <horizontalLines>true</horizontalLines>
         <verticalLines>true</verticalLines>
         <useAlternationRowColor>true</useAlternationRowColor>
-        <autoInsertNewRow>true</autoInsertNewRow>
         <searchOnInput>Auto</searchOnInput>
         <initialListView>Auto</initialListView>
         <horizontalStretch>true</horizontalStretch>
         <verticalStretch>true</verticalStretch>
-        <enableStartDrag>true</enableStartDrag>
-        <enableDrag>true</enableDrag>
         <fileDragMode>AsFileRef</fileDragMode>
-        <rowFilter xsi:type="core:UndefinedValue"/>
+        <extInfo xsi:type="form:DynamicListTableExtInfo">
+          <autoRefreshPeriod>60</autoRefreshPeriod>
+          <period>
+            <startDate>0001-01-01T00:00:00</startDate>
+            <endDate>0001-01-01T00:00:00</endDate>
+          </period>
+          <topLevelParent xsi:type="core:UndefinedValue"/>
+          <showRoot>true</showRoot>
+          <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
+        </extInfo>
       </items>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -2120,242 +2057,6 @@
     <savedData>true</savedData>
   </attributes>
   <attributes>
-    <name>ХодСогласования</name>
-    <title>
-      <key>ru</key>
-      <value>Ход согласования</value>
-    </title>
-    <id>2</id>
-    <valueType>
-      <types>ValueTable</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-    <columns>
-      <name>КолонкаЭтап</name>
-      <title>
-        <key>ru</key>
-        <value>Этап</value>
-      </title>
-      <id>6</id>
-      <valueType>
-        <types>String</types>
-        <stringQualifiers>
-          <length>150</length>
-        </stringQualifiers>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаУчастник</name>
-      <title>
-        <key>ru</key>
-        <value>Участник</value>
-      </title>
-      <id>7</id>
-      <valueType>
-        <types>CatalogRef.Пользователи</types>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаРезультат</name>
-      <title>
-        <key>ru</key>
-        <value>Результат</value>
-      </title>
-      <id>8</id>
-      <valueType>
-        <types>EnumRef.ГКСИ_РезультатыСогласованияИнструкций</types>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаКомментарий</name>
-      <title>
-        <key>ru</key>
-        <value>Комментарий</value>
-      </title>
-      <id>9</id>
-      <valueType>
-        <types>String</types>
-        <stringQualifiers>
-          <length>500</length>
-        </stringQualifiers>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаДатаСогласования</name>
-      <title>
-        <key>ru</key>
-        <value>Дата согласования</value>
-      </title>
-      <id>10</id>
-      <valueType>
-        <types>Date</types>
-        <dateQualifiers/>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаНомерВерсии</name>
-      <title>
-        <key>ru</key>
-        <value>Версия</value>
-      </title>
-      <id>11</id>
-      <valueType>
-        <types>Number</types>
-        <numberQualifiers>
-          <precision>10</precision>
-        </numberQualifiers>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-  </attributes>
-  <attributes>
-    <name>ЗадачиПроцесса</name>
-    <title>
-      <key>ru</key>
-      <value>Задачи процесса</value>
-    </title>
-    <id>3</id>
-    <valueType>
-      <types>ValueTable</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-    <columns>
-      <name>КолонкаЭтап</name>
-      <title>
-        <key>ru</key>
-        <value>Этап</value>
-      </title>
-      <id>12</id>
-      <valueType>
-        <types>String</types>
-        <stringQualifiers>
-          <length>150</length>
-        </stringQualifiers>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаИсполнитель</name>
-      <title>
-        <key>ru</key>
-        <value>Исполнитель</value>
-      </title>
-      <id>13</id>
-      <valueType>
-        <types>CatalogRef.Пользователи</types>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаСрокИсполнения</name>
-      <title>
-        <key>ru</key>
-        <value>Срок исполнения</value>
-      </title>
-      <id>14</id>
-      <valueType>
-        <types>Date</types>
-        <dateQualifiers/>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаВыполнена</name>
-      <title>
-        <key>ru</key>
-        <value>Выполнена</value>
-      </title>
-      <id>15</id>
-      <valueType>
-        <types>Boolean</types>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-    <columns>
-      <name>КолонкаДатаИсполнения</name>
-      <title>
-        <key>ru</key>
-        <value>Дата исполнения</value>
-      </title>
-      <id>16</id>
-      <valueType>
-        <types>Date</types>
-        <dateQualifiers/>
-      </valueType>
-      <view>
-        <common>true</common>
-      </view>
-      <edit>
-        <common>true</common>
-      </edit>
-    </columns>
-  </attributes>
-  <attributes>
     <name>Состояние</name>
     <title>
       <key>ru</key>
@@ -2391,6 +2092,214 @@
     <edit>
       <common>true</common>
     </edit>
+  </attributes>
+  <attributes>
+    <name>ХодСогласования</name>
+    <title>
+      <key>ru</key>
+      <value>Ход согласования</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	Участники.Сотрудник КАК Сотрудник,
+	&amp;ТочкаМаршрутаНачальники КАК Этап,
+	Участники.РезультатСогласования КАК РезультатСогласования,
+	Участники.Комментарий КАК Комментарий,
+	Участники.ДатаСогласования КАК ДатаСогласования,
+	Участники.НомерВерсии КАК НомерВерсии
+ИЗ
+	БизнесПроцесс.ГКСИ_СогласованиеИнструкции.Начальники КАК Участники
+ГДЕ
+	Участники.Ссылка = &amp;БизнесПроцесс
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Участники.Сотрудник,
+	&amp;ТочкаМаршрутаПодчинённые,
+	Участники.РезультатСогласования,
+	Участники.Комментарий,
+	Участники.ДатаСогласования,
+	Участники.НомерВерсии
+ИЗ
+	БизнесПроцесс.ГКСИ_СогласованиеИнструкции.Подчинённые КАК Участники
+ГДЕ
+	Участники.Ссылка = &amp;БизнесПроцесс
+
+УПОРЯДОЧИТЬ ПО
+	Этап,
+	ДатаСогласования</queryText>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Сотрудник</dataPath>
+        <field>Сотрудник</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Этап</dataPath>
+        <field>Этап</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Этап</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>РезультатСогласования</dataPath>
+        <field>РезультатСогласования</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Комментарий</dataPath>
+        <field>Комментарий</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ДатаСогласования</dataPath>
+        <field>ДатаСогласования</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>НомерВерсии</dataPath>
+        <field>НомерВерсии</field>
+      </fields>
+      <parameters>
+        <name>БизнесПроцесс</name>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Бизнес процесс</value>
+            </content>
+          </localValue>
+        </title>
+        <valueType>
+          <types>BusinessProcessRef.ГКСИ_СогласованиеИнструкции</types>
+        </valueType>
+        <useRestriction>true</useRestriction>
+      </parameters>
+      <parameters>
+        <name>ТочкаМаршрутаНачальники</name>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Точка маршрута начальники</value>
+            </content>
+          </localValue>
+        </title>
+        <valueType/>
+        <useRestriction>true</useRestriction>
+      </parameters>
+      <parameters>
+        <name>ТочкаМаршрутаПодчинённые</name>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Точка маршрута подчинённые</value>
+            </content>
+          </localValue>
+        </title>
+        <valueType/>
+        <useRestriction>true</useRestriction>
+      </parameters>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>ЗадачиПроцесса</name>
+    <title>
+      <key>ru</key>
+      <value>Задачи процесса</value>
+    </title>
+    <id>18</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	Задачи.Ссылка КАК Задача,
+	Задачи.ТочкаМаршрута КАК Этап,
+	Задачи.Выполнена КАК Выполнена,
+	Задачи.Дата КАК Дата
+ИЗ
+	Задача.ЗадачаИсполнителя КАК Задачи
+ГДЕ
+	Задачи.БизнесПроцесс = &amp;БизнесПроцесс
+	И НЕ Задачи.ПометкаУдаления
+
+УПОРЯДОЧИТЬ ПО
+	Задачи.Дата</queryText>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Задача</dataPath>
+        <field>Задача</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Задача</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Этап</dataPath>
+        <field>Этап</field>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Этап</value>
+            </content>
+          </localValue>
+        </title>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Выполнена</dataPath>
+        <field>Выполнена</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>Дата</dataPath>
+        <field>Дата</field>
+      </fields>
+      <parameters>
+        <name>БизнесПроцесс</name>
+        <title>
+          <localValue>
+            <content>
+              <key>ru</key>
+              <value>Бизнес процесс</value>
+            </content>
+          </localValue>
+        </title>
+        <valueType>
+          <types>BusinessProcessRef.ГКСИ_СогласованиеИнструкции</types>
+        </valueType>
+        <useRestriction>true</useRestriction>
+      </parameters>
+    </extInfo>
   </attributes>
   <commandInterface>
     <navigationPanel/>
