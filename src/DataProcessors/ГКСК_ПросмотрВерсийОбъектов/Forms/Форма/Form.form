@@ -640,7 +640,7 @@
           <id>262</id>
           <title>
             <key>ru</key>
-            <value>Записи регистра</value>
+            <value>Отметка</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
