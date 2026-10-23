@@ -479,19 +479,17 @@
       <id>32</id>
       <autoFill>true</autoFill>
     </contextMenu>
-    <type>InputField</type>
+    <type>LabelField</type>
     <editMode>EnterOnInput</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:InputFieldExtInfo">
+    <extInfo xsi:type="form:LabelFieldExtInfo">
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
-      <wrap>true</wrap>
-      <extendedEditMultipleValues>true</extendedEditMultipleValues>
-      <chooseType>true</chooseType>
-      <typeDomainEnabled>true</typeDomainEnabled>
-      <textEdit>true</textEdit>
+      <border xsi:type="core:BorderDef">
+        <width>1</width>
+      </border>
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
@@ -1324,19 +1322,23 @@
         </dataPath>
         <titleLocation>None</titleLocation>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияДатаСогласования</name>
-          <id>210</id>
+          <name>ХодСогласованияТипЗаписи</name>
+          <id>253</id>
+          <title>
+            <key>ru</key>
+            <value>Тип записи</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.ДатаСогласования</segments>
+            <segments>ХодСогласования.ТипЗаписи</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияДатаСогласованияРасширеннаяПодсказка</name>
-            <id>212</id>
+            <name>ХодСогласованияХодСогласованияТипЗаписиРасширеннаяПодсказка</name>
+            <id>255</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1345,8 +1347,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияДатаСогласованияКонтекстноеМеню</name>
-            <id>211</id>
+            <name>ХодСогласованияХодСогласованияТипЗаписиКонтекстноеМеню</name>
+            <id>254</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
@@ -1360,19 +1362,23 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияКомментарий</name>
-          <id>213</id>
+          <name>ХодСогласованияЭтап</name>
+          <id>225</id>
+          <title>
+            <key>ru</key>
+            <value>Этап</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.Комментарий</segments>
+            <segments>ХодСогласования.Этап</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияКомментарийРасширеннаяПодсказка</name>
-            <id>215</id>
+            <name>ХодСогласованияЭтапРасширеннаяПодсказка</name>
+            <id>227</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1381,8 +1387,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияКомментарийКонтекстноеМеню</name>
-            <id>214</id>
+            <name>ХодСогласованияЭтапКонтекстноеМеню</name>
+            <id>226</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
@@ -1396,19 +1402,23 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияСотрудник</name>
-          <id>216</id>
+          <name>ХодСогласованияУчастник</name>
+          <id>256</id>
+          <title>
+            <key>ru</key>
+            <value>Участник</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.Сотрудник</segments>
+            <segments>ХодСогласования.Участник</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияСотрудникРасширеннаяПодсказка</name>
-            <id>218</id>
+            <name>ХодСогласованияХодСогласованияУчастникРасширеннаяПодсказка</name>
+            <id>258</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1417,8 +1427,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияСотрудникКонтекстноеМеню</name>
-            <id>217</id>
+            <name>ХодСогласованияХодСогласованияУчастникКонтекстноеМеню</name>
+            <id>257</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
@@ -1432,19 +1442,23 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияНомерВерсии</name>
-          <id>219</id>
+          <name>ХодСогласованияЗадача</name>
+          <id>259</id>
+          <title>
+            <key>ru</key>
+            <value>Задача</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.НомерВерсии</segments>
+            <segments>ХодСогласования.Задача</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияНомерВерсииРасширеннаяПодсказка</name>
-            <id>221</id>
+            <name>ХодСогласованияХодСогласованияЗадачаРасширеннаяПодсказка</name>
+            <id>261</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1453,8 +1467,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияНомерВерсииКонтекстноеМеню</name>
-            <id>220</id>
+            <name>ХодСогласованияХодСогласованияЗадачаКонтекстноеМеню</name>
+            <id>260</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
@@ -1470,6 +1484,10 @@
         <items xsi:type="form:FormField">
           <name>ХодСогласованияРезультатСогласования</name>
           <id>222</id>
+          <title>
+            <key>ru</key>
+            <value>Результат</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1504,19 +1522,23 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ХодСогласованияЭтап</name>
-          <id>225</id>
+          <name>ХодСогласованияКомментарий</name>
+          <id>213</id>
+          <title>
+            <key>ru</key>
+            <value>Комментарий</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>ХодСогласования.Этап</segments>
+            <segments>ХодСогласования.Комментарий</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ХодСогласованияЭтапРасширеннаяПодсказка</name>
-            <id>227</id>
+            <name>ХодСогласованияКомментарийРасширеннаяПодсказка</name>
+            <id>215</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1525,8 +1547,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ХодСогласованияЭтапКонтекстноеМеню</name>
-            <id>226</id>
+            <name>ХодСогласованияКомментарийКонтекстноеМеню</name>
+            <id>214</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
@@ -1538,6 +1560,123 @@
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
           </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ХодСогласованияДата</name>
+          <id>262</id>
+          <title>
+            <key>ru</key>
+            <value>Дата</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ХодСогласования.Дата</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ХодСогласованияХодСогласованияДатаРасширеннаяПодсказка</name>
+            <id>264</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ХодСогласованияХодСогласованияДатаКонтекстноеМеню</name>
+            <id>263</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ХодСогласованияНомерВерсии</name>
+          <id>219</id>
+          <title>
+            <key>ru</key>
+            <value>Версия</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ХодСогласования.НомерВерсии</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ХодСогласованияНомерВерсииРасширеннаяПодсказка</name>
+            <id>221</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ХодСогласованияНомерВерсииКонтекстноеМеню</name>
+            <id>220</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ХодСогласованияВыполнена</name>
+          <id>265</id>
+          <title>
+            <key>ru</key>
+            <value>Выполнена</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ХодСогласования.Выполнена</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ХодСогласованияХодСогласованияВыполненаРасширеннаяПодсказка</name>
+            <id>267</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ХодСогласованияХодСогласованияВыполненаКонтекстноеМеню</name>
+            <id>266</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
         </items>
         <autoCommandBar>
           <name>ХодСогласованияКоманднаяПанель</name>
@@ -2111,12 +2250,15 @@
     </edit>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
-	Участники.Сотрудник КАК Сотрудник,
+	ВЫРАЗИТЬ(&quot;Процесс&quot; КАК СТРОКА(20)) КАК ТипЗаписи,
 	&amp;ТочкаМаршрутаНачальники КАК Этап,
+	Участники.Сотрудник КАК Участник,
+	ЗНАЧЕНИЕ(Задача.ЗадачаИсполнителя.ПустаяСсылка) КАК Задача,
 	Участники.РезультатСогласования КАК РезультатСогласования,
 	Участники.Комментарий КАК Комментарий,
-	Участники.ДатаСогласования КАК ДатаСогласования,
-	Участники.НомерВерсии КАК НомерВерсии
+	Участники.ДатаСогласования КАК Дата,
+	Участники.НомерВерсии КАК НомерВерсии,
+	ЛОЖЬ КАК Выполнена
 ИЗ
 	БизнесПроцесс.ГКСИ_СогласованиеИнструкции.Начальники КАК Участники
 ГДЕ
@@ -2125,20 +2267,42 @@
 ОБЪЕДИНИТЬ ВСЕ
 
 ВЫБРАТЬ
-	Участники.Сотрудник,
+	ВЫРАЗИТЬ(&quot;Процесс&quot; КАК СТРОКА(20)),
 	&amp;ТочкаМаршрутаПодчинённые,
+	Участники.Сотрудник,
+	ЗНАЧЕНИЕ(Задача.ЗадачаИсполнителя.ПустаяСсылка),
 	Участники.РезультатСогласования,
 	Участники.Комментарий,
 	Участники.ДатаСогласования,
-	Участники.НомерВерсии
+	Участники.НомерВерсии,
+	ЛОЖЬ
 ИЗ
 	БизнесПроцесс.ГКСИ_СогласованиеИнструкции.Подчинённые КАК Участники
 ГДЕ
 	Участники.Ссылка = &amp;БизнесПроцесс
 
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВЫРАЗИТЬ(&quot;Задача&quot; КАК СТРОКА(20)),
+	Задачи.ТочкаМаршрута,
+	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка),
+	Задачи.Ссылка,
+	ЗНАЧЕНИЕ(Перечисление.ГКСИ_РезультатыСогласованияИнструкций.ПустаяСсылка),
+	ВЫРАЗИТЬ(&quot;&quot; КАК СТРОКА(100)),
+	Задачи.Дата,
+	0,
+	Задачи.Выполнена
+ИЗ
+	Задача.ЗадачаИсполнителя КАК Задачи
+ГДЕ
+	Задачи.БизнесПроцесс = &amp;БизнесПроцесс
+	И НЕ Задачи.ПометкаУдаления
+
 УПОРЯДОЧИТЬ ПО
 	Этап,
-	ДатаСогласования</queryText>
+	ТипЗаписи,
+	Дата</queryText>
       <autoFillAvailableFields>true</autoFillAvailableFields>
       <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
