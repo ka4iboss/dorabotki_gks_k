@@ -2145,12 +2145,30 @@
     </edit>
   </attributes>
   <attributes>
+    <name>ВыбраннаяЗапись</name>
+    <title>
+      <key>ru</key>
+      <value>Выбранная запись</value>
+    </title>
+    <id>50</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
     <name>ТаблицаЗаписей</name>
     <title>
       <key>ru</key>
       <value>Записи регистра</value>
     </title>
-    <id>40</id>
+    <id>51</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -2166,7 +2184,7 @@
         <key>ru</key>
         <value>Отметка</value>
       </title>
-      <id>41</id>
+      <id>52</id>
       <valueType>
         <types>Boolean</types>
       </valueType>
@@ -2183,12 +2201,10 @@
         <key>ru</key>
         <value>Запись</value>
       </title>
-      <id>42</id>
+      <id>53</id>
       <valueType>
         <types>String</types>
-        <stringQualifiers>
-          <length>100</length>
-        </stringQualifiers>
+        <stringQualifiers/>
       </valueType>
       <view>
         <common>true</common>
@@ -2203,11 +2219,11 @@
         <key>ru</key>
         <value>Наименование</value>
       </title>
-      <id>43</id>
+      <id>54</id>
       <valueType>
         <types>String</types>
         <stringQualifiers>
-          <length>100</length>
+          <length>200</length>
         </stringQualifiers>
       </valueType>
       <view>
@@ -2217,26 +2233,6 @@
         <common>true</common>
       </edit>
     </columns>
-  </attributes>
-  <attributes>
-    <name>ВыбраннаяЗапись</name>
-    <title>
-      <key>ru</key>
-      <value>Выбранная запись</value>
-    </title>
-    <id>44</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers>
-        <length>100</length>
-      </stringQualifiers>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
   </attributes>
   <formCommands>
     <name>ПерейтиНаТекущую</name>
