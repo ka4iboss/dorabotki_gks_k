@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.10.4</version>
+  <version>1.0.11.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -117,6 +117,7 @@
   <commonModules>CommonModule.ГКСК_СопоставлениеОплатПоЗаявкамСервер</commonModules>
   <commonModules>CommonModule.ГКСИ_СсылкиСценариев</commonModules>
   <commonModules>CommonModule.ГКСИ_Видео</commonModules>
+  <commonModules>CommonModule.ГКСИ_СогласованиеИнструкцийСервер</commonModules>
   <xDTOPackages>XDTOPackage.ППГД_ПраваДоступа</xDTOPackages>
   <functionalOptions>FunctionalOption.ОграничиватьДоступНаУровнеЗаписей</functionalOptions>
   <definedTypes>DefinedType.ЗначениеДоступа</definedTypes>
@@ -143,6 +144,8 @@
   <enums>Enum.СтатусыДемонстрационныхСценариев</enums>
   <enums>Enum.ТипыГруппДемонстрационныхСценариев</enums>
   <enums>Enum.СтатусыЗаявокНаРасходованиеДенежныхСредств</enums>
+  <enums>Enum.ГКСИ_ВидыСогласованияИнструкций</enums>
+  <enums>Enum.ГКСИ_РезультатыСогласованияИнструкций</enums>
   <dataProcessors>DataProcessor.ППГД_ГенерацияГруппДоступа</dataProcessors>
   <dataProcessors>DataProcessor.ППГД_ПодборРолейДляПрофиляГруппДоступа</dataProcessors>
   <dataProcessors>DataProcessor.ППГД_ВыгрузкаЗагрузкаПрав</dataProcessors>
@@ -159,4 +162,6 @@
   <informationRegisters>InformationRegister.ППГД_ЖурналЗагрузки</informationRegisters>
   <informationRegisters>InformationRegister.ППГД_ПоляВЗапросахМодулей</informationRegisters>
   <informationRegisters>InformationRegister.ГКСИ_ГруппыСценариев</informationRegisters>
+  <businessProcesses>BusinessProcess.ГКСИ_СогласованиеИнструкции</businessProcesses>
+  <tasks>Task.ЗадачаИсполнителя</tasks>
 </mdclass:Configuration>

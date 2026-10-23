@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d88322bd-6283-4e09-8e2b-c2d57043fff7">
+  <producedTypes>
+    <refType typeId="cad5db6e-6553-4c58-a0e7-11c1f2ad07bb" valueTypeId="1ef33dbe-4346-4452-904e-0438dbf12022"/>
+    <listType typeId="204c7eeb-f4d5-4fbc-a9a3-3d3f429b40a9" valueTypeId="1e0442f1-0b29-405c-8f64-3122a0b7a1cb"/>
+    <managerType typeId="96136186-12b4-4503-8f44-6b18b60e8687" valueTypeId="a7807228-a891-4b6d-8a53-d3f58b983453"/>
+  </producedTypes>
+  <name>ГКСИ_ВидыСогласованияИнструкций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды согласования инструкций</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="1d1854ed-4041-4586-ae1a-005f8893dc6f">
+    <name>ВсяИнструкция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вся инструкция</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="589e751c-0a8f-458e-b6b7-f7ab9cedbef1">
+    <name>ЭлементИнструкции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Элемент инструкции</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

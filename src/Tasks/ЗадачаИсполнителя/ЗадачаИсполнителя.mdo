@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="a76a0401-5b0d-4fee-9e4d-a6ed609e7d4c" extendedConfigurationObject="3ad08f4a-6202-4099-b6cc-bc116e6731a0">
+  <producedTypes>
+    <objectType typeId="3d570650-bcbd-4c4e-ac5d-9b4979acd276" valueTypeId="9a338aa1-717c-485a-8df6-7e82751dab94"/>
+    <refType typeId="6eca697e-d820-49b2-80e4-ed55d29b51d3" valueTypeId="0d117f20-a1c6-4dcc-9f1e-c645f79388b3"/>
+    <selectionType typeId="85e8c226-2ae6-4278-be7c-f4aaeced41d7" valueTypeId="cd03920a-6698-4d26-bee5-ca5692d975a5"/>
+    <listType typeId="619103ee-1ec8-4bb2-b6c5-071faa9685ff" valueTypeId="1f02c86a-0dba-4a6b-b79c-3c4a94d87b00"/>
+    <managerType typeId="fb1cdfce-4cdf-4328-935e-04b7072d4c0d" valueTypeId="0fa19362-a6cc-41d9-ba8a-1e0bbf691991"/>
+  </producedTypes>
+  <name>ЗадачаИсполнителя</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:TaskExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+  <forms uuid="7ad0d2c2-175f-424e-8be1-4c2be44ecdc3">
+    <name>ГКСИ_ФормаЗадачиНазначенияУчастников</name>
+  </forms>
+  <forms uuid="5ded9604-7e9c-45a5-9b99-0b3851b13303">
+    <name>ГКСИ_ФормаЗадачиСогласования</name>
+  </forms>
+</mdclass:Task>

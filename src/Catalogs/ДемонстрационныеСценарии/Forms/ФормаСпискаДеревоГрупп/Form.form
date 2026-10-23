@@ -567,6 +567,35 @@
       </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
+    <items xsi:type="form:Button">
+      <name>ГКСИ_ОтправитьНаСогласование</name>
+      <id>231</id>
+      <title>
+        <key>ru</key>
+        <value>Отправить на согласование</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаГКСИ_ОтправитьНаСогласованиеРасширеннаяПодсказка</name>
+        <id>232</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ГКСИ_ОтправитьНаСогласование</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -814,6 +843,22 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>АльбомПоВыделенным</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>ГКСИ_ОтправитьНаСогласование</name>
+    <title>
+      <key>ru</key>
+      <value>Отправить на согласование</value>
+    </title>
+    <id>7</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ГКСИ_ОтправитьНаСогласование</name>
       </handler>
     </action>
   </formCommands>
