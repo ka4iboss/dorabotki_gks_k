@@ -470,7 +470,6 @@
     <event>BeforeExecute</event>
     <name>ПередВыполнением</name>
   </handlers>
-  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
