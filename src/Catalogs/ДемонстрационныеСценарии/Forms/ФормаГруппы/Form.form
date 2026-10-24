@@ -706,6 +706,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Жирный</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -731,6 +734,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Курсив</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -756,6 +762,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Зачеркнутый</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -781,6 +790,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_ЗаголовокH1</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -806,6 +818,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_ЗаголовокH2</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -831,6 +846,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_ЗаголовокH3</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -856,6 +874,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Цитата</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -881,6 +902,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Ссылка</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -906,6 +930,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_ПрограммныйКод</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -931,6 +958,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_МаркерыСписок</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -956,6 +986,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_НумерованныйСписок</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -981,6 +1014,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_СписокЗадач</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -1006,6 +1042,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Таблица</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -1031,6 +1070,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_ВставитьКартинкуИзБуфера</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -1056,12 +1098,14 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Ссылка</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
               <name>РМ_КомандаMDОткрытьСинтаксис_ТекстMarkdownСтрока</name>
               <id>354</id>
-              <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
                 <common>true</common>
@@ -1106,6 +1150,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Ссылка</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -1131,6 +1178,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Ссылка</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <items xsi:type="form:Button">
@@ -1156,6 +1206,9 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ГКСИ_Ссылка</picture>
+              </picture>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <visible>true</visible>
@@ -1214,9 +1267,10 @@
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
-              <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
+              <multiLine>true</multiLine>
+              <extendedEdit>true</extendedEdit>
               <chooseType>true</chooseType>
               <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
@@ -1287,6 +1341,10 @@
           <items xsi:type="form:FormField">
             <name>РМ_ПолеПросмотра_ТекстMarkdownСтрока</name>
             <id>296</id>
+            <title>
+              <key>ru</key>
+              <value>Просмотр маркдаун</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1941,7 +1999,6 @@
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
             <horizontalAlign>Left</horizontalAlign>
-            <autoFill>true</autoFill>
           </autoCommandBar>
           <searchStringAddition>
             <name>ГКСИ_ГруппыСценарияСтрокаПоиска</name>
@@ -2043,7 +2100,6 @@
           <horizontalLines>true</horizontalLines>
           <verticalLines>true</verticalLines>
           <useAlternationRowColor>true</useAlternationRowColor>
-          <autoInsertNewRow>true</autoInsertNewRow>
           <searchOnInput>Auto</searchOnInput>
           <initialListView>Auto</initialListView>
           <horizontalStretch>true</horizontalStretch>
@@ -2079,7 +2135,6 @@
           <representation>WeakSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
-          <showTitle>true</showTitle>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
@@ -2661,7 +2716,6 @@
             <name>ПодписантыКоманднаяПанель</name>
             <id>214</id>
             <horizontalAlign>Left</horizontalAlign>
-            <autoFill>true</autoFill>
           </autoCommandBar>
           <searchStringAddition>
             <name>ПодписантыСтрокаПоиска</name>
@@ -2799,7 +2853,6 @@
           <representation>WeakSeparation</representation>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
-          <showTitle>true</showTitle>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
