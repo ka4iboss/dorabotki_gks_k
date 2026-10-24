@@ -5181,6 +5181,23 @@
         <common>true</common>
       </edit>
     </columns>
+    <columns>
+      <name>КолонкаУзел</name>
+      <title>
+        <key>ru</key>
+        <value>Узел</value>
+      </title>
+      <id>1000027</id>
+      <valueType>
+        <types>CatalogRef.ДемонстрационныеСценарии</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
   </attributes>
   <attributes>
     <name>РМ_ТаблицаПрисоединенныхФайлов_ТекстMarkdownСтрока</name>
