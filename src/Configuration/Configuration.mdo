@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.13.0</version>
+  <version>1.0.14.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -122,6 +122,7 @@
   <functionalOptions>FunctionalOption.ОграничиватьДоступНаУровнеЗаписей</functionalOptions>
   <definedTypes>DefinedType.ЗначениеДоступа</definedTypes>
   <definedTypes>DefinedType.Пользователь</definedTypes>
+  <definedTypes>DefinedType.ВерсионируемыеДанные</definedTypes>
   <commonCommands>CommonCommand.ППГД_ОткрытьЖурналРегистрации</commonCommands>
   <commandGroups>CommandGroup.РазделГлавное250_ОписанияПроцессов</commandGroups>
   <constants>Constant.ОграничиватьДоступНаУровнеЗаписей</constants>
