@@ -2445,8 +2445,8 @@
     </extInfo>
   </items>
   <items xsi:type="form:FormGroup">
-    <name>РМ_СтраницаГлоссарий</name>
-    <id>301</id>
+    <name>PM_СтраницаГлоссарий</name>
+    <id>362</id>
     <items xsi:type="form:Table">
       <name>РМ_ТаблицаГлоссария</name>
       <id>303</id>
@@ -2670,11 +2670,313 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Глоссарий</value>
+      <value>Страница глоссарий</value>
     </title>
     <extendedTooltip>
-      <name>РМ_СтраницаГлоссарийРасширеннаяПодсказка</name>
-      <id>302</id>
+      <name>PM_СтраницаГлоссарийРасширеннаяПодсказка</name>
+      <id>363</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГКСИ_ГруппыСценарияГруппа</name>
+    <id>364</id>
+    <items xsi:type="form:Button">
+      <name>ГКСИ_ДобавитьГруппу</name>
+      <id>366</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ГКСИ_ДобавитьГруппуРасширеннаяПодсказка</name>
+        <id>367</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.ГКСИ_ДобавитьГруппу</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ГКСИ_УдалитьГруппу</name>
+      <id>368</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ГКСИ_УдалитьГруппуРасширеннаяПодсказка</name>
+        <id>369</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.ГКСИ_УдалитьГруппу</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Table">
+      <name>ГКСИ_ГруппыСценария</name>
+      <id>370</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ГКСИ_ГруппыСценария</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <items xsi:type="form:FormField">
+        <name>ГКСИ_ГруппыСценарияКолонкаГруппа</name>
+        <id>383</id>
+        <title>
+          <key>ru</key>
+          <value>Группа</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ГКСИ_ГруппыСценария.Группа</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ГКСИ_ГруппыСценарияГКСИ_ГруппыСценарияКолонкаГруппаРасширеннаяПодсказка</name>
+          <id>385</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ГКСИ_ГруппыСценарияГКСИ_ГруппыСценарияКолонкаГруппаКонтекстноеМеню</name>
+          <id>384</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ГКСИ_ГруппыСценарияКолонкаПолныйКод</name>
+        <id>386</id>
+        <title>
+          <key>ru</key>
+          <value>Полный код (контекстный)</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ГКСИ_ГруппыСценария.ПолныйКодКонтекстный</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ГКСИ_ГруппыСценарияГКСИ_ГруппыСценарияКолонкаПолныйКодРасширеннаяПодсказка</name>
+          <id>388</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ГКСИ_ГруппыСценарияГКСИ_ГруппыСценарияКолонкаПолныйКодКонтекстноеМеню</name>
+          <id>387</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <autoCommandBar>
+        <name>ГКСИ_ГруппыСценарияКоманднаяПанель</name>
+        <id>371</id>
+        <horizontalAlign>Left</horizontalAlign>
+        <autoFill>true</autoFill>
+      </autoCommandBar>
+      <searchStringAddition>
+        <name>ГКСИ_ГруппыСценарияСтрокаПоиска</name>
+        <id>374</id>
+        <extendedTooltip>
+          <name>ГКСИ_ГруппыСценарияСтрокаПоискаРасширеннаяПодсказка</name>
+          <id>376</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ГКСИ_ГруппыСценарияСтрокаПоискаКонтекстноеМеню</name>
+          <id>375</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <source>ГКСИ_ГруппыСценария</source>
+        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchStringAddition>
+      <viewStatusAddition>
+        <name>ГКСИ_ГруппыСценарияСостояниеПросмотра</name>
+        <id>380</id>
+        <extendedTooltip>
+          <name>ГКСИ_ГруппыСценарияСостояниеПросмотраРасширеннаяПодсказка</name>
+          <id>382</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ГКСИ_ГруппыСценарияСостояниеПросмотраКонтекстноеМеню</name>
+          <id>381</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>ViewStatusAddition</type>
+        <source>ГКСИ_ГруппыСценария</source>
+        <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </viewStatusAddition>
+      <searchControlAddition>
+        <name>ГКСИ_ГруппыСценарияУправлениеПоиском</name>
+        <id>377</id>
+        <extendedTooltip>
+          <name>ГКСИ_ГруппыСценарияУправлениеПоискомРасширеннаяПодсказка</name>
+          <id>379</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ГКСИ_ГруппыСценарияУправлениеПоискомКонтекстноеМеню</name>
+          <id>378</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>SearchControlAddition</type>
+        <source>ГКСИ_ГруппыСценария</source>
+        <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchControlAddition>
+      <extendedTooltip>
+        <name>ГКСИ_ГруппыСценарияРасширеннаяПодсказка</name>
+        <id>373</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ГКСИ_ГруппыСценарияКонтекстноеМеню</name>
+        <id>372</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <changeRowSet>true</changeRowSet>
+      <changeRowOrder>true</changeRowOrder>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <autoMaxRowsCount>true</autoMaxRowsCount>
+      <selectionMode>MultiRow</selectionMode>
+      <header>true</header>
+      <headerHeight>1</headerHeight>
+      <footerHeight>1</footerHeight>
+      <horizontalScrollBar>AutoUse</horizontalScrollBar>
+      <verticalScrollBar>AutoUse</verticalScrollBar>
+      <horizontalLines>true</horizontalLines>
+      <verticalLines>true</verticalLines>
+      <useAlternationRowColor>true</useAlternationRowColor>
+      <autoInsertNewRow>true</autoInsertNewRow>
+      <searchOnInput>Auto</searchOnInput>
+      <initialListView>Auto</initialListView>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <enableStartDrag>true</enableStartDrag>
+      <enableDrag>true</enableDrag>
+      <fileDragMode>AsFileRef</fileDragMode>
+      <rowFilter xsi:type="core:UndefinedValue"/>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Входит в группы</value>
+    </title>
+    <extendedTooltip>
+      <name>ГКСИ_ГруппыСценарияГруппаРасширеннаяПодсказка</name>
+      <id>365</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -4081,6 +4383,38 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>РМ_КомандаMDВидео_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>ГКСИ_ДобавитьГруппу</name>
+    <title>
+      <key>ru</key>
+      <value>Добавить</value>
+    </title>
+    <id>1000022</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_ДобавитьГруппу</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>ГКСИ_УдалитьГруппу</name>
+    <title>
+      <key>ru</key>
+      <value>Удалить</value>
+    </title>
+    <id>1000023</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_УдалитьГруппу</name>
       </handler>
     </action>
   </formCommands>
