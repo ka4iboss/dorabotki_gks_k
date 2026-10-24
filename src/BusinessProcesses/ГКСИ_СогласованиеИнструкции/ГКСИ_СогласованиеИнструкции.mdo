@@ -165,23 +165,6 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </attributes>
-  <attributes uuid="57f36a21-9407-4376-b777-4a694e9e991b">
-    <name>ГКСИ_HTMLИнструкции</name>
-    <synonym>
-      <key>ru</key>
-      <value>HTML инструкции</value>
-    </synonym>
-    <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>100</length>
-      </stringQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-  </attributes>
   <attributes uuid="1c21d4fc-9bff-48e4-bf97-1db95ef41b6f">
     <name>НомерВерсииСогласования</name>
     <synonym>
@@ -210,6 +193,21 @@
       <numberQualifiers>
         <precision>10</precision>
       </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="856b96be-47d0-46cd-a853-a47c914bedf6">
+    <name>ГКСИ_HTMLИнструкции</name>
+    <synonym>
+      <key>ru</key>
+      <value>HTML инструкции</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
