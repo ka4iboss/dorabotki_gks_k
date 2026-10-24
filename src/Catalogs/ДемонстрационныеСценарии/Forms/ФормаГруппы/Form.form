@@ -2468,7 +2468,6 @@
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
             </extInfo>
           </items>
@@ -2508,7 +2507,6 @@
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
             </extInfo>
           </items>
@@ -2548,7 +2546,6 @@
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
             </extInfo>
           </items>
@@ -2588,7 +2585,6 @@
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
             </extInfo>
           </items>
@@ -2628,7 +2624,6 @@
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
             </extInfo>
           </items>
@@ -2668,7 +2663,6 @@
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
             </extInfo>
           </items>
@@ -2708,7 +2702,6 @@
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
-              <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
             </extInfo>
           </items>
@@ -2820,6 +2813,7 @@
           <autoInsertNewRow>true</autoInsertNewRow>
           <searchOnInput>Auto</searchOnInput>
           <initialListView>Auto</initialListView>
+          <initialTreeView>ExpandAllLevels</initialTreeView>
           <horizontalStretch>true</horizontalStretch>
           <verticalStretch>true</verticalStretch>
           <enableStartDrag>true</enableStartDrag>
@@ -3960,6 +3954,137 @@
     <edit>
       <common>true</common>
     </edit>
+    <columns>
+      <name>КолонкаСотрудник</name>
+      <title>
+        <key>ru</key>
+        <value>Колонка сотрудник</value>
+      </title>
+      <id>1000031</id>
+      <valueType>
+        <types>CatalogRef.Пользователи</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КолонкаЭтап</name>
+      <title>
+        <key>ru</key>
+        <value>Колонка этап</value>
+      </title>
+      <id>1000032</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КолонкаРезультат</name>
+      <title>
+        <key>ru</key>
+        <value>Колонка результат</value>
+      </title>
+      <id>1000033</id>
+      <valueType>
+        <types>EnumRef.ГКСИ_РезультатыСогласованияИнструкций</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КолонкаКомментарий</name>
+      <title>
+        <key>ru</key>
+        <value>Колонка комментарий</value>
+      </title>
+      <id>1000034</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>500</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КолонкаДатаСогласования</name>
+      <title>
+        <key>ru</key>
+        <value>Колонка дата согласования</value>
+      </title>
+      <id>1000035</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КолонкаНомерВерсии</name>
+      <title>
+        <key>ru</key>
+        <value>Колонка номер версии</value>
+      </title>
+      <id>1000036</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КолонкаУзел</name>
+      <title>
+        <key>ru</key>
+        <value>Колонка узел</value>
+      </title>
+      <id>1000037</id>
+      <valueType>
+        <types>CatalogRef.ДемонстрационныеСценарии</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
   </attributes>
   <formCommands>
     <name>ГКСИ_ПереключитьРежим</name>
