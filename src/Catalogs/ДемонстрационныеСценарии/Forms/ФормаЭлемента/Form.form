@@ -367,6 +367,32 @@
         <textEdit>true</textEdit>
       </extInfo>
     </items>
+    <items xsi:type="form:Button">
+      <name>ГКСИ_ПереключитьРежим</name>
+      <id>401</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ГКСИ_ПереключитьРежимРасширеннаяПодсказка</name>
+        <id>402</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.ГКСИ_ПереключитьРежим</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -400,6 +426,725 @@
     <items xsi:type="form:FormGroup">
       <name>СтраницаОписание</name>
       <id>311</id>
+      <items xsi:type="form:FormGroup">
+        <name>РМ_Страницы_ТекстMarkdownСтрока</name>
+        <id>324</id>
+        <items xsi:type="form:FormGroup">
+          <name>РМ_Страница_Редактирование_ТекстMarkdownСтрока</name>
+          <id>326</id>
+          <items xsi:type="form:FormGroup">
+            <name>РМ_КомманднаяПанель_Редактирование_ТекстMarkdownСтрока</name>
+            <id>330</id>
+            <items xsi:type="form:FormGroup">
+              <name>РМ_ПодменюВставитьЗагруженноеИзображение_ТекстMarkdownСтрока</name>
+              <id>332</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Вставить...</value>
+              </title>
+              <extendedTooltip>
+                <name>РМ_ПодменюВставитьЗагруженноеИзображение_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>333</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>Popup</type>
+              <extInfo xsi:type="form:PopupGroupExtInfo">
+                <representation>Auto</representation>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDЖирный_ТекстMarkdownСтрока</name>
+              <id>407</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDЖирный_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>408</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDЖирный_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDКурсив_ТекстMarkdownСтрока</name>
+              <id>403</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDКурсив_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>404</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDКурсив_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDЗачеркнутый_ТекстMarkdownСтрока</name>
+              <id>405</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDЗачеркнутый_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>406</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDЗачеркнутый_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDЗаголовок1_ТекстMarkdownСтрока</name>
+              <id>409</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDЗаголовок1_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>410</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDЗаголовок1_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDЗаголовок2_ТекстMarkdownСтрока</name>
+              <id>411</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDЗаголовок2_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>412</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDЗаголовок2_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDЗаголовок3_ТекстMarkdownСтрока</name>
+              <id>413</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDЗаголовок3_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>414</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDЗаголовок3_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDЦитата_ТекстMarkdownСтрока</name>
+              <id>415</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDЦитата_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>416</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDЦитата_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDСсылка_ТекстMarkdownСтрока</name>
+              <id>417</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDСсылка_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>418</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDСсылка_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDПрограммныйКод_ТекстMarkdownСтрока</name>
+              <id>419</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDПрограммныйКод_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>420</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDПрограммныйКод_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDМаркерыСписок_ТекстMarkdownСтрока</name>
+              <id>421</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDМаркерыСписок_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>422</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDМаркерыСписок_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDНумерованныйСписок_ТекстMarkdownСтрока</name>
+              <id>423</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDНумерованныйСписок_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>424</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDНумерованныйСписок_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDСписокЗадач_ТекстMarkdownСтрока</name>
+              <id>425</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDСписокЗадач_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>426</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDСписокЗадач_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDТаблица_ТекстMarkdownСтрока</name>
+              <id>427</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDТаблица_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>428</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDТаблица_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDВставитьИзображениеИзБуфераОбмена_ТекстMarkdownСтрока</name>
+              <id>429</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDВставитьИзображениеИзБуфераОбмена_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>430</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDВставитьИзображениеИзБуфераОбмена_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDДобавитьФайл_ТекстMarkdownСтрока</name>
+              <id>431</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDДобавитьФайл_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>432</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDДобавитьФайл_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDОткрытьСинтаксис_ТекстMarkdownСтрока</name>
+              <id>433</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDОткрытьСинтаксис_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>434</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDОткрытьСинтаксис_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDГлоссарий_ТекстMarkdownСтрока</name>
+              <id>435</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDГлоссарий_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>436</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDГлоссарий_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDСсылкаНаУзел_ТекстMarkdownСтрока</name>
+              <id>437</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDСсылкаНаУзел_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>438</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDСсылкаНаУзел_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РМ_КомандаMDВидео_ТекстMarkdownСтрока</name>
+              <id>439</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РМ_КомандаMDВидео_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+                <id>440</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РМ_КомандаMDВидео_ТекстMarkdownСтрока</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>РМ_КомманднаяПанель_Редактирование_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+              <id>331</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>CommandBar</type>
+            <extInfo xsi:type="form:CommandBarExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>РМ_ТекстMarkdownСтрока</name>
+            <id>334</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ТекстMarkdownСтрока</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>РМ_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+              <id>336</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РМ_ТекстMarkdownСтрокаКонтекстноеМеню</name>
+              <id>335</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>РМ_НовыеПрисоединенныеФайлы_ТекстMarkdownСтрока</name>
+            <id>340</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Новые файлы</value>
+            </title>
+            <extendedTooltip>
+              <name>РМ_НовыеПрисоединенныеФайлы_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+              <id>341</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>HorizontalIfPossible</group>
+              <behavior>Auto</behavior>
+              <representation>WeakSeparation</representation>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <showTitle>true</showTitle>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Редактирование</value>
+          </title>
+          <extendedTooltip>
+            <name>РМ_Страница_Редактирование_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+            <id>327</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Page</type>
+          <extInfo xsi:type="form:PageGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>РМ_Страница_Просмотр_ТекстMarkdownСтрока</name>
+          <id>328</id>
+          <items xsi:type="form:FormField">
+            <name>РМ_ПолеПросмотра_ТекстMarkdownСтрока</name>
+            <id>337</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>РМ_ПолеПросмотра_ТекстMarkdownСтрока</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>РМ_ПолеПросмотра_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+              <id>339</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РМ_ПолеПросмотра_ТекстMarkdownСтрокаКонтекстноеМеню</name>
+              <id>338</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>HTMLDocumentField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:HtmlFieldExtInfo">
+              <width>50</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>10</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <verticalStretch>true</verticalStretch>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Просмотр</value>
+          </title>
+          <extendedTooltip>
+            <name>РМ_Страница_Просмотр_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+            <id>329</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Page</type>
+          <extInfo xsi:type="form:PageGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>РМ_Страницы_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
+          <id>325</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Pages</type>
+        <extInfo xsi:type="form:PagesGroupExtInfo">
+          <pagesRepresentation>Auto</pagesRepresentation>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
       <items xsi:type="form:FormGroup">
         <name>ГруппаЧтение</name>
         <id>28</id>
@@ -2331,6 +3076,256 @@
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
+      <items xsi:type="form:FormGroup">
+        <name>РМ_СтраницаГлоссарий</name>
+        <id>380</id>
+        <items xsi:type="form:Table">
+          <name>РМ_ТаблицаГлоссария</name>
+          <id>382</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ГКСИ_ТерминыГлоссария</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <items xsi:type="form:FormField">
+            <name>РМ_ТерминНаименование</name>
+            <id>395</id>
+            <title>
+              <key>ru</key>
+              <value>Термин</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ГКСИ_ТерминыГлоссария.Наименование</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>РМ_ТаблицаГлоссарияРМ_ТерминНаименованиеРасширеннаяПодсказка</name>
+              <id>397</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РМ_ТаблицаГлоссарияРМ_ТерминНаименованиеКонтекстноеМеню</name>
+              <id>396</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>РМ_ТерминОписание</name>
+            <id>398</id>
+            <title>
+              <key>ru</key>
+              <value>Описание</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ГКСИ_ТерминыГлоссария.Описание</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>РМ_ТаблицаГлоссарияРМ_ТерминОписаниеРасширеннаяПодсказка</name>
+              <id>400</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РМ_ТаблицаГлоссарияРМ_ТерминОписаниеКонтекстноеМеню</name>
+              <id>399</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <autoCommandBar>
+            <name>РМ_ТаблицаГлоссарияКоманднаяПанель</name>
+            <id>383</id>
+            <horizontalAlign>Left</horizontalAlign>
+            <autoFill>true</autoFill>
+          </autoCommandBar>
+          <searchStringAddition>
+            <name>РМ_ТаблицаГлоссарияСтрокаПоиска</name>
+            <id>386</id>
+            <extendedTooltip>
+              <name>РМ_ТаблицаГлоссарияСтрокаПоискаРасширеннаяПодсказка</name>
+              <id>388</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РМ_ТаблицаГлоссарияСтрокаПоискаКонтекстноеМеню</name>
+              <id>387</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <source>РМ_ТаблицаГлоссария</source>
+            <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchStringAddition>
+          <viewStatusAddition>
+            <name>РМ_ТаблицаГлоссарияСостояниеПросмотра</name>
+            <id>392</id>
+            <extendedTooltip>
+              <name>РМ_ТаблицаГлоссарияСостояниеПросмотраРасширеннаяПодсказка</name>
+              <id>394</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РМ_ТаблицаГлоссарияСостояниеПросмотраКонтекстноеМеню</name>
+              <id>393</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>ViewStatusAddition</type>
+            <source>РМ_ТаблицаГлоссария</source>
+            <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </viewStatusAddition>
+          <searchControlAddition>
+            <name>РМ_ТаблицаГлоссарияУправлениеПоиском</name>
+            <id>389</id>
+            <extendedTooltip>
+              <name>РМ_ТаблицаГлоссарияУправлениеПоискомРасширеннаяПодсказка</name>
+              <id>391</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РМ_ТаблицаГлоссарияУправлениеПоискомКонтекстноеМеню</name>
+              <id>390</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>SearchControlAddition</type>
+            <source>РМ_ТаблицаГлоссария</source>
+            <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchControlAddition>
+          <extendedTooltip>
+            <name>РМ_ТаблицаГлоссарияРасширеннаяПодсказка</name>
+            <id>385</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>РМ_ТаблицаГлоссарияКонтекстноеМеню</name>
+            <id>384</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <changeRowSet>true</changeRowSet>
+          <changeRowOrder>true</changeRowOrder>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <autoMaxRowsCount>true</autoMaxRowsCount>
+          <selectionMode>MultiRow</selectionMode>
+          <header>true</header>
+          <headerHeight>1</headerHeight>
+          <footerHeight>1</footerHeight>
+          <horizontalScrollBar>AutoUse</horizontalScrollBar>
+          <verticalScrollBar>AutoUse</verticalScrollBar>
+          <horizontalLines>true</horizontalLines>
+          <verticalLines>true</verticalLines>
+          <useAlternationRowColor>true</useAlternationRowColor>
+          <autoInsertNewRow>true</autoInsertNewRow>
+          <searchOnInput>Auto</searchOnInput>
+          <initialListView>Auto</initialListView>
+          <horizontalStretch>true</horizontalStretch>
+          <verticalStretch>true</verticalStretch>
+          <enableStartDrag>true</enableStartDrag>
+          <enableDrag>true</enableDrag>
+          <fileDragMode>AsFileRef</fileDragMode>
+          <rowFilter xsi:type="core:UndefinedValue"/>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Глоссарий</value>
+        </title>
+        <extendedTooltip>
+          <name>РМ_СтраницаГлоссарийРасширеннаяПодсказка</name>
+          <id>381</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <behavior>Auto</behavior>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -3770,6 +4765,137 @@
       </edit>
     </columns>
   </attributes>
+  <attributes>
+    <name>РМ_ПолеПросмотра_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>РМ_ПолеПросмотра_ТекстMarkdownСтрока</value>
+    </title>
+    <id>1000018</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РМ_ТаблицаПрисоединенныхФайлов_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>РМ_ТаблицаПрисоединенныхФайлов_ТекстMarkdownСтрока</value>
+    </title>
+    <id>1000019</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Ссылка</name>
+      <title>
+        <key>ru</key>
+        <value>Ссылка</value>
+      </title>
+      <id>1000020</id>
+      <valueType>
+        <types>CatalogRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ПутьКФайлу</name>
+      <title>
+        <key>ru</key>
+        <value>ПутьКФайлу</value>
+      </title>
+      <id>1000021</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИмяФайла</name>
+      <title>
+        <key>ru</key>
+        <value>ИмяФайла</value>
+      </title>
+      <id>1000022</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Адрес</name>
+      <title>
+        <key>ru</key>
+        <value>Адрес</value>
+      </title>
+      <id>1000023</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЭтоНовый</name>
+      <title>
+        <key>ru</key>
+        <value>ЭтоНовый</value>
+      </title>
+      <id>1000024</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
   <formCommands>
     <name>ГКСИ_ПереключитьРежим</name>
     <title>
@@ -3799,6 +4925,310 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ГКСИ_ОтправитьНаСогласование</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDКурсив_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Курсив</value>
+    </title>
+    <id>1000022</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDКурсив_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDЗачеркнутый_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Зачеркнутый</value>
+    </title>
+    <id>1000023</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDЗачеркнутый_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDЖирный_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Жирный</value>
+    </title>
+    <id>1000024</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDЖирный_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDЗаголовок1_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Заголовок 1</value>
+    </title>
+    <id>1000025</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDЗаголовок1_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDЗаголовок2_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Заголовок 2</value>
+    </title>
+    <id>1000026</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDЗаголовок2_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDЗаголовок3_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Заголовок 3</value>
+    </title>
+    <id>1000027</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDЗаголовок3_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDЦитата_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Цитата</value>
+    </title>
+    <id>1000028</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDЦитата_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDСсылка_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </title>
+    <id>1000029</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDСсылка_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDПрограммныйКод_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Вставить код</value>
+    </title>
+    <id>1000030</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDПрограммныйКод_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDМаркерыСписок_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Маркированный список</value>
+    </title>
+    <id>1000031</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDМаркерыСписок_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDНумерованныйСписок_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Нумерованный список</value>
+    </title>
+    <id>1000032</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDНумерованныйСписок_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDСписокЗадач_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Список задач</value>
+    </title>
+    <id>1000033</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDСписокЗадач_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDТаблица_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Вставить таблицу</value>
+    </title>
+    <id>1000034</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDТаблица_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDВставитьИзображениеИзБуфераОбмена_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Изображение из буфера</value>
+    </title>
+    <id>1000035</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDВставитьИзображениеИзБуфераОбмена_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDДобавитьФайл_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Добавить файл</value>
+    </title>
+    <id>1000036</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDДобавитьФайл_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDОткрытьСинтаксис_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Справка по синтаксису</value>
+    </title>
+    <id>1000037</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDОткрытьСинтаксис_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDГлоссарий_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Термин глоссария</value>
+    </title>
+    <id>1000038</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDГлоссарий_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDСсылкаНаУзел_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Ссылка на группу или шаг</value>
+    </title>
+    <id>1000039</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDСсылкаНаУзел_ТекстMarkdownСтрока</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>РМ_КомандаMDВидео_ТекстMarkdownСтрока</name>
+    <title>
+      <key>ru</key>
+      <value>Видео</value>
+    </title>
+    <id>1000040</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РМ_КомандаMDВидео_ТекстMarkdownСтрока</name>
       </handler>
     </action>
   </formCommands>
