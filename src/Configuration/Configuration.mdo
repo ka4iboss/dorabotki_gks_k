@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.15.6</version>
+  <version>1.0.15.7</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
