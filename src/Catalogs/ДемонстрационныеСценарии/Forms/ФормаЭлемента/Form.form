@@ -1169,6 +1169,14 @@
             <dataPath xsi:type="form:DataPath">
               <segments>РМ_ПолеПросмотра_ТекстMarkdownСтрока</segments>
             </dataPath>
+            <handlers>
+              <event>DocumentComplete</event>
+              <name>РМ_Подключаемый_ДокументСформированПоляПросмотраКомментария</name>
+            </handlers>
+            <handlers>
+              <event>OnClick</event>
+              <name>РМ_Подключаемый_ПриНажатииПоляПросмотраКомментария</name>
+            </handlers>
             <extendedTooltip>
               <name>РМ_ПолеПросмотра_ТекстMarkdownСтрокаРасширеннаяПодсказка</name>
               <id>339</id>
