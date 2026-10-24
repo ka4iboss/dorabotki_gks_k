@@ -250,4 +250,15 @@
 			<value>true</value>
 		</right>
 	</object>
+	<object>
+		<name>BusinessProcess.ГКСИ_СогласованиеИнструкции</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
 </Rights>

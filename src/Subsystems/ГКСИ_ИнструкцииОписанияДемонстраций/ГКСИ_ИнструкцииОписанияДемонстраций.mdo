@@ -20,4 +20,8 @@
   <content>DataProcessor.ГКСИ_ВыгрузкаСценариевВMarkdown</content>
   <content>CommonModule.ГКСИ_ВыгрузкаСценариевВMarkdown</content>
   <content>CommonModule.ГКСИ_ВыгрузкаСценариевВMarkdownДлительныеОперации</content>
+  <content>BusinessProcess.ГКСИ_СогласованиеИнструкции</content>
+  <content>Enum.ГКСИ_ВидыСогласованияИнструкций</content>
+  <content>Enum.ГКСИ_РезультатыСогласованияИнструкций</content>
+  <content>Task.ЗадачаИсполнителя</content>
 </mdclass:Subsystem>

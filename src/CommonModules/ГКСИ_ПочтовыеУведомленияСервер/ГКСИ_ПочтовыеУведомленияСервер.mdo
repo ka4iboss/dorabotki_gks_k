@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b56abc96-f61c-4ab6-b218-ac6b1d1a73a2">
+  <name>ГКСИ_ПочтовыеУведомленияСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Почтовые уведомления (сервер)</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

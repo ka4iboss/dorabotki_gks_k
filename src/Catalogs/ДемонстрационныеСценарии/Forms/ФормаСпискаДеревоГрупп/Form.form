@@ -211,6 +211,46 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
+      <name>ГКСИ_ДеревоСценариевСтатус</name>
+      <id>233</id>
+      <title>
+        <key>ru</key>
+        <value>Статус</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ГКСИ_ДеревоСценариев.Статус</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ГКСИ_ДеревоСценариевГКСИ_ДеревоСценариевСтатусРасширеннаяПодсказка</name>
+        <id>235</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ГКСИ_ДеревоСценариевГКСИ_ДеревоСценариевСтатусКонтекстноеМеню</name>
+        <id>234</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
       <name>ГКСИ_ДеревоСценариевЭтоГруппа</name>
       <id>104</id>
       <enabled>true</enabled>
@@ -567,6 +607,38 @@
       </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
+    <items xsi:type="form:Button">
+      <name>ГКСИ_ОтправитьНаСогласование</name>
+      <id>231</id>
+      <title>
+        <key>ru</key>
+        <value>Отправить на согласование</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаГКСИ_ОтправитьНаСогласованиеРасширеннаяПодсказка</name>
+        <id>232</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ГКСИ_ОтправитьНаСогласование</commandName>
+      <representation>PictureAndText</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.ActivateTask</picture>
+      </picture>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -714,6 +786,23 @@
         <common>true</common>
       </edit>
     </columns>
+    <columns>
+      <name>Статус</name>
+      <title>
+        <key>ru</key>
+        <value>Статус</value>
+      </title>
+      <id>107</id>
+      <valueType>
+        <types>EnumRef.СтатусыДемонстрационныхСценариев</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
   </attributes>
   <formCommands>
     <name>Создать</name>
@@ -814,6 +903,22 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>АльбомПоВыделенным</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>ГКСИ_ОтправитьНаСогласование</name>
+    <title>
+      <key>ru</key>
+      <value>Отправить на согласование</value>
+    </title>
+    <id>7</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ГКСИ_ОтправитьНаСогласование</name>
       </handler>
     </action>
   </formCommands>

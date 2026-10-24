@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="634adc30-c5b3-4e70-9c52-809ed18cca6e">
+  <producedTypes>
+    <refType typeId="f4ad9adc-2e57-42a5-a211-adf147d326cd" valueTypeId="112d4a03-68a9-4d53-98f5-b6c8bea2a976"/>
+    <listType typeId="42876cb1-962d-4c76-a066-ec0300f03aed" valueTypeId="614bb594-c3c2-445e-a9d6-370886e8f004"/>
+    <managerType typeId="118f4e29-ee15-46ee-b399-f65fbf165b66" valueTypeId="63fc0e0b-9e78-4246-8d37-e109c9e19be4"/>
+  </producedTypes>
+  <name>ГКСИ_РезультатыСогласованияИнструкций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Результаты согласования инструкций</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="5420fe66-e549-490f-b087-b884096722f4">
+    <name>Согласовано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласовано</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4017d5a5-1b07-41e7-8bed-4a1ef41ebb45">
+    <name>НеСогласовано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не согласовано</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
