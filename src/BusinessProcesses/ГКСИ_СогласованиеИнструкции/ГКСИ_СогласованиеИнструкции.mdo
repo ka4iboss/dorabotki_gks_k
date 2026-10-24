@@ -165,6 +165,23 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </attributes>
+  <attributes uuid="57f36a21-9407-4376-b777-4a694e9e991b">
+    <name>ГКСИ_HTMLИнструкции</name>
+    <synonym>
+      <key>ru</key>
+      <value>HTML инструкции</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
   <tabularSections uuid="39921074-0125-4277-991f-070858f5620c">
     <producedTypes>
       <objectType typeId="9e99e70f-bb3a-4d5c-a495-52a0e8f09286" valueTypeId="231e605b-e562-4267-b544-f455ec05a2d1"/>
