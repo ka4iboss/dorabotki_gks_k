@@ -630,10 +630,13 @@
         </extInfo>
       </extendedTooltip>
       <commandName>Form.Command.ГКСИ_ОтправитьНаСогласование</commandName>
-      <representation>Auto</representation>
+      <representation>PictureAndText</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.ActivateTask</picture>
+      </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <horizontalAlign>Left</horizontalAlign>
