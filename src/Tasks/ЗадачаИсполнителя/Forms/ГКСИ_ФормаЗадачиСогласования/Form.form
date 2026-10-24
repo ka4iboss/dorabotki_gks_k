@@ -69,18 +69,24 @@
       <id>9</id>
       <autoFill>true</autoFill>
     </contextMenu>
-    <type>LabelField</type>
+    <type>InputField</type>
     <editMode>Enter</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:LabelFieldExtInfo">
+    <extInfo xsi:type="form:InputFieldExtInfo">
       <width>200</width>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
-      <border xsi:type="core:BorderDef">
-        <width>1</width>
-      </border>
+      <wrap>true</wrap>
+      <dropListButton>false</dropListButton>
+      <choiceButton>false</choiceButton>
+      <clearButton>false</clearButton>
+      <spinButton>false</spinButton>
+      <openButton>true</openButton>
+      <createButton>false</createButton>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
     </extInfo>
   </items>
   <items xsi:type="form:FormGroup">
@@ -89,6 +95,10 @@
     <items xsi:type="form:FormField">
       <name>ТекстСогласуемогоОбъекта</name>
       <id>14</id>
+      <title>
+        <key>ru</key>
+        <value>Согласуемая текстовка</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -97,7 +107,6 @@
       <dataPath xsi:type="form:DataPath">
         <segments>ТекстСогласуемогоОбъекта</segments>
       </dataPath>
-      <titleLocation>None</titleLocation>
       <extendedTooltip>
         <name>ТекстСогласуемогоОбъектаРасширеннаяПодсказка</name>
         <id>16</id>
@@ -130,6 +139,10 @@
     <items xsi:type="form:FormField">
       <name>ТекстПодписаннойВерсии</name>
       <id>17</id>
+      <title>
+        <key>ru</key>
+        <value>Прошлая согласованная текстовка</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -138,7 +151,6 @@
       <dataPath xsi:type="form:DataPath">
         <segments>ТекстПодписаннойВерсии</segments>
       </dataPath>
-      <titleLocation>None</titleLocation>
       <extendedTooltip>
         <name>ТекстПодписаннойВерсииРасширеннаяПодсказка</name>
         <id>19</id>
@@ -277,9 +289,12 @@
     <extInfo xsi:type="form:InputFieldExtInfo">
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
       <wrap>true</wrap>
+      <multiLine>true</multiLine>
+      <extendedEdit>true</extendedEdit>
       <chooseType>true</chooseType>
-      <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
     </extInfo>
   </items>
@@ -318,6 +333,7 @@
         <picture>StdPicture.AppearanceCheckIcon</picture>
       </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
       <name>Отклонить</name>
@@ -350,8 +366,9 @@
         <picture>StdPicture.AppearanceCrossIcon</picture>
       </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
     </items>
-    <horizontalAlign>Left</horizontalAlign>
+    <horizontalAlign>Right</horizontalAlign>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -424,9 +441,7 @@
     <id>4</id>
     <valueType>
       <types>String</types>
-      <stringQualifiers>
-        <length>100</length>
-      </stringQualifiers>
+      <stringQualifiers/>
     </valueType>
     <view>
       <common>true</common>
