@@ -182,6 +182,40 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </attributes>
+  <attributes uuid="1c21d4fc-9bff-48e4-bf97-1db95ef41b6f">
+    <name>НомерВерсииСогласования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия, которая согласуется</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="151b5ebf-d065-4b2a-b17c-990537494344">
+    <name>НомерБазовойВерсии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Последняя подписанная версия до старта</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
   <tabularSections uuid="39921074-0125-4277-991f-070858f5620c">
     <producedTypes>
       <objectType typeId="9e99e70f-bb3a-4d5c-a495-52a0e8f09286" valueTypeId="231e605b-e562-4267-b544-f455ec05a2d1"/>
