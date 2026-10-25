@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="82d6a813-2cba-4e3b-b513-f663d2eb5828">
+  <name>ГКСИ_ПраваДоступаСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Права доступа сервер</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>
