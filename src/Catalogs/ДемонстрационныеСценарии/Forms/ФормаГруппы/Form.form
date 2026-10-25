@@ -2435,6 +2435,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеВерсия</name>
             <id>262</id>
+            <title>
+              <key>ru</key>
+              <value>Номер версии</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2474,6 +2478,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеПодписант</name>
             <id>247</id>
+            <title>
+              <key>ru</key>
+              <value>Рецензент</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2513,6 +2521,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеЭтап</name>
             <id>250</id>
+            <title>
+              <key>ru</key>
+              <value>Процесс согласования</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2552,6 +2564,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеРезультат</name>
             <id>253</id>
+            <title>
+              <key>ru</key>
+              <value>Результат согласования</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2591,6 +2607,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеКомментарий</name>
             <id>256</id>
+            <title>
+              <key>ru</key>
+              <value>Комментарий</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2630,6 +2650,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеДатаСогласования</name>
             <id>259</id>
+            <title>
+              <key>ru</key>
+              <value>Дата согласования</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2669,7 +2693,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеУзел</name>
             <id>265</id>
-            <visible>true</visible>
+            <title>
+              <key>ru</key>
+              <value>Узел</value>
+            </title>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
@@ -2796,7 +2823,7 @@
             <id>215</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <representation>HierarchicalList</representation>
+          <representation>Tree</representation>
           <readOnly>true</readOnly>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>

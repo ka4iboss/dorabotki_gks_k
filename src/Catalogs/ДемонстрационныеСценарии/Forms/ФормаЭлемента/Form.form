@@ -3066,6 +3066,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеВерсия</name>
             <id>304</id>
+            <title>
+              <key>ru</key>
+              <value>Номер версии</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3105,6 +3109,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеПодписант</name>
             <id>289</id>
+            <title>
+              <key>ru</key>
+              <value>Рецензент</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3144,6 +3152,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеЭтап</name>
             <id>292</id>
+            <title>
+              <key>ru</key>
+              <value>Процесс согласования</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3183,6 +3195,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеРезультат</name>
             <id>295</id>
+            <title>
+              <key>ru</key>
+              <value>Результат согласования</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3222,6 +3238,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеКомментарий</name>
             <id>298</id>
+            <title>
+              <key>ru</key>
+              <value>Комментарий</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3261,6 +3281,10 @@
           <items xsi:type="form:FormField">
             <name>ПолеДатаСогласования</name>
             <id>301</id>
+            <title>
+              <key>ru</key>
+              <value>Дата согласования</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3388,7 +3412,7 @@
             <id>260</id>
             <autoFill>true</autoFill>
           </contextMenu>
-          <representation>HierarchicalList</representation>
+          <representation>Tree</representation>
           <readOnly>true</readOnly>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>

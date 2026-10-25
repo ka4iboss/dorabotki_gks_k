@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ca1f6aef-c150-4b2a-bf3a-fbede8a050fd">
+  <name>ГКСИ_ФайлыСценариевСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГКСИ Файлы сценариев (сервер)</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>
