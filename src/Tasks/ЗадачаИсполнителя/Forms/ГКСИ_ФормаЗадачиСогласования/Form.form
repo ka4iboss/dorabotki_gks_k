@@ -211,6 +211,50 @@
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
+    <name>ПроцессСсылка</name>
+    <id>27</id>
+    <title>
+      <key>ru</key>
+      <value>Бизнес-процесс</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ПроцессСсылка</segments>
+    </dataPath>
+    <handlers>
+      <event>Click</event>
+      <name>ПроцессСсылкаНажатие</name>
+    </handlers>
+    <extendedTooltip>
+      <name>ПроцессСсылкаРасширеннаяПодсказка</name>
+      <id>29</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ПроцессСсылкаКонтекстноеМеню</name>
+      <id>28</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>LabelField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:LabelFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
     <name>ТекстИзменений</name>
     <id>20</id>
     <visible>true</visible>
