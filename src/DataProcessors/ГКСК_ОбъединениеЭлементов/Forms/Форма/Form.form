@@ -16,10 +16,6 @@
       <segments>ИмяОбъекта</segments>
     </dataPath>
     <handlers>
-      <event>StartChoice</event>
-      <name>ПолеОбъектаМетаданныхНачалоВыбора</name>
-    </handlers>
-    <handlers>
       <event>OnChange</event>
       <name>ОбъектМетаданныхПриИзменении</name>
     </handlers>
@@ -742,6 +738,226 @@
       <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
     </extInfo>
   </items>
+  <items xsi:type="form:Table">
+    <name>ТаблицаОбъектовМетаданных</name>
+    <id>86</id>
+    <title>
+      <key>ru</key>
+      <value>Объекты метаданных</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ОбъектыМетаданных</segments>
+    </dataPath>
+    <titleLocation>None</titleLocation>
+    <items xsi:type="form:FormField">
+      <name>ТаблицаОбъектовМетаданныхТаблицаОбъектовМетаданных</name>
+      <id>99</id>
+      <title>
+        <key>ru</key>
+        <value>Объекты метаданных</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ОбъектыМетаданных.Представление</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ТаблицаОбъектовМетаданныхТаблицаОбъектовМетаданныхРасширеннаяПодсказка</name>
+        <id>101</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ТаблицаОбъектовМетаданныхТаблицаОбъектовМетаданныхКонтекстноеМеню</name>
+        <id>100</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ТаблицаОбъектовМетаданныхТаблицаОбъектовМетаданных1</name>
+      <id>102</id>
+      <title>
+        <key>ru</key>
+        <value>Объекты метаданных</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ОбъектыМетаданных.ПолноеИмя</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ТаблицаОбъектовМетаданныхТаблицаОбъектовМетаданных1РасширеннаяПодсказка</name>
+        <id>104</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ТаблицаОбъектовМетаданныхТаблицаОбъектовМетаданных1КонтекстноеМеню</name>
+        <id>103</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <autoCommandBar>
+      <name>ТаблицаОбъектовМетаданныхКоманднаяПанель</name>
+      <id>87</id>
+      <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
+    </autoCommandBar>
+    <searchStringAddition>
+      <name>ТаблицаОбъектовМетаданныхСтрокаПоиска</name>
+      <id>90</id>
+      <extendedTooltip>
+        <name>ТаблицаОбъектовМетаданныхСтрокаПоискаРасширеннаяПодсказка</name>
+        <id>92</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ТаблицаОбъектовМетаданныхСтрокаПоискаКонтекстноеМеню</name>
+        <id>91</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <source>ТаблицаОбъектовМетаданных</source>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchStringAddition>
+    <viewStatusAddition>
+      <name>ТаблицаОбъектовМетаданныхСостояниеПросмотра</name>
+      <id>96</id>
+      <extendedTooltip>
+        <name>ТаблицаОбъектовМетаданныхСостояниеПросмотраРасширеннаяПодсказка</name>
+        <id>98</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ТаблицаОбъектовМетаданныхСостояниеПросмотраКонтекстноеМеню</name>
+        <id>97</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>ViewStatusAddition</type>
+      <source>ТаблицаОбъектовМетаданных</source>
+      <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </viewStatusAddition>
+    <searchControlAddition>
+      <name>ТаблицаОбъектовМетаданныхУправлениеПоиском</name>
+      <id>93</id>
+      <extendedTooltip>
+        <name>ТаблицаОбъектовМетаданныхУправлениеПоискомРасширеннаяПодсказка</name>
+        <id>95</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ТаблицаОбъектовМетаданныхУправлениеПоискомКонтекстноеМеню</name>
+        <id>94</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>SearchControlAddition</type>
+      <source>ТаблицаОбъектовМетаданных</source>
+      <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchControlAddition>
+    <extendedTooltip>
+      <name>ТаблицаОбъектовМетаданныхРасширеннаяПодсказка</name>
+      <id>89</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ТаблицаОбъектовМетаданныхКонтекстноеМеню</name>
+      <id>88</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <changeRowSet>true</changeRowSet>
+    <changeRowOrder>true</changeRowOrder>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <autoMaxRowsCount>true</autoMaxRowsCount>
+    <selectionMode>MultiRow</selectionMode>
+    <header>true</header>
+    <headerHeight>1</headerHeight>
+    <footerHeight>1</footerHeight>
+    <horizontalScrollBar>AutoUse</horizontalScrollBar>
+    <verticalScrollBar>AutoUse</verticalScrollBar>
+    <horizontalLines>true</horizontalLines>
+    <verticalLines>true</verticalLines>
+    <useAlternationRowColor>true</useAlternationRowColor>
+    <autoInsertNewRow>true</autoInsertNewRow>
+    <searchOnInput>Auto</searchOnInput>
+    <initialListView>Auto</initialListView>
+    <horizontalStretch>true</horizontalStretch>
+    <verticalStretch>true</verticalStretch>
+    <enableStartDrag>true</enableStartDrag>
+    <enableDrag>true</enableDrag>
+    <fileDragMode>AsFileRef</fileDragMode>
+    <rowFilter xsi:type="core:UndefinedValue"/>
+  </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
@@ -1219,6 +1435,63 @@
     <edit>
       <common>true</common>
     </edit>
+  </attributes>
+  <attributes>
+    <name>ОбъектыМетаданных</name>
+    <title>
+      <key>ru</key>
+      <value>Объекты метаданных</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Представление</name>
+      <title>
+        <key>ru</key>
+        <value>Объект метаданных</value>
+      </title>
+      <id>15</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ПолноеИмя</name>
+      <title>
+        <key>ru</key>
+        <value>Полное имя</value>
+      </title>
+      <id>16</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
   </attributes>
   <formCommands>
     <name>ОтметитьОригинал</name>
