@@ -1447,23 +1447,6 @@
       <common>true</common>
     </edit>
   </attributes>
-  <attributes>
-    <name>ОбъектыМетаданных</name>
-    <title>
-      <key>ru</key>
-      <value>Объекты метаданных</value>
-    </title>
-    <id>20</id>
-    <valueType>
-      <types>ValueList</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
   <formCommands>
     <name>ОтметитьОригинал</name>
     <title>
