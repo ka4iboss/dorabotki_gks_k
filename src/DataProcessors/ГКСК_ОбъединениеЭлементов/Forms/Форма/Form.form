@@ -98,12 +98,46 @@
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
     </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Параметры объединения</value>
+    </title>
+    <extendedTooltip>
+      <name>ГруппаШапкаРасширеннаяПодсказка</name>
+      <id>106</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
+      <behavior>Auto</behavior>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаДействиеСДублями</name>
+    <id>126</id>
     <items xsi:type="form:FormField">
       <name>ПолеСпособУдаления</name>
       <id>123</id>
       <title>
         <key>ru</key>
-        <value>Действие с дублями</value>
+        <value>Способ</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -142,11 +176,11 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Параметры объединения</value>
+      <value>Действие с дублями</value>
     </title>
     <extendedTooltip>
-      <name>ГруппаШапкаРасширеннаяПодсказка</name>
-      <id>106</id>
+      <name>ГруппаДействиеСДублямиРасширеннаяПодсказка</name>
+      <id>127</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
