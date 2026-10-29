@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="66c12432-b28a-4243-a7ce-f48e2f5f0aa4">
+  <producedTypes>
+    <objectType typeId="fc130555-e393-4050-a180-3184c18a5069" valueTypeId="48857b51-5935-4bb4-9b89-6c75f8c4f175"/>
+    <managerType typeId="2dc745b1-cbe0-4e76-a9f3-bb06581519ab" valueTypeId="df875e5a-a10a-4120-b3cb-86753247a98f"/>
+  </producedTypes>
+  <name>ГКСК_УдалениеДублейПросмотрВерсий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удаление дублей и просмотр версий</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСК_УдалениеДублейПросмотрВерсий.Form.Форма</defaultForm>
+  <forms uuid="8f588b3c-fae4-4081-9003-fa7e898135c4">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удаление дублей и просмотр версий</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>
