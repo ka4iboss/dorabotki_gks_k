@@ -47,6 +47,13 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <wrap>true</wrap>
+      <dropListButton>true</dropListButton>
+      <choiceButton>true</choiceButton>
+      <clearButton>false</clearButton>
+      <spinButton>false</spinButton>
+      <openButton>false</openButton>
+      <createButton>false</createButton>
+      <listChoiceMode>true</listChoiceMode>
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
@@ -151,6 +158,10 @@
       <event>OnChange</event>
       <name>СпособУдаленияПриИзменении</name>
     </handlers>
+    <handlers>
+      <event>StartChoice</event>
+      <name>ПолеСпособаУдаленияНачалоВыбора</name>
+    </handlers>
     <extendedTooltip>
       <name>ПолеСпособУдаленияРасширеннаяПодсказка</name>
       <id>12</id>
@@ -175,6 +186,7 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <wrap>true</wrap>
+      <listChoiceMode>true</listChoiceMode>
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
