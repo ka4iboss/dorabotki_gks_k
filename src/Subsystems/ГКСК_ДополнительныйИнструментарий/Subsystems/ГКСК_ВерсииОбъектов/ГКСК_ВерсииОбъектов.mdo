@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ff58914-0e97-4cd4-af8d-01b8155635f3">
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="72374b62-dfaf-4f22-8ae9-d74068a6c8b2">
   <name>ГКСК_ВерсииОбъектов</name>
   <synonym>
     <key>ru</key>
@@ -9,4 +9,5 @@
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>DataProcessor.ГКСК_ПросмотрВерсийОбъектов</content>
   <content>CommonModule.ГКСК_ВерсииОбъектовСервер</content>
+  <parentSubsystem>Subsystem.ГКСК_ДополнительныйИнструментарий</parentSubsystem>
 </mdclass:Subsystem>

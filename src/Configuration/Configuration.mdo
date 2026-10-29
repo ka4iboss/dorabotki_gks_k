@@ -40,7 +40,6 @@
   <subsystems>Subsystem.ППГД_ПраваПрофилейГруппДоступа</subsystems>
   <subsystems>Subsystem.ГКСИ_ИнструкцииОписанияДемонстраций</subsystems>
   <subsystems>Subsystem.ГКСИ_РМ_РедакторMarkdown</subsystems>
-  <subsystems>Subsystem.ГКСК_ВерсииОбъектов</subsystems>
   <subsystems>Subsystem.ГКСК_ДополнительныйИнструментарий</subsystems>
   <styleItems>StyleItem.ШрифтЗаголовкаВсплывающейГруппы</styleItems>
   <styleItems>StyleItem.ПоясняющийТекст</styleItems>
