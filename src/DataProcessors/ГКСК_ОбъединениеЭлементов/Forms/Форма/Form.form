@@ -1022,23 +1022,6 @@
     </extInfo>
   </attributes>
   <attributes>
-    <name>ОтмеченныеДубли</name>
-    <title>
-      <key>ru</key>
-      <value>ОтмеченныеДубли</value>
-    </title>
-    <id>2</id>
-    <valueType>
-      <types>Array</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
     <name>ОригиналСтрокой</name>
     <title>
       <key>ru</key>
@@ -1183,6 +1166,23 @@
       <stringQualifiers>
         <length>300</length>
       </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ОтмеченныеДубли</name>
+    <title>
+      <key>ru</key>
+      <value>Отмеченные дубли</value>
+    </title>
+    <id>13</id>
+    <valueType>
+      <types>ValueList</types>
     </valueType>
     <view>
       <common>true</common>
