@@ -1098,38 +1098,6 @@
       </picture>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
-    <items xsi:type="form:Button">
-      <name>КнопкаВыбратьОбъектМетаданных</name>
-      <id>84</id>
-      <title>
-        <key>ru</key>
-        <value>Выбрать объект метаданных</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаВыбратьОбъектМетаданныхРасширеннаяПодсказка</name>
-        <id>85</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.ВыбратьОбъектМетаданных</commandName>
-      <representation>Picture</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <picture xsi:type="core:PictureRef">
-        <picture>CommonPicture.ГКСИ_ПрограммныйКод</picture>
-      </picture>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
   </autoCommandBar>
   <handlers>
     <event>OnCreateAtServer</event>
@@ -1540,22 +1508,6 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>Объединить</name>
-      </handler>
-    </action>
-  </formCommands>
-  <formCommands>
-    <name>ВыбратьОбъектМетаданных</name>
-    <title>
-      <key>ru</key>
-      <value>Выбрать объект метаданных</value>
-    </title>
-    <id>7</id>
-    <use>
-      <common>true</common>
-    </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>ВыбратьОбъектМетаданных</name>
       </handler>
     </action>
   </formCommands>
