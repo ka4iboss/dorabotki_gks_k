@@ -99,11 +99,11 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
-      <name>ПолеСпособУдаления</name>
-      <id>10</id>
+      <name>ПолеПомечатьНаУдаление</name>
+      <id>120</id>
       <title>
         <key>ru</key>
-        <value>Способ удаления дублей (Пометка / Непосредственно)</value>
+        <value>Помечать дубли на удаление после замены ссылок</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -111,15 +111,11 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>СпособУдаления</segments>
+        <segments>ПомечатьНаУдаление</segments>
       </dataPath>
-      <handlers>
-        <event>OnChange</event>
-        <name>СпособУдаленияПриИзменении</name>
-      </handlers>
       <extendedTooltip>
-        <name>ПолеСпособУдаленияРасширеннаяПодсказка</name>
-        <id>12</id>
+        <name>ПолеПомечатьНаУдалениеРасширеннаяПодсказка</name>
+        <id>122</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -128,24 +124,16 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>ПолеСпособУдаленияКонтекстноеМеню</name>
-        <id>11</id>
+        <name>ПолеПомечатьНаУдалениеКонтекстноеМеню</name>
+        <id>121</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <type>InputField</type>
+      <type>CheckBoxField</type>
       <editMode>Enter</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:InputFieldExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <wrap>true</wrap>
-        <listChoiceMode>true</listChoiceMode>
-        <chooseType>true</chooseType>
-        <typeDomainEnabled>true</typeDomainEnabled>
-        <textEdit>true</textEdit>
-      </extInfo>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
     </items>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -1500,26 +1488,6 @@
     </edit>
   </attributes>
   <attributes>
-    <name>СпособУдаления</name>
-    <title>
-      <key>ru</key>
-      <value>СпособУдаления</value>
-    </title>
-    <id>5</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers>
-        <length>20</length>
-      </stringQualifiers>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
     <name>Состояние</name>
     <title>
       <key>ru</key>
@@ -1700,6 +1668,23 @@
       <stringQualifiers>
         <length>100</length>
       </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПомечатьНаУдаление</name>
+    <title>
+      <key>ru</key>
+      <value>ПомечатьНаУдаление</value>
+    </title>
+    <id>18</id>
+    <valueType>
+      <types>Boolean</types>
     </valueType>
     <view>
       <common>true</common>
