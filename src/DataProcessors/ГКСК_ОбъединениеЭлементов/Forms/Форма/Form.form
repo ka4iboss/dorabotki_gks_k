@@ -2,7 +2,7 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form" xmlns:schema="http://g5.1c.ru/v8/dt/data-composition-system/schema">
   <items xsi:type="form:FormField">
     <name>ПолеОбъектаМетаданных</name>
-    <id>78</id>
+    <id>81</id>
     <title>
       <key>ru</key>
       <value>Объект метаданных</value>
@@ -13,15 +13,19 @@
       <common>true</common>
     </userVisible>
     <dataPath xsi:type="form:DataPath">
-      <segments>ДоступныеОбъекты</segments>
+      <segments>ИмяОбъекта</segments>
     </dataPath>
+    <handlers>
+      <event>StartChoice</event>
+      <name>ПолеОбъектаМетаданныхНачалоВыбора</name>
+    </handlers>
     <handlers>
       <event>OnChange</event>
       <name>ОбъектМетаданныхПриИзменении</name>
     </handlers>
     <extendedTooltip>
       <name>ПолеОбъектаМетаданныхРасширеннаяПодсказка</name>
-      <id>80</id>
+      <id>83</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -31,7 +35,7 @@
     </extendedTooltip>
     <contextMenu>
       <name>ПолеОбъектаМетаданныхКонтекстноеМеню</name>
-      <id>79</id>
+      <id>82</id>
       <autoFill>true</autoFill>
     </contextMenu>
     <type>InputField</type>
@@ -1167,23 +1171,6 @@
       <stringQualifiers>
         <length>300</length>
       </stringQualifiers>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
-    <name>ДоступныеОбъекты</name>
-    <title>
-      <key>ru</key>
-      <value>Доступные объекты</value>
-    </title>
-    <id>11</id>
-    <valueType>
-      <types>ValueList</types>
     </valueType>
     <view>
       <common>true</common>
