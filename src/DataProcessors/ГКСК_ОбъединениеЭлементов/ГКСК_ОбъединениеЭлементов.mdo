@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cdaaa201-4676-4591-bb97-b1ca1bc61d9d">
+  <producedTypes>
+    <objectType typeId="2816af3d-2aaa-4748-8e44-7ff3a87a2941" valueTypeId="55ecab8b-40a1-4916-9b25-02cc25c9e501"/>
+    <managerType typeId="6a30d70f-2357-486f-8c3d-6d83d21dac95" valueTypeId="8acda3b2-bb93-4602-bbe1-9d89af478dfb"/>
+  </producedTypes>
+  <name>ГКСК_ОбъединениеЭлементов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Объединение элементов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСК_ОбъединениеЭлементов.Form.Форма</defaultForm>
+  <forms uuid="79d3fc72-5afd-4b2b-b094-bffcee689133">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объединение элементов</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>
