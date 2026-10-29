@@ -402,6 +402,54 @@
       <fileDragMode>AsFileRef</fileDragMode>
       <rowFilter xsi:type="core:UndefinedValue"/>
     </items>
+    <items xsi:type="form:FormField">
+      <name>ПолеПоиска</name>
+      <id>111</id>
+      <title>
+        <key>ru</key>
+        <value>Поиск по наименованию</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СтрокаПоиска</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ПолеПоискаПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>ПолеПоискаРасширеннаяПодсказка</name>
+        <id>113</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПолеПоискаКонтекстноеМеню</name>
+        <id>112</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
     <items xsi:type="form:Table">
       <name>СписокЭлементов</name>
       <id>44</id>
@@ -734,6 +782,7 @@
       <horizontalStretch>true</horizontalStretch>
       <verticalStretch>true</verticalStretch>
       <fileDragMode>AsFileRef</fileDragMode>
+      <searchStringLocation>None</searchStringLocation>
       <extInfo xsi:type="form:DynamicListTableExtInfo">
         <autoRefreshPeriod>60</autoRefreshPeriod>
         <period>
@@ -1594,6 +1643,26 @@
         <common>true</common>
       </edit>
     </columns>
+  </attributes>
+  <attributes>
+    <name>СтрокаПоиска</name>
+    <title>
+      <key>ru</key>
+      <value>Поиск по наименованию</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
   </attributes>
   <formCommands>
     <name>ОтметитьОригинал</name>
