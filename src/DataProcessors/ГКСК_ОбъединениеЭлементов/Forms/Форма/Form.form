@@ -888,6 +888,7 @@
     <event>OnOpen</event>
     <name>ПриОткрытии</name>
   </handlers>
+  <enabled>true</enabled>
   <attributes>
     <name>СписокЭлементов</name>
     <title>
