@@ -99,11 +99,11 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
-      <name>ПолеПомечатьНаУдаление</name>
-      <id>120</id>
+      <name>ПолеСпособУдаления</name>
+      <id>123</id>
       <title>
         <key>ru</key>
-        <value>Помечать дубли на удаление после замены ссылок</value>
+        <value>Действие с дублями</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -111,11 +111,11 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>ПомечатьНаУдаление</segments>
+        <segments>СпособУдаления</segments>
       </dataPath>
       <extendedTooltip>
-        <name>ПолеПомечатьНаУдалениеРасширеннаяПодсказка</name>
-        <id>122</id>
+        <name>ПолеСпособУдаленияРасширеннаяПодсказка</name>
+        <id>125</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -124,16 +124,16 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>ПолеПомечатьНаУдалениеКонтекстноеМеню</name>
-        <id>121</id>
+        <name>ПолеСпособУдаленияКонтекстноеМеню</name>
+        <id>124</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <type>CheckBoxField</type>
+      <type>RadioButtonField</type>
       <editMode>Enter</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      <extInfo xsi:type="form:RadioButtonsFieldExtInfo"/>
     </items>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -1677,14 +1677,14 @@
     </edit>
   </attributes>
   <attributes>
-    <name>ПомечатьНаУдаление</name>
+    <name>СпособУдаления</name>
     <title>
       <key>ru</key>
-      <value>ПомечатьНаУдаление</value>
+      <value>СпособУдаления</value>
     </title>
-    <id>18</id>
+    <id>19</id>
     <valueType>
-      <types>Boolean</types>
+      <types>EnumRef.ГКСК_СпособУдаленияДублей</types>
     </valueType>
     <view>
       <common>true</common>

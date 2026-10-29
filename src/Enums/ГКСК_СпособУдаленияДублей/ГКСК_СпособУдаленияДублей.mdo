@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7ed8899b-167d-49b2-99e5-f498eb112b8d">
+  <producedTypes>
+    <refType typeId="babf9319-3f76-4fd3-87a7-1ccea6b791ac" valueTypeId="8ae4ecdc-79a0-4332-af97-fdca8b732c28"/>
+    <listType typeId="96127148-43b6-4b0d-8f31-d1c9e37375c7" valueTypeId="23d024ef-ac18-436c-accf-4f71c52b7555"/>
+    <managerType typeId="26db777c-fbda-47ec-85b6-cf3d3dfb8b63" valueTypeId="ec770beb-1756-42b2-8309-8453b206e562"/>
+  </producedTypes>
+  <name>ГКСК_СпособУдаленияДублей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Способ удаления дублей</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="fabefc82-2b97-4b4d-a4a5-dca6fe748bb8">
+    <name>ТолькоЗамена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Только замена ссылок</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e7010a44-45d5-4205-97f4-4f1ca84965f9">
+    <name>Пометка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пометка на удаление</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="b5c43ad7-32d0-4cca-b715-78d2ab277bb8">
+    <name>НепосредственноеУдаление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Непосредственное удаление</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
