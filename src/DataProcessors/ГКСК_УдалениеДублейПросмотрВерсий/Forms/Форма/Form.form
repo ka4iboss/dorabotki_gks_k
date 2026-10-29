@@ -1492,7 +1492,7 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>HorizontalIfPossible</group>
+      <group>AlwaysHorizontal</group>
       <behavior>Auto</behavior>
       <representation>WeakSeparation</representation>
       <showLeftMargin>true</showLeftMargin>
@@ -1604,6 +1604,88 @@
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ФлажокПоказыватьОбъединение</name>
+      <id>153</id>
+      <title>
+        <key>ru</key>
+        <value>Объединение дублей</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПоказыватьОбъединение</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ПоказыватьОбъединениеПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>ФормаФлажокПоказыватьОбъединениеРасширеннаяПодсказка</name>
+        <id>155</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ФормаФлажокПоказыватьОбъединениеКонтекстноеМеню</name>
+        <id>154</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ФлажокПоказыватьВерсии</name>
+      <id>156</id>
+      <title>
+        <key>ru</key>
+        <value>Версии</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПоказыватьВерсии</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ПоказыватьВерсииПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>ФормаФлажокПоказыватьВерсииРасширеннаяПодсказка</name>
+        <id>158</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ФормаФлажокПоказыватьВерсииКонтекстноеМеню</name>
+        <id>157</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
     </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
@@ -2109,6 +2191,40 @@
       <autoSaveUserSettings>true</autoSaveUserSettings>
       <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
     </extInfo>
+  </attributes>
+  <attributes>
+    <name>ПоказыватьОбъединение</name>
+    <title>
+      <key>ru</key>
+      <value>Показывать объединение дублей</value>
+    </title>
+    <id>26</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПоказыватьВерсии</name>
+    <title>
+      <key>ru</key>
+      <value>Показывать версии</value>
+    </title>
+    <id>27</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
   </attributes>
   <formCommands>
     <name>ОтметитьОригинал</name>
