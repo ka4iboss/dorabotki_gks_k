@@ -463,6 +463,46 @@
       </dataPath>
       <titleLocation>None</titleLocation>
       <items xsi:type="form:FormField">
+        <name>СписокЭлементовЭлементСсылка</name>
+        <id>117</id>
+        <title>
+          <key>ru</key>
+          <value>Элемент</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>СписокЭлементов.ЭлементСсылка</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>СписокЭлементовСписокЭлементовЭлементСсылкаРасширеннаяПодсказка</name>
+          <id>119</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>СписокЭлементовСписокЭлементовЭлементСсылкаКонтекстноеМеню</name>
+          <id>118</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
         <name>СписокЭлементовСписокЭлементов</name>
         <id>57</id>
         <visible>true</visible>
@@ -1300,6 +1340,9 @@
     <event>OnOpen</event>
     <name>ПриОткрытии</name>
   </handlers>
+  <autoTitle>true</autoTitle>
+  <group>Vertical</group>
+  <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
   <attributes>
     <name>СписокЭлементов</name>
@@ -1320,6 +1363,7 @@
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
 	Таблица.Ссылка КАК Ссылка,
+	Таблица.Ссылка КАК ЭлементСсылка,
 	Таблица.Код КАК Код,
 	Таблица.Наименование КАК Наименование,
 	Таблица.ПометкаУдаления КАК ПометкаУдаления,
