@@ -9,5 +9,6 @@
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>DataProcessor.ГКСК_ОбъединениеЭлементов</content>
   <content>CommonModule.ГКСК_ОбъединениеЭлементовСервер</content>
+  <content>DataProcessor.ГКСК_УдалениеДублейПросмотрВерсий</content>
   <subsystems>ГКСК_ВерсииОбъектов</subsystems>
 </mdclass:Subsystem>
