@@ -107,6 +107,35 @@
       <autoCommandBar>
         <name>НачальникиСогласованияКоманднаяПанель</name>
         <id>5</id>
+        <items xsi:type="form:Button">
+          <name>НачальникиСогласованияПодобрать</name>
+          <id>43</id>
+          <title>
+            <key>ru</key>
+            <value>Подобрать</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>НачальникиСогласованияПодобратьНачальниковРасширеннаяПодсказка</name>
+            <id>44</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ПодобратьНачальников</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
         <horizontalAlign>Left</horizontalAlign>
         <autoFill>true</autoFill>
       </autoCommandBar>
@@ -283,6 +312,35 @@
       <autoCommandBar>
         <name>ПодчинённыеСогласованияКоманднаяПанель</name>
         <id>21</id>
+        <items xsi:type="form:Button">
+          <name>ПодчинённыеСогласованияПодобрать</name>
+          <id>45</id>
+          <title>
+            <key>ru</key>
+            <value>Подобрать</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ПодчинённыеСогласованияПодобратьПодчинённыхРасширеннаяПодсказка</name>
+            <id>46</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ПодобратьПодчинённых</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
         <horizontalAlign>Left</horizontalAlign>
         <autoFill>true</autoFill>
       </autoCommandBar>
@@ -636,6 +694,38 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>НазначитьУчастников</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>ПодобратьНачальников</name>
+    <title>
+      <key>ru</key>
+      <value>Подобрать начальников отделов</value>
+    </title>
+    <id>2</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПодобратьНачальников</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>ПодобратьПодчинённых</name>
+    <title>
+      <key>ru</key>
+      <value>Подобрать подчинённых</value>
+    </title>
+    <id>3</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПодобратьПодчинённых</name>
       </handler>
     </action>
   </formCommands>
