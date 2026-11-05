@@ -139,6 +139,10 @@
         <horizontalAlign>Left</horizontalAlign>
         <autoFill>true</autoFill>
       </autoCommandBar>
+      <handlers>
+        <event>ChoiceProcessing</event>
+        <name>НачальникиСогласованияОбработкаВыбора</name>
+      </handlers>
       <searchStringAddition>
         <name>НачальникиСогласованияСтрокаПоиска</name>
         <id>8</id>
@@ -344,6 +348,10 @@
         <horizontalAlign>Left</horizontalAlign>
         <autoFill>true</autoFill>
       </autoCommandBar>
+      <handlers>
+        <event>ChoiceProcessing</event>
+        <name>ПодчинённыеСогласованияОбработкаВыбора</name>
+      </handlers>
       <searchStringAddition>
         <name>ПодчинённыеСогласованияСтрокаПоиска</name>
         <id>24</id>
