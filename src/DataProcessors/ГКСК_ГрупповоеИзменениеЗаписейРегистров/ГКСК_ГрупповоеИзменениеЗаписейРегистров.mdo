@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ea9b97e7-4113-43a4-b0d8-4302f47f8096">
+  <producedTypes>
+    <objectType typeId="603fed31-7fb4-41ce-9184-8db061bcb344" valueTypeId="38d1608e-3424-4318-9e9f-9615650948fe"/>
+    <managerType typeId="4055fcf6-173a-4806-8ba4-ad631c675daf" valueTypeId="20a6156b-9150-4644-a137-ac5b286c52ca"/>
+  </producedTypes>
+  <name>ГКСК_ГрупповоеИзменениеЗаписейРегистров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Групповое изменение записей регистров сведений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСК_ГрупповоеИзменениеЗаписейРегистров.Form.Форма</defaultForm>
+  <forms uuid="153df22d-f267-4e7f-b048-03b16feb8b91">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

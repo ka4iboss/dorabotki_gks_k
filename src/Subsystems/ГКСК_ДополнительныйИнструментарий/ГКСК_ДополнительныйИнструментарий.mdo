@@ -10,5 +10,6 @@
   <content>DataProcessor.ГКСК_ОбъединениеЭлементов</content>
   <content>CommonModule.ГКСК_ОбъединениеЭлементовСервер</content>
   <content>DataProcessor.ГКСК_УдалениеДублейПросмотрВерсий</content>
+  <content>DataProcessor.ГКСК_ГрупповоеИзменениеЗаписейРегистров</content>
   <subsystems>ГКСК_ВерсииОбъектов</subsystems>
 </mdclass:Subsystem>
