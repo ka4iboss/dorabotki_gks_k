@@ -11,6 +11,7 @@
     <usePurposes>Checked</usePurposes>
     <defaultLanguage>Checked</defaultLanguage>
     <interfaceCompatibilityMode>Checked</interfaceCompatibilityMode>
+    <compatibilityMode>Checked</compatibilityMode>
     <logo>Extended</logo>
     <defaultRoles>Extended</defaultRoles>
   </extension>
@@ -32,6 +33,7 @@
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
+  <compatibilityMode>8.3.27</compatibilityMode>
   <languages uuid="23d480a9-8ba7-4d0d-aa71-792161cbbcff" extendedConfigurationObject="0663bf5b-bcba-4a40-a862-a0b3baa2d884">
     <name>Русский</name>
     <objectBelonging>Adopted</objectBelonging>
