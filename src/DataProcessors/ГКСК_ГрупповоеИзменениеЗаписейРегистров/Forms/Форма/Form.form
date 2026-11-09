@@ -22,6 +22,10 @@
         <event>OnChange</event>
         <name>ИмяРегистраПриИзменении</name>
       </handlers>
+      <handlers>
+        <event>StartChoice</event>
+        <name>ИмяРегистраНачалоВыбора</name>
+      </handlers>
       <extendedTooltip>
         <name>ПолеИмяРегистраРасширеннаяПодсказка</name>
         <id>5</id>
