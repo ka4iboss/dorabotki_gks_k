@@ -1941,7 +1941,8 @@
       <common>true</common>
     </edit>
     <extInfo xsi:type="form:DynamicListExtInfo">
-      <queryText>ВЫБРАТЬ ПЕРВЫЕ 0 1 КАК Заглушка</queryText>
+      <queryText>ВЫБРАТЬ
+	1 КАК Заглушка</queryText>
       <autoFillAvailableFields>true</autoFillAvailableFields>
       <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
