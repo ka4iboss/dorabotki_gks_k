@@ -26,6 +26,10 @@
         <event>StartChoice</event>
         <name>ИмяРегистраНачалоВыбора</name>
       </handlers>
+      <handlers>
+        <event>StartListChoice</event>
+        <name>ИмяРегистраНачалоВыбораИзСписка</name>
+      </handlers>
       <extendedTooltip>
         <name>ПолеИмяРегистраРасширеннаяПодсказка</name>
         <id>5</id>
