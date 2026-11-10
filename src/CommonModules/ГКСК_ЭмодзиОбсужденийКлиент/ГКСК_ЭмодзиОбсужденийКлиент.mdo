@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="489b2b90-c2ee-4043-aebb-24fdbaf7bc5a">
+  <name>ГКСК_ЭмодзиОбсужденийКлиент</name>
+  <synonym>
+    <key>ru</key>
+    <value>Эмодзи в обсуждениях (клиент)</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>
