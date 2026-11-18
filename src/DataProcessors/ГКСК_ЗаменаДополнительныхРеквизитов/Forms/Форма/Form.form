@@ -1436,6 +1436,7 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
+  <autoTitle>true</autoTitle>
   <enabled>true</enabled>
   <attributes>
     <name>СвойствоИсточник</name>
