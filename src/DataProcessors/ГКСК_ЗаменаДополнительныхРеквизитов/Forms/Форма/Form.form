@@ -746,6 +746,36 @@
           <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <items xsi:type="form:Button">
+          <name>КнопкаЗаполнитьГруппуУВыделенных</name>
+          <id>163</id>
+          <title>
+            <key>ru</key>
+            <value>Заполнить группу у выделенных строк</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ЗаполнитьГруппуУВыделенныхРасширеннаяПодсказка</name>
+            <id>164</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualButton</type>
+          <commandName>Form.Command.ЗаполнитьГруппуУВыделенных</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
           <name>КнопкаВыполнитьЗамену</name>
           <id>105</id>
           <title>
@@ -1912,6 +1942,22 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ВыполнитьЗамену</name>
+      </handler>
+    </action>
+  </formCommands>
+  <formCommands>
+    <name>ЗаполнитьГруппуУВыделенных</name>
+    <title>
+      <key>ru</key>
+      <value>Заполнить группу у выделенных строк</value>
+    </title>
+    <id>5</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗаполнитьГруппуУВыделенных</name>
       </handler>
     </action>
   </formCommands>
