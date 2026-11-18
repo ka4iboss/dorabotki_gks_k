@@ -136,118 +136,6 @@
     <items xsi:type="form:FormGroup">
       <name>СтраницаЗначения</name>
       <id>11</id>
-      <items xsi:type="form:FormGroup">
-        <name>ГруппаСозданияЗначений</name>
-        <id>92</id>
-        <items xsi:type="form:FormField">
-          <name>ПолеГруппаСоздания</name>
-          <id>94</id>
-          <title>
-            <key>ru</key>
-            <value>Группа для создания</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>ГруппаСоздания</segments>
-          </dataPath>
-          <handlers>
-            <event>StartChoice</event>
-            <name>ПолеГруппаСозданияНачалоВыбора</name>
-          </handlers>
-          <extendedTooltip>
-            <name>ПолеГруппаСозданияРасширеннаяПодсказка</name>
-            <id>96</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>ПолеГруппаСозданияКонтекстноеМеню</name>
-            <id>95</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>Enter</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
-        <items xsi:type="form:Button">
-          <name>КнопкаЗаполнитьГруппу</name>
-          <id>101</id>
-          <title>
-            <key>ru</key>
-            <value>Заполнить группу у выделенных позиций</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>ЗаполнитьГруппуРасширеннаяПодсказка</name>
-            <id>102</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualButton</type>
-          <commandName>Form.Command.ЗаполнитьГруппу</commandName>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Создание недостающих значений</value>
-        </title>
-        <extendedTooltip>
-          <name>ГруппаСозданияЗначенийРасширеннаяПодсказка</name>
-          <id>93</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>HorizontalIfPossible</group>
-          <behavior>Auto</behavior>
-          <representation>WeakSeparation</representation>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <showTitle>true</showTitle>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
-        </extInfo>
-      </items>
       <items xsi:type="form:Table">
         <name>ТаблицаСоответствий</name>
         <id>15</id>
@@ -265,11 +153,11 @@
         </dataPath>
         <titleLocation>None</titleLocation>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий</name>
-          <id>28</id>
+          <name>КолонкаЗначениеИсточника</name>
+          <id>110</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Значение источника</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -280,8 +168,8 @@
             <segments>СоответствияЗначений.ЗначениеИсточника</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствийРасширеннаяПодсказка</name>
-            <id>30</id>
+            <name>ТаблицаСоответствийКолонкаЗначениеИсточникаРасширеннаяПодсказка</name>
+            <id>112</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -290,8 +178,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствийКонтекстноеМеню</name>
-            <id>29</id>
+            <name>ТаблицаСоответствийКолонкаЗначениеИсточникаКонтекстноеМеню</name>
+            <id>111</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -309,11 +197,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий1</name>
-          <id>31</id>
+          <name>КолонкаНаименованиеИсточника</name>
+          <id>113</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Наименование источника</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -324,8 +212,8 @@
             <segments>СоответствияЗначений.НаименованиеИсточника</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий1РасширеннаяПодсказка</name>
-            <id>33</id>
+            <name>ТаблицаСоответствийКолонкаНаименованиеИсточникаРасширеннаяПодсказка</name>
+            <id>115</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -334,8 +222,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий1КонтекстноеМеню</name>
-            <id>32</id>
+            <name>ТаблицаСоответствийКолонкаНаименованиеИсточникаКонтекстноеМеню</name>
+            <id>114</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -353,11 +241,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий2</name>
-          <id>34</id>
+          <name>КолонкаКоличествоИспользований</name>
+          <id>116</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Количество использований</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -368,8 +256,8 @@
             <segments>СоответствияЗначений.КоличествоИспользований</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий2РасширеннаяПодсказка</name>
-            <id>36</id>
+            <name>ТаблицаСоответствийКолонкаКоличествоИспользованийРасширеннаяПодсказка</name>
+            <id>118</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -378,8 +266,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий2КонтекстноеМеню</name>
-            <id>35</id>
+            <name>ТаблицаСоответствийКолонкаКоличествоИспользованийКонтекстноеМеню</name>
+            <id>117</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -397,11 +285,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий3</name>
-          <id>37</id>
+          <name>КолонкаНайденноеЗначение</name>
+          <id>119</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Найденное значение</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -412,8 +300,8 @@
             <segments>СоответствияЗначений.НайденноеЗначение</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий3РасширеннаяПодсказка</name>
-            <id>39</id>
+            <name>ТаблицаСоответствийКолонкаНайденноеЗначениеРасширеннаяПодсказка</name>
+            <id>121</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -422,8 +310,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий3КонтекстноеМеню</name>
-            <id>38</id>
+            <name>ТаблицаСоответствийКолонкаНайденноеЗначениеКонтекстноеМеню</name>
+            <id>120</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -441,11 +329,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий4</name>
-          <id>40</id>
+          <name>КолонкаСпособПодбора</name>
+          <id>122</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Способ подбора</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -456,8 +344,8 @@
             <segments>СоответствияЗначений.СпособПодбора</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий4РасширеннаяПодсказка</name>
-            <id>42</id>
+            <name>ТаблицаСоответствийКолонкаСпособПодбораРасширеннаяПодсказка</name>
+            <id>124</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -466,8 +354,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий4КонтекстноеМеню</name>
-            <id>41</id>
+            <name>ТаблицаСоответствийКолонкаСпособПодбораКонтекстноеМеню</name>
+            <id>123</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -485,11 +373,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий5</name>
-          <id>43</id>
+          <name>КолонкаНовоеНаименование</name>
+          <id>125</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Наименование нового значения</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -500,8 +388,8 @@
             <segments>СоответствияЗначений.НовоеНаименование</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий5РасширеннаяПодсказка</name>
-            <id>45</id>
+            <name>ТаблицаСоответствийКолонкаНовоеНаименованиеРасширеннаяПодсказка</name>
+            <id>127</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -510,8 +398,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий5КонтекстноеМеню</name>
-            <id>44</id>
+            <name>ТаблицаСоответствийКолонкаНовоеНаименованиеКонтекстноеМеню</name>
+            <id>126</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -529,11 +417,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий6</name>
-          <id>46</id>
+          <name>КолонкаНовоеПолноеНаименование</name>
+          <id>128</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Полное наименование нового значения</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -544,8 +432,8 @@
             <segments>СоответствияЗначений.НовоеПолноеНаименование</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий6РасширеннаяПодсказка</name>
-            <id>48</id>
+            <name>ТаблицаСоответствийКолонкаНовоеПолноеНаименованиеРасширеннаяПодсказка</name>
+            <id>130</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -554,8 +442,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий6КонтекстноеМеню</name>
-            <id>47</id>
+            <name>ТаблицаСоответствийКолонкаНовоеПолноеНаименованиеКонтекстноеМеню</name>
+            <id>129</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -573,11 +461,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий7</name>
-          <id>49</id>
+          <name>КолонкаГруппаСоздания</name>
+          <id>131</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Группа создания</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -587,9 +475,13 @@
           <dataPath xsi:type="form:DataPath">
             <segments>СоответствияЗначений.ГруппаСоздания</segments>
           </dataPath>
+          <handlers>
+            <event>StartChoice</event>
+            <name>КолонкаГруппаСозданияНачалоВыбора</name>
+          </handlers>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий7РасширеннаяПодсказка</name>
-            <id>51</id>
+            <name>ТаблицаСоответствийКолонкаГруппаСозданияРасширеннаяПодсказка</name>
+            <id>133</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -598,8 +490,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий7КонтекстноеМеню</name>
-            <id>50</id>
+            <name>ТаблицаСоответствийКолонкаГруппаСозданияКонтекстноеМеню</name>
+            <id>132</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -617,11 +509,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий8</name>
-          <id>52</id>
+          <name>КолонкаСтатус</name>
+          <id>134</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Статус</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -632,8 +524,8 @@
             <segments>СоответствияЗначений.Статус</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий8РасширеннаяПодсказка</name>
-            <id>54</id>
+            <name>ТаблицаСоответствийКолонкаСтатусРасширеннаяПодсказка</name>
+            <id>136</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -642,8 +534,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий8КонтекстноеМеню</name>
-            <id>53</id>
+            <name>ТаблицаСоответствийКолонкаСтатусКонтекстноеМеню</name>
+            <id>135</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -661,11 +553,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаСоответствийТаблицаСоответствий9</name>
-          <id>55</id>
+          <name>КолонкаКомментарий</name>
+          <id>137</id>
           <title>
             <key>ru</key>
-            <value>Соответствия значений</value>
+            <value>Комментарий</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -676,8 +568,8 @@
             <segments>СоответствияЗначений.Комментарий</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаСоответствийТаблицаСоответствий9РасширеннаяПодсказка</name>
-            <id>57</id>
+            <name>ТаблицаСоответствийКолонкаКомментарийРасширеннаяПодсказка</name>
+            <id>139</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -686,8 +578,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаСоответствийТаблицаСоответствий9КонтекстноеМеню</name>
-            <id>56</id>
+            <name>ТаблицаСоответствийКолонкаКомментарийКонтекстноеМеню</name>
+            <id>138</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -820,21 +712,81 @@
         <fileDragMode>AsFileRef</fileDragMode>
         <rowFilter xsi:type="core:UndefinedValue"/>
       </items>
-      <items xsi:type="form:Button">
-        <name>КнопкаНайтиЗначения</name>
-        <id>99</id>
-        <title>
-          <key>ru</key>
-          <value>Найти значения</value>
-        </title>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаКнопокЗначений</name>
+        <id>161</id>
+        <items xsi:type="form:Button">
+          <name>КнопкаНайтиЗначения</name>
+          <id>99</id>
+          <title>
+            <key>ru</key>
+            <value>Найти значения</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>НайтиЗначенияРасширеннаяПодсказка</name>
+            <id>100</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualButton</type>
+          <commandName>Form.Command.НайтиЗначения</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>КнопкаВыполнитьЗамену</name>
+          <id>105</id>
+          <title>
+            <key>ru</key>
+            <value>Выполнить замену</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ВыполнитьЗаменуРасширеннаяПодсказка</name>
+            <id>106</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualButton</type>
+          <commandName>Form.Command.ВыполнитьЗамену</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Действия</value>
+        </title>
         <extendedTooltip>
-          <name>НайтиЗначенияРасширеннаяПодсказка</name>
-          <id>100</id>
+          <name>ГруппаКнопокЗначенийРасширеннаяПодсказка</name>
+          <id>162</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -842,13 +794,17 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <type>UsualButton</type>
-        <commandName>Form.Command.НайтиЗначения</commandName>
-        <representation>Auto</representation>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <behavior>Auto</behavior>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
       </items>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -895,11 +851,11 @@
         </dataPath>
         <titleLocation>None</titleLocation>
         <items xsi:type="form:FormField">
-          <name>ТаблицаДанныхТаблицаДанных</name>
-          <id>71</id>
+          <name>КолонкаЭтап</name>
+          <id>140</id>
           <title>
             <key>ru</key>
-            <value>Данные для замены</value>
+            <value>Этап</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -910,8 +866,8 @@
             <segments>Данные.Этап</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаДанныхТаблицаДанныхРасширеннаяПодсказка</name>
-            <id>73</id>
+            <name>ТаблицаДанныхКолонкаЭтапРасширеннаяПодсказка</name>
+            <id>142</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -920,8 +876,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаДанныхТаблицаДанныхКонтекстноеМеню</name>
-            <id>72</id>
+            <name>ТаблицаДанныхКолонкаЭтапКонтекстноеМеню</name>
+            <id>141</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -939,11 +895,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаДанныхТаблицаДанных1</name>
-          <id>74</id>
+          <name>КолонкаОбъект</name>
+          <id>143</id>
           <title>
             <key>ru</key>
-            <value>Данные для замены</value>
+            <value>Объект</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -954,8 +910,8 @@
             <segments>Данные.Объект</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаДанныхТаблицаДанных1РасширеннаяПодсказка</name>
-            <id>76</id>
+            <name>ТаблицаДанныхКолонкаОбъектРасширеннаяПодсказка</name>
+            <id>145</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -964,8 +920,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаДанныхТаблицаДанных1КонтекстноеМеню</name>
-            <id>75</id>
+            <name>ТаблицаДанныхКолонкаОбъектКонтекстноеМеню</name>
+            <id>144</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -983,11 +939,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаДанныхТаблицаДанных2</name>
-          <id>77</id>
+          <name>КолонкаНаименованиеДанных</name>
+          <id>146</id>
           <title>
             <key>ru</key>
-            <value>Данные для замены</value>
+            <value>Наименование</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -998,8 +954,8 @@
             <segments>Данные.Наименование</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаДанныхТаблицаДанных2РасширеннаяПодсказка</name>
-            <id>79</id>
+            <name>ТаблицаДанныхКолонкаНаименованиеДанныхРасширеннаяПодсказка</name>
+            <id>148</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1008,8 +964,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаДанныхТаблицаДанных2КонтекстноеМеню</name>
-            <id>78</id>
+            <name>ТаблицаДанныхКолонкаНаименованиеДанныхКонтекстноеМеню</name>
+            <id>147</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -1027,11 +983,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаДанныхТаблицаДанных3</name>
-          <id>80</id>
+          <name>КолонкаСвойствоИсточник</name>
+          <id>149</id>
           <title>
             <key>ru</key>
-            <value>Данные для замены</value>
+            <value>Свойство-источник</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -1042,8 +998,8 @@
             <segments>Данные.СвойствоИсточник</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаДанныхТаблицаДанных3РасширеннаяПодсказка</name>
-            <id>82</id>
+            <name>ТаблицаДанныхКолонкаСвойствоИсточникРасширеннаяПодсказка</name>
+            <id>151</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1052,8 +1008,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаДанныхТаблицаДанных3КонтекстноеМеню</name>
-            <id>81</id>
+            <name>ТаблицаДанныхКолонкаСвойствоИсточникКонтекстноеМеню</name>
+            <id>150</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -1071,11 +1027,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаДанныхТаблицаДанных4</name>
-          <id>83</id>
+          <name>КолонкаЗначение</name>
+          <id>152</id>
           <title>
             <key>ru</key>
-            <value>Данные для замены</value>
+            <value>Значение</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -1086,8 +1042,8 @@
             <segments>Данные.Значение</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаДанныхТаблицаДанных4РасширеннаяПодсказка</name>
-            <id>85</id>
+            <name>ТаблицаДанныхКолонкаЗначениеРасширеннаяПодсказка</name>
+            <id>154</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1096,8 +1052,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаДанныхТаблицаДанных4КонтекстноеМеню</name>
-            <id>84</id>
+            <name>ТаблицаДанныхКолонкаЗначениеКонтекстноеМеню</name>
+            <id>153</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -1115,11 +1071,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаДанныхТаблицаДанных5</name>
-          <id>86</id>
+          <name>КолонкаСтатусЗамены</name>
+          <id>155</id>
           <title>
             <key>ru</key>
-            <value>Данные для замены</value>
+            <value>Статус</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -1130,8 +1086,8 @@
             <segments>Данные.Статус</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаДанныхТаблицаДанных5РасширеннаяПодсказка</name>
-            <id>88</id>
+            <name>ТаблицаДанныхКолонкаСтатусЗаменыРасширеннаяПодсказка</name>
+            <id>157</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1140,8 +1096,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаДанныхТаблицаДанных5КонтекстноеМеню</name>
-            <id>87</id>
+            <name>ТаблицаДанныхКолонкаСтатусЗаменыКонтекстноеМеню</name>
+            <id>156</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -1159,11 +1115,11 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>ТаблицаДанныхТаблицаДанных6</name>
-          <id>89</id>
+          <name>КолонкаКомментарийЗамены</name>
+          <id>158</id>
           <title>
             <key>ru</key>
-            <value>Данные для замены</value>
+            <value>Комментарий</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -1174,8 +1130,8 @@
             <segments>Данные.Комментарий</segments>
           </dataPath>
           <extendedTooltip>
-            <name>ТаблицаДанныхТаблицаДанных6РасширеннаяПодсказка</name>
-            <id>91</id>
+            <name>ТаблицаДанныхКолонкаКомментарийЗаменыРасширеннаяПодсказка</name>
+            <id>160</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1184,8 +1140,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ТаблицаДанныхТаблицаДанных6КонтекстноеМеню</name>
-            <id>90</id>
+            <name>ТаблицаДанныхКолонкаКомментарийЗаменыКонтекстноеМеню</name>
+            <id>159</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -1401,36 +1357,6 @@
   <items xsi:type="form:FormGroup">
     <name>ГруппаВыполнения</name>
     <id>97</id>
-    <items xsi:type="form:Button">
-      <name>КнопкаВыполнитьЗамену</name>
-      <id>105</id>
-      <title>
-        <key>ru</key>
-        <value>Выполнить замену</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ВыполнитьЗаменуРасширеннаяПодсказка</name>
-        <id>106</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Command.ВыполнитьЗамену</commandName>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
     <items xsi:type="form:FormField">
       <name>ПолеСостояния</name>
       <id>107</id>
@@ -1537,23 +1463,6 @@
     <id>2</id>
     <valueType>
       <types>ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
-    <name>ГруппаСоздания</name>
-    <title>
-      <key>ru</key>
-      <value>Группа для создания значений</value>
-    </title>
-    <id>3</id>
-    <valueType>
-      <types>CatalogRef.ЗначенияСвойствОбъектовИерархия</types>
     </valueType>
     <view>
       <common>true</common>
@@ -1970,22 +1879,6 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>НайтиЗначения</name>
-      </handler>
-    </action>
-  </formCommands>
-  <formCommands>
-    <name>ЗаполнитьГруппу</name>
-    <title>
-      <key>ru</key>
-      <value>Заполнить группу у выделенных позиций</value>
-    </title>
-    <id>2</id>
-    <use>
-      <common>true</common>
-    </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>ЗаполнитьГруппу</name>
       </handler>
     </action>
   </formCommands>
