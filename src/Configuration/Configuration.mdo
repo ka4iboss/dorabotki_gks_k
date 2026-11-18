@@ -29,7 +29,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.21.7</version>
+  <version>1.0.22.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -150,6 +150,8 @@
   <catalogs>Catalog.ПрофилиГруппДоступа</catalogs>
   <catalogs>Catalog.ВидыНоменклатуры</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
+  <catalogs>Catalog.ЗначенияСвойствОбъектовИерархия</catalogs>
+  <catalogs>Catalog.ЗначенияСвойствОбъектов</catalogs>
   <documents>Document.СписаниеБезналичныхДенежныхСредств</documents>
   <documents>Document.ЗаявкаНаРасходованиеДенежныхСредств</documents>
   <enums>Enum.СтатусыДемонстрационныхСценариев</enums>
@@ -174,9 +176,11 @@
   <dataProcessors>DataProcessor.ГКСК_ОбъединениеЭлементов</dataProcessors>
   <dataProcessors>DataProcessor.ГКСК_УдалениеДублейПросмотрВерсий</dataProcessors>
   <dataProcessors>DataProcessor.ГКСК_ГрупповоеИзменениеЗаписейРегистров</dataProcessors>
+  <dataProcessors>DataProcessor.ГКСК_ЗаменаДополнительныхРеквизитов</dataProcessors>
   <informationRegisters>InformationRegister.ППГД_ЖурналЗагрузки</informationRegisters>
   <informationRegisters>InformationRegister.ППГД_ПоляВЗапросахМодулей</informationRegisters>
   <informationRegisters>InformationRegister.ГКСИ_ГруппыСценариев</informationRegisters>
+  <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
   <businessProcesses>BusinessProcess.ГКСИ_СогласованиеИнструкции</businessProcesses>
   <tasks>Task.ЗадачаИсполнителя</tasks>
 </mdclass:Configuration>
