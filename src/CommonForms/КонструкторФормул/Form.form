@@ -1044,6 +1044,10 @@
           <horizontalAlign>Left</horizontalAlign>
           <autoFill>true</autoFill>
         </autoCommandBar>
+        <handlers>
+          <event>OnActivateField</event>
+          <name>ГКСК_ТаблицаФормулыПриАктивизацииПоля</name>
+        </handlers>
         <searchStringAddition>
           <name>ГКСК_ТаблицаФормулыСтрокаПоиска</name>
           <id>179</id>
@@ -1699,6 +1703,26 @@
     <id>1000009</id>
     <valueType>
       <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ГКСК_АктивнаяКолонка</name>
+    <title>
+      <key>ru</key>
+      <value>Активная колонка таблицы формулы</value>
+    </title>
+    <id>1000010</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
     </valueType>
     <view>
       <common>true</common>
