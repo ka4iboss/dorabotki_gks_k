@@ -15,4 +15,12 @@
     <typeExtension/>
   </extension>
   <useStandardCommands>true</useStandardCommands>
+  <forms uuid="ebd6d6a0-6026-431d-b285-fe0c96126820" extendedConfigurationObject="7fba41a5-4faa-412b-b367-b30ced0314c0">
+    <name>ФормаСписка</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <form>Extended</form>
+    </extension>
+  </forms>
 </mdclass:ChartOfCharacteristicTypes>
