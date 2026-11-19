@@ -834,50 +834,6 @@
           <textEdit>true</textEdit>
         </extInfo>
       </items>
-      <items xsi:type="form:FormField">
-        <name>ГКСК_КолонкаВставки</name>
-        <id>172</id>
-        <title>
-          <key>ru</key>
-          <value>Вставлять операнд в</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>ГКСК_КолонкаВставки</segments>
-        </dataPath>
-        <extendedTooltip>
-          <name>ГКСК_КолонкаВставкиРасширеннаяПодсказка</name>
-          <id>174</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>ГКСК_КолонкаВставкиКонтекстноеМеню</name>
-          <id>173</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-        </extInfo>
-      </items>
       <items xsi:type="form:FormGroup">
         <name>ГруппыТаблицаИФормула</name>
         <id>209</id>
@@ -1047,10 +1003,6 @@
             <horizontalAlign>Left</horizontalAlign>
             <autoFill>true</autoFill>
           </autoCommandBar>
-          <handlers>
-            <event>OnActivateField</event>
-            <name>ГКСК_ТаблицаФормулыПриАктивизацииПоля</name>
-          </handlers>
           <searchStringAddition>
             <name>ГКСК_ТаблицаФормулыСтрокаПоиска</name>
             <id>179</id>
@@ -1694,26 +1646,6 @@
     </columns>
   </attributes>
   <attributes>
-    <name>ГКСК_КолонкаВставки</name>
-    <title>
-      <key>ru</key>
-      <value>Вставлять операнд в</value>
-    </title>
-    <id>1000007</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers>
-        <length>20</length>
-      </stringQualifiers>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
     <name>ГКСК_Предпросмотр</name>
     <title>
       <key>ru</key>
@@ -1740,26 +1672,6 @@
     <id>1000009</id>
     <valueType>
       <types>Boolean</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
-    <name>ГКСК_АктивнаяКолонка</name>
-    <title>
-      <key>ru</key>
-      <value>Активная колонка таблицы формулы</value>
-    </title>
-    <id>1000010</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers>
-        <length>20</length>
-      </stringQualifiers>
     </valueType>
     <view>
       <common>true</common>
