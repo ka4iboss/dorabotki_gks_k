@@ -29,7 +29,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.22.12</version>
+  <version>1.0.23.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -45,6 +45,8 @@
   <subsystems>Subsystem.ГКСК_ДополнительныйИнструментарий</subsystems>
   <styleItems>StyleItem.ШрифтЗаголовкаВсплывающейГруппы</styleItems>
   <styleItems>StyleItem.ПоясняющийТекст</styleItems>
+  <styleItems>StyleItem.ТекстИнформационнойНадписи</styleItems>
+  <styleItems>StyleItem.ГиперссылкаЦвет</styleItems>
   <commonPictures>CommonPicture.ППГД_ОформлениеФлажки</commonPictures>
   <commonPictures>CommonPicture.ГКСИ_Markdown</commonPictures>
   <commonPictures>CommonPicture.ГКСИ_ВставитьКартинкуИзБуфера</commonPictures>
@@ -73,6 +75,9 @@
   <commonPictures>CommonPicture.ППГД_ИконкаПодсистемы</commonPictures>
   <commonPictures>CommonPicture.КоллекцияПиктограммКонструктораФормул</commonPictures>
   <commonPictures>CommonPicture.РасчетПоФормуле</commonPictures>
+  <commonPictures>CommonPicture.ДополнительныеРеквизитыСведения</commonPictures>
+  <commonPictures>CommonPicture.ИнформацияПоНедоступнымПолям</commonPictures>
+  <commonPictures>CommonPicture.ЗаполнитьПоШаблону</commonPictures>
   <roles>Role.ППГД_ОсновнаяРоль</roles>
   <roles>Role.ГКСИ_РедактированиеИнструкций</roles>
   <roles>Role.ГКСИ_ЧтениеИнструкций</roles>
@@ -160,6 +165,13 @@
   <enums>Enum.ГКСИ_ВидыСогласованияИнструкций</enums>
   <enums>Enum.ГКСИ_РезультатыСогласованияИнструкций</enums>
   <enums>Enum.ГКСК_СпособУдаленияДублей</enums>
+  <enums>Enum.ВариантыРасчетаЦенНаборов</enums>
+  <enums>Enum.ВариантыПредставленияНаборовВПечатныхФормах</enums>
+  <enums>Enum.ВариантыОформленияПродажи</enums>
+  <enums>Enum.ВариантыИспользованияХарактеристикНоменклатуры</enums>
+  <enums>Enum.НастройкиИспользованияСерийНоменклатуры</enums>
+  <enums>Enum.ТочностиУказанияСрокаГодности</enums>
+  <enums>Enum.ВариантОтбораДляКлючаЦен</enums>
   <dataProcessors>DataProcessor.ППГД_ГенерацияГруппДоступа</dataProcessors>
   <dataProcessors>DataProcessor.ППГД_ПодборРолейДляПрофиляГруппДоступа</dataProcessors>
   <dataProcessors>DataProcessor.ППГД_ВыгрузкаЗагрузкаПрав</dataProcessors>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="b00a7abb-d153-4396-b36d-3cfaf2a8a28a" extendedConfigurationObject="5d47ec06-d860-4c90-911f-9c171f5507ee">
+  <producedTypes>
+    <refType typeId="85788ccc-5625-487f-a3b5-6137528c973e" valueTypeId="cd2da84e-eba2-43d4-8f64-337f4fb4686d"/>
+    <listType typeId="239df610-51a2-4ce4-a831-82ecb0f765ab" valueTypeId="364f87e9-c3f4-4a7e-9671-f1cb8e5efc48"/>
+    <managerType typeId="76addf38-dd58-4166-bcb2-57b651e725de" valueTypeId="66c2e2a1-4327-4619-99c3-cb73f88859b0"/>
+  </producedTypes>
+  <name>ВариантОтбораДляКлючаЦен</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:EnumExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+  <enumValues uuid="9f3ea724-65d6-40b1-b911-875409506ac0" extendedConfigurationObject="0cef4915-095f-427f-9172-8419e9e2c4f2">
+    <name>НеИспользовать</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+  <enumValues uuid="78c75f1c-fea3-4957-af5e-42961aef6547" extendedConfigurationObject="d174b127-9e52-4e2e-beb9-4b17f87383a2">
+    <name>Использовать</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+  <enumValues uuid="cd287146-3bbd-4cd4-b3da-0e431ab0a422" extendedConfigurationObject="a7c7d8bd-45f3-4043-808b-6b41aed3903c">
+    <name>ИспользоватьПоРеквизитам</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+</mdclass:Enum>

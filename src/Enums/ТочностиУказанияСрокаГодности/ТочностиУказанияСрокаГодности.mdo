@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="fe710e17-64ac-428d-b265-6051ca320a52" extendedConfigurationObject="790f3e73-51b2-4960-b516-d049dab19a48">
+  <producedTypes>
+    <refType typeId="b31b3605-039e-4286-b4db-1ec8f2f81ce7" valueTypeId="d0ff4610-1c36-4cec-b5ae-dc7b3140b52f"/>
+    <listType typeId="24495e67-88a0-429b-afbc-81af0cb9e64b" valueTypeId="83404713-a483-4913-9b92-1dd7232fd2be"/>
+    <managerType typeId="813e5bf3-a224-40de-bf01-1908b3b301cd" valueTypeId="e26f429f-f7a4-4fe0-8650-cf625a6c16c0"/>
+  </producedTypes>
+  <name>ТочностиУказанияСрокаГодности</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:EnumExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+  <enumValues uuid="fdf598d5-4c80-4714-abae-4cf210d4b610" extendedConfigurationObject="e9d26973-8fe5-4b85-8b81-39c6d8e62bcf">
+    <name>СТочностьюДоМесяцев</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+  <enumValues uuid="95305b1c-4882-46a1-9cb5-b005e0687612" extendedConfigurationObject="fc697e5e-1b92-49ce-aa69-3546dc809579">
+    <name>СТочностьюДоДней</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+  <enumValues uuid="91b4061c-94b0-48ec-87cf-90703aa062d7" extendedConfigurationObject="6356be70-433e-4c99-9731-f9c175b3bd43">
+    <name>СТочностьюДоЧасов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+</mdclass:Enum>
