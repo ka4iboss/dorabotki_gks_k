@@ -29,7 +29,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.25.6</version>
+  <version>1.0.26.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -132,6 +132,7 @@
   <commonModules>CommonModule.ОбсужденияСлужебныйКлиент</commonModules>
   <commonModules>CommonModule.ГКСК_ЭмодзиОбсужденийКлиент</commonModules>
   <commonModules>CommonModule.ГКСК_ЭмодзиОбсужденийВызовСервера</commonModules>
+  <commonModules>CommonModule.ГКСК_MarkdownКонвертер</commonModules>
   <xDTOPackages>XDTOPackage.ППГД_ПраваДоступа</xDTOPackages>
   <functionalOptions>FunctionalOption.ОграничиватьДоступНаУровнеЗаписей</functionalOptions>
   <definedTypes>DefinedType.ЗначениеДоступа</definedTypes>
