@@ -1003,6 +1003,10 @@
             <horizontalAlign>Left</horizontalAlign>
             <autoFill>true</autoFill>
           </autoCommandBar>
+          <handlers>
+            <event>OnActivateField</event>
+            <name>ГКСК_ТаблицаФормулыПриАктивизацииПоля</name>
+          </handlers>
           <searchStringAddition>
             <name>ГКСК_ТаблицаФормулыСтрокаПоиска</name>
             <id>179</id>
@@ -1112,6 +1116,184 @@
           <enableDrag>true</enableDrag>
           <fileDragMode>AsFileRef</fileDragMode>
           <rowFilter xsi:type="core:UndefinedValue"/>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГКСК_ГруппаРедактора</name>
+          <id>211</id>
+          <items xsi:type="form:FormField">
+            <name>ГКСК_РедакторУсловие</name>
+            <id>213</id>
+            <title>
+              <key>ru</key>
+              <value>Условие</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ГКСК_РедакторУсловие</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>ГКСК_РедакторУсловиеПриИзменении</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ГКСК_РедакторУсловиеРасширеннаяПодсказка</name>
+              <id>215</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ГКСК_РедакторУсловиеКонтекстноеМеню</name>
+              <id>214</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>TextDocumentField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:TextDocFieldExtInfo">
+              <width>50</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>10</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <verticalStretch>true</verticalStretch>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ГКСК_РедакторЕслиЗаполнено</name>
+            <id>216</id>
+            <title>
+              <key>ru</key>
+              <value>Если заполнено</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ГКСК_РедакторЕслиЗаполнено</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>ГКСК_РедакторЕслиЗаполненоПриИзменении</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ГКСК_РедакторЕслиЗаполненоРасширеннаяПодсказка</name>
+              <id>218</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ГКСК_РедакторЕслиЗаполненоКонтекстноеМеню</name>
+              <id>217</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>TextDocumentField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:TextDocFieldExtInfo">
+              <width>50</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>10</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <verticalStretch>true</verticalStretch>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ГКСК_РедакторЕслиПусто</name>
+            <id>219</id>
+            <title>
+              <key>ru</key>
+              <value>Если пусто</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ГКСК_РедакторЕслиПусто</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>ГКСК_РедакторЕслиПустоПриИзменении</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ГКСК_РедакторЕслиПустоРасширеннаяПодсказка</name>
+              <id>221</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ГКСК_РедакторЕслиПустоКонтекстноеМеню</name>
+              <id>220</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>TextDocumentField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:TextDocFieldExtInfo">
+              <width>50</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>10</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <verticalStretch>true</verticalStretch>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Строка формулы</value>
+          </title>
+          <extendedTooltip>
+            <name>ГКСК_ГруппаРедактораРасширеннаяПодсказка</name>
+            <id>212</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <behavior>Auto</behavior>
+            <representation>WeakSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <showTitle>true</showTitle>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
         </items>
         <items xsi:type="form:FormField">
           <name>Формула</name>
@@ -1672,6 +1854,86 @@
     <id>1000009</id>
     <valueType>
       <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ГКСК_РедакторУсловие</name>
+    <title>
+      <key>ru</key>
+      <value>Условие</value>
+    </title>
+    <id>1000011</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ГКСК_РедакторЕслиЗаполнено</name>
+    <title>
+      <key>ru</key>
+      <value>Если заполнено</value>
+    </title>
+    <id>1000012</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ГКСК_РедакторЕслиПусто</name>
+    <title>
+      <key>ru</key>
+      <value>Если пусто</value>
+    </title>
+    <id>1000013</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ГКСК_АктивныйРедактор</name>
+    <title>
+      <key>ru</key>
+      <value>ГКСК_АктивныйРедактор</value>
+    </title>
+    <id>1000014</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>60</length>
+      </stringQualifiers>
     </valueType>
     <view>
       <common>true</common>
