@@ -1007,6 +1007,10 @@
             <event>OnActivateField</event>
             <name>ГКСК_ТаблицаФормулыПриАктивизацииПоля</name>
           </handlers>
+          <handlers>
+            <event>OnActivateRow</event>
+            <name>ГКСК_ТаблицаФормулыПриАктивизацииСтроки</name>
+          </handlers>
           <searchStringAddition>
             <name>ГКСК_ТаблицаФормулыСтрокаПоиска</name>
             <id>179</id>
