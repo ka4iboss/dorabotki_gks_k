@@ -1122,7 +1122,7 @@
           <id>211</id>
           <items xsi:type="form:FormField">
             <name>ГКСК_РедакторУсловие</name>
-            <id>213</id>
+            <id>222</id>
             <title>
               <key>ru</key>
               <value>Условие</value>
@@ -1141,7 +1141,7 @@
             </handlers>
             <extendedTooltip>
               <name>ГКСК_РедакторУсловиеРасширеннаяПодсказка</name>
-              <id>215</id>
+              <id>224</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1151,7 +1151,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>ГКСК_РедакторУсловиеКонтекстноеМеню</name>
-              <id>214</id>
+              <id>223</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>TextDocumentField</type>
@@ -1170,7 +1170,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>ГКСК_РедакторЕслиЗаполнено</name>
-            <id>216</id>
+            <id>225</id>
             <title>
               <key>ru</key>
               <value>Если заполнено</value>
@@ -1189,7 +1189,7 @@
             </handlers>
             <extendedTooltip>
               <name>ГКСК_РедакторЕслиЗаполненоРасширеннаяПодсказка</name>
-              <id>218</id>
+              <id>227</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1199,7 +1199,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>ГКСК_РедакторЕслиЗаполненоКонтекстноеМеню</name>
-              <id>217</id>
+              <id>226</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>TextDocumentField</type>
@@ -1218,7 +1218,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>ГКСК_РедакторЕслиПусто</name>
-            <id>219</id>
+            <id>228</id>
             <title>
               <key>ru</key>
               <value>Если пусто</value>
@@ -1237,7 +1237,7 @@
             </handlers>
             <extendedTooltip>
               <name>ГКСК_РедакторЕслиПустоРасширеннаяПодсказка</name>
-              <id>221</id>
+              <id>230</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1247,7 +1247,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>ГКСК_РедакторЕслиПустоКонтекстноеМеню</name>
-              <id>220</id>
+              <id>229</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>TextDocumentField</type>
@@ -1863,17 +1863,35 @@
     </edit>
   </attributes>
   <attributes>
+    <name>ГКСК_АктивныйРедактор</name>
+    <title>
+      <key>ru</key>
+      <value>ГКСК_АктивныйРедактор</value>
+    </title>
+    <id>1000014</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>60</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
     <name>ГКСК_РедакторУсловие</name>
     <title>
       <key>ru</key>
       <value>Условие</value>
     </title>
-    <id>1000011</id>
+    <id>1000016</id>
     <valueType>
       <types>String</types>
-      <stringQualifiers>
-        <length>100</length>
-      </stringQualifiers>
+      <stringQualifiers/>
     </valueType>
     <view>
       <common>true</common>
@@ -1888,12 +1906,10 @@
       <key>ru</key>
       <value>Если заполнено</value>
     </title>
-    <id>1000012</id>
+    <id>1000017</id>
     <valueType>
       <types>String</types>
-      <stringQualifiers>
-        <length>100</length>
-      </stringQualifiers>
+      <stringQualifiers/>
     </valueType>
     <view>
       <common>true</common>
@@ -1908,32 +1924,10 @@
       <key>ru</key>
       <value>Если пусто</value>
     </title>
-    <id>1000013</id>
+    <id>1000018</id>
     <valueType>
       <types>String</types>
-      <stringQualifiers>
-        <length>100</length>
-      </stringQualifiers>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-  </attributes>
-  <attributes>
-    <name>ГКСК_АктивныйРедактор</name>
-    <title>
-      <key>ru</key>
-      <value>ГКСК_АктивныйРедактор</value>
-    </title>
-    <id>1000014</id>
-    <valueType>
-      <types>String</types>
-      <stringQualifiers>
-        <length>60</length>
-      </stringQualifiers>
+      <stringQualifiers/>
     </valueType>
     <view>
       <common>true</common>
