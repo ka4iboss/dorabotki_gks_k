@@ -12,6 +12,7 @@
   <extension xsi:type="mdclassExtension:CatalogExtension">
     <extendedConfigurationObject>Checked</extendedConfigurationObject>
     <objectModule>Extended</objectModule>
+    <managerModule>Extended</managerModule>
     <defaultObjectForm>Extended</defaultObjectForm>
     <defaultListForm>Extended</defaultListForm>
   </extension>
@@ -72,6 +73,7 @@
         </types>
       </typeExtension>
     </extension>
+    <use>ForFolder</use>
   </attributes>
   <attributes uuid="a4052fbb-8d22-4060-98ff-a5c5c2f810f1" extendedConfigurationObject="2aa37933-135e-4b38-beab-afec4a06a33c">
     <name>НаименованиеЯзык1</name>
