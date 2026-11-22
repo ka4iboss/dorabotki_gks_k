@@ -13,9 +13,8 @@
     </dataPath>
     <titleLocation>None</titleLocation>
     <items xsi:type="form:FormField">
-      <name>СписокГруппСписокГрупп</name>
-      <id>100</id>
-      <visible>true</visible>
+      <name>СписокГруппСсылка</name>
+      <id>117</id>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -24,8 +23,8 @@
         <segments>СписокГрупп.Группа</segments>
       </dataPath>
       <extendedTooltip>
-        <name>СписокГруппСписокГруппРасширеннаяПодсказка</name>
-        <id>102</id>
+        <name>СписокГруппСписокГруппСсылкаРасширеннаяПодсказка</name>
+        <id>119</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -34,8 +33,8 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>СписокГруппСписокГруппКонтекстноеМеню</name>
-        <id>101</id>
+        <name>СписокГруппСписокГруппСсылкаКонтекстноеМеню</name>
+        <id>118</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
@@ -53,8 +52,12 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
-      <name>СписокГруппСписокГрупп1</name>
-      <id>103</id>
+      <name>СписокГруппНаименование</name>
+      <id>120</id>
+      <title>
+        <key>ru</key>
+        <value>Группа / шаг</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -64,8 +67,8 @@
         <segments>СписокГрупп.Наименование</segments>
       </dataPath>
       <extendedTooltip>
-        <name>СписокГруппСписокГрупп1РасширеннаяПодсказка</name>
-        <id>105</id>
+        <name>СписокГруппСписокГруппНаименованиеРасширеннаяПодсказка</name>
+        <id>122</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -74,8 +77,8 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>СписокГруппСписокГрупп1КонтекстноеМеню</name>
-        <id>104</id>
+        <name>СписокГруппСписокГруппНаименованиеКонтекстноеМеню</name>
+        <id>121</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
