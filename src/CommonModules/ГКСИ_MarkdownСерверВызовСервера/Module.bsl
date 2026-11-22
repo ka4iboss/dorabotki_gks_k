@@ -306,7 +306,10 @@
 	СтрокиJS.Добавить("        + '<div class=' + Q + 'gksi-video-caption' + Q + '>'");
 	СтрокиJS.Добавить("        + '<a class=' + Q + 'gksi-video-open' + Q + ' href=' + Q + '#' + Q");
 	СтрокиJS.Добавить("        + ' data-gksi-video=' + Q + gksiVideoEsc(p) + Q + '>'");
-	СтрокиJS.Добавить("        + 'Открыть во внешнем плеере</a></div>'");
+	СтрокиJS.Добавить("        + 'Открыть во внешнем плеере</a>'");
+	СтрокиJS.Добавить("        + '<span class=' + Q + 'gksi-video-sep' + Q + '> · </span>'");
+	СтрокиJS.Добавить("        + '<a class=' + Q + 'gksi-video-browser' + Q + ' href=' + Q + gksiVideoEsc(url) + Q");
+	СтрокиJS.Добавить("        + ' target=' + Q + '_blank' + Q + '>Открыть в браузере</a></div>'");
 	СтрокиJS.Добавить("        + '</div>';");
 	СтрокиJS.Добавить("    });");
 	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][video] preprocess error:', _e.message); } catch(_){} return text; }");
@@ -358,6 +361,18 @@
 |}
 |.gksi-video-open:hover {
 |    background-color: #eef5fd;
+|}
+|.gksi-video-browser {
+|    color: #2f6fb5;
+|    text-decoration: none;
+|    border-bottom: 1px solid rgba(47, 111, 181, 0.4);
+|    cursor: pointer;
+|}
+|.gksi-video-browser:hover {
+|    background-color: #eef5fd;
+|}
+|.gksi-video-sep {
+|    color: #8a949e;
 |}
 |h2, .wiki h1 {font-size: 20px;}
 	|h3, .wiki h2 {font-size: 16px;}

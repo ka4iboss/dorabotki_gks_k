@@ -137,6 +137,10 @@
 	+ "<a class=""gksi-video-open"" href=""#"""
 	+ " data-gksi-video=""" + ЭкранироватьЗначениеАтрибута(Оригинал) + """>"
 	+ НСтр("ru = 'Открыть во внешнем плеере'")
+	+ "</a>"
+	+ "<span class=""gksi-video-sep""> · </span>"
+	+ "<a class=""gksi-video-browser"" href=""" + ЭкранироватьЗначениеАтрибута(URL) + """ target=""_blank"">"
+	+ НСтр("ru = 'Открыть в браузере'")
 	+ "</a></div>" + Символы.ПС
 	+ "</div>";
 
