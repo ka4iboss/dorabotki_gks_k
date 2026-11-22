@@ -49,6 +49,32 @@
   <items xsi:type="form:FormGroup">
     <name>ГруппаРазмера</name>
     <id>17</id>
+    <items xsi:type="form:Button">
+      <name>КнопкаВернутьсяОбратно</name>
+      <id>19</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ВернутьсяОбратноРасширеннаяПодсказка</name>
+        <id>20</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.ВернутьсяОбратно</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <items xsi:type="form:FormField">
       <name>ШиринаКартинокЧисло</name>
       <id>7</id>
@@ -181,12 +207,14 @@
     <id>-1</id>
     <horizontalAlign>Left</horizontalAlign>
   </autoCommandBar>
+  <windowOpeningMode>DontBlock</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
+  <showTitle>auto</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>ГруппыДляАльбомаАдрес</name>
@@ -268,6 +296,42 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ПоследнийЯкорьАльбома</name>
+    <title>
+      <key>ru</key>
+      <value>Последний якорь альбома</value>
+    </title>
+    <id>1000008</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ВернутьсяОбратно</name>
+    <title>
+      <key>ru</key>
+      <value>Вернуться обратно</value>
+    </title>
+    <id>1000001</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ГКСИ_ВернутьсяОбратно</name>
+      </handler>
+    </action>
+  </formCommands>
   <commandInterface>
     <navigationPanel/>
     <commandBar/>

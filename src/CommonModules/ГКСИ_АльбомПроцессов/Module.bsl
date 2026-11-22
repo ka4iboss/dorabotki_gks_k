@@ -1343,6 +1343,27 @@
 		|</style>
 		|<style id=""album-imgs-style"">" + СтильКартинок + "</style>";
 
+	// Функция для кнопки «Вернуться обратно»: возвращает id ближайшего якоря
+	// раздела, который находится выше текущей позиции прокрутки, то есть раздел,
+	// из которого пользователь перешёл по внутренней ссылке альбома.
+	СкриптЯкорей =
+		"<script>
+		|function gksiCurrentAnchorId() {
+		|  var nodes = document.querySelectorAll('[id^=""gksi-node-""]');
+		|  if (!nodes || nodes.length === 0) { return ''; }
+		|  var scrollY = window.pageYOffset
+		|    || (document.documentElement ? document.documentElement.scrollTop : 0)
+		|    || (document.body ? document.body.scrollTop : 0) || 0;
+		|  var best = '', bestTop = -1e15;
+		|  for (var i = 0; i < nodes.length; i++) {
+		|    var top = nodes[i].getBoundingClientRect().top + scrollY;
+		|    if (top <= scrollY + 5 && top > bestTop) { bestTop = top; best = nodes[i].id; }
+		|  }
+		|  if (!best) { best = nodes[0].id; }
+		|  return best;
+		|}
+		|</script>";
+
 	Тело = СтрСоединить(ФрагментыДокумента, Символы.ПС);
 	Тело = ГКСИ_MarkdownСерверВызовСервера.ОбработатьАлертыВHTML(Тело);
 
@@ -1352,7 +1373,7 @@
 		|<head>
 		|<meta charset=""UTF-8"">
 		|<title>Альбом процессов</title>"
-		+ Стили + "
+		+ Стили + СкриптЯкорей + "
 		|</head>
 		|<body>"
 		+ Тело + "
