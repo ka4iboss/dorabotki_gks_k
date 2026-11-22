@@ -228,16 +228,46 @@
 	СтрокиJS.Добавить("    + icon + ' ' + titleText + '</p>' + NL;");
 	СтрокиJS.Добавить("  return divOpen + NL + titleOpen + inner + NL + '</div>' + NL;");
 	СтрокиJS.Добавить("}");
+	// Разбор GitHub Alerts на строковых операциях (без регулярных выражений):
+	// шапка "[!TYPE|Заголовок]" может стоять как в цитате (">"), так и без неё,
+	// тело блока — строки до пустой строки или до следующей шапки.
+	СтрокиJS.Добавить("function gksiAlertHead(line){");
+	СтрокиJS.Добавить("  var t = String(line).replace(/^\s+|\s+$/g, '');");
+	СтрокиJS.Добавить("  if (t.substring(0, 2) !== '[!') return null;");
+	СтрокиJS.Добавить("  var close = t.indexOf(']');");
+	СтрокиJS.Добавить("  if (close < 0) return null;");
+	СтрокиJS.Добавить("  var inside = t.substring(2, close);");
+	СтрокиJS.Добавить("  var bar = inside.indexOf('|');");
+	СтрокиJS.Добавить("  var type = (bar >= 0 ? inside.substring(0, bar) : inside).replace(/^\s+|\s+$/g, '').toUpperCase();");
+	СтрокиJS.Добавить("  if (type !== 'NOTE' && type !== 'TIP' && type !== 'IMPORTANT' && type !== 'WARNING' && type !== 'CAUTION') return null;");
+	СтрокиJS.Добавить("  var title = bar >= 0 ? inside.substring(bar + 1).replace(/^\s+|\s+$/g, '') : '';");
+	СтрокиJS.Добавить("  return {type: type, title: title};");
+	СтрокиJS.Добавить("}");
 	СтрокиJS.Добавить("function gksiPreprocessAlerts(text){");
 	СтрокиJS.Добавить("  try {");
-	СтрокиJS.Добавить("    var reQuote = /^[ ]{0,3}>[ ]{0,3}[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)(?:\\|([^\\]\\n]*))?\\][ ]*\\r?\\n((?:(?![ ]{0,3}>[ ]{0,3}[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION))[ ]{0,3}>[ ]?[^\\n]*(?:\\r?\\n|$))*)/gm;");
-	СтрокиJS.Добавить("    var re = /^[ ]{0,3}[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)(?:\\|([^\\]\\n]*))?\\][ ]*\\r?\\n((?:(?![ ]{0,3}>?[ ]{0,3}[!|\\r?\\n\\r?\\n).+\\r?\\n?)*)/gm;");
-	СтрокиJS.Добавить("    text = text.replace(reQuote, function(_, head, type, titleOverride, body){");
-	СтрокиJS.Добавить("      return gksiRenderAlert(type, titleOverride, body);");
-	СтрокиJS.Добавить("    });");
-	СтрокиJS.Добавить("    return text.replace(re, function(_, head, type, titleOverride, body){");
-	СтрокиJS.Добавить("      return gksiRenderAlert(type, titleOverride, body);");
-	СтрокиJS.Добавить("    });");
+	СтрокиJS.Добавить("    if (!text) return text;");
+	СтрокиJS.Добавить("    var nl = String.fromCharCode(10);");
+	СтрокиJS.Добавить("    var lines = String(text).split(nl);");
+	СтрокиJS.Добавить("    var out = [];");
+	СтрокиJS.Добавить("    var i = 0;");
+	СтрокиJS.Добавить("    while (i < lines.length){");
+	СтрокиJS.Добавить("      var q = lines[i].replace(/^\s+/, '');");
+	СтрокиJS.Добавить("      var head = gksiAlertHead(q.charAt(0) === '>' ? q.substring(1) : lines[i]);");
+	СтрокиJS.Добавить("      if (!head){ out.push(lines[i]); i++; continue; }");
+	СтрокиJS.Добавить("      var body = [];");
+	СтрокиJS.Добавить("      i++;");
+	СтрокиJS.Добавить("      while (i < lines.length){");
+	СтрокиJS.Добавить("        var l2 = lines[i];");
+	СтрокиJS.Добавить("        if (l2.replace(/\s+$/g, '') === '') break;");
+	СтрокиJS.Добавить("        var q2 = l2.replace(/^\s+/, '');");
+	СтрокиJS.Добавить("        var t2 = q2.charAt(0) === '>' ? q2.substring(1) : l2;");
+	СтрокиJS.Добавить("        if (gksiAlertHead(t2)) break;");
+	СтрокиJS.Добавить("        body.push(t2);");
+	СтрокиJS.Добавить("        i++;");
+	СтрокиJS.Добавить("      }");
+	СтрокиJS.Добавить("      out.push(gksiRenderAlert(head.type, head.title, body.join(nl)));");
+	СтрокиJS.Добавить("    }");
+	СтрокиJS.Добавить("    return out.join(nl);");
 	СтрокиJS.Добавить("  } catch(_e){ try { console.log('[GKSI][alerts] preprocess error:', _e.message); } catch(_){} return text; }");
 	СтрокиJS.Добавить("}");
 	// Вики-ссылки [[Имя]] / [[Имя|Текст]] на группы и шаги демонстрационных
@@ -587,7 +617,7 @@
 |                var newCls = 'markdown-alert markdown-alert-' + t.cls;
 |                var idx = html.indexOf(marker);
 |                while (idx !== -1) {
-|                    var pStart = idx - 3;
+|                    var pStart = idx;
 |                    var pEnd = html.indexOf('</p>', idx);
 |                    if (pStart >= 0 && pEnd !== -1) {
 |                        var pInner = html.substring(pStart + 3, pEnd);
@@ -612,7 +642,7 @@
 |                            + pInner + '</div>'
 |                            + html.substring(pEnd + 4);
 |                    }
-|                    idx = html.indexOf(marker, pStart + 1);
+|                    idx = (pEnd !== -1) ? html.indexOf(marker, pStart + 3) : idx + marker.length;
 |                }
 |            }
 |            // Поле HTML-документа 1С не наклоняет текст внутри em, а showdown
