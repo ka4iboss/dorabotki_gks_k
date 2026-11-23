@@ -29,7 +29,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.29.0</version>
+  <version>1.0.30.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -169,6 +169,7 @@
   <documents>Document.ЗаявкаНаРасходованиеДенежныхСредств</documents>
   <documents>Document.ЗаказПоставщику</documents>
   <documents>Document.ПриобретениеТоваровУслуг</documents>
+  <documents>Document.ПриходныйОрдерНаТовары</documents>
   <enums>Enum.СтатусыДемонстрационныхСценариев</enums>
   <enums>Enum.ТипыГруппДемонстрационныхСценариев</enums>
   <enums>Enum.СтатусыЗаявокНаРасходованиеДенежныхСредств</enums>
