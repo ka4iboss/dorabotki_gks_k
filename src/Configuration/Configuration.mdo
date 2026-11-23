@@ -29,7 +29,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.27.13</version>
+  <version>1.0.27.14</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -190,6 +190,7 @@
   <dataProcessors>DataProcessor.ГКСК_УдалениеДублейПросмотрВерсий</dataProcessors>
   <dataProcessors>DataProcessor.ГКСК_ГрупповоеИзменениеЗаписейРегистров</dataProcessors>
   <dataProcessors>DataProcessor.ГКСК_ЗаменаДополнительныхРеквизитов</dataProcessors>
+  <dataProcessors>DataProcessor.ГКСКСопоставлениеПоступлений</dataProcessors>
   <informationRegisters>InformationRegister.ППГД_ЖурналЗагрузки</informationRegisters>
   <informationRegisters>InformationRegister.ППГД_ПоляВЗапросахМодулей</informationRegisters>
   <informationRegisters>InformationRegister.ГКСИ_ГруппыСценариев</informationRegisters>

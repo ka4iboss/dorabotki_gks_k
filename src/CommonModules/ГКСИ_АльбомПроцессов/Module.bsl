@@ -1334,6 +1334,12 @@
 		|.album-group-summary:hover > .album-group { text-decoration: underline; }
 		|.album-group-desc { margin: 4pt 0 10pt 0; padding: 4pt 8pt; background: #F5F5FA;
 		|                   border-left: 3px solid #2a4d7a; }
+		|pre { margin: 8px 0; padding: 8px; background-color: #fafafa; border: 1px solid #e2e2e2;
+		|      border-radius: 3px; overflow-x: auto; white-space: pre-wrap;
+		|      font-family: Consolas, 'Courier New', monospace; font-size: 9pt; }
+		|pre code { border: 0; background: transparent; padding: 0; font-size: 9pt; }
+		|code { font-family: Consolas, 'Courier New', monospace; font-size: 9pt;
+		|       background-color: #f0f0f0; border-radius: 2px; padding: 1px 3px; }
 		|.gksi-term { border-bottom: 1px dashed #2a4d7a; cursor: help; color: inherit; }
 		|.gksi-term:hover { background-color: #FFF8DC; }
 		|.markdown-alert { padding: 8px 16px; margin: 4px 0 16px; border-left: 4px solid; border-radius: 4px; }
