@@ -12,5 +12,6 @@
   <content>DataProcessor.ГКСК_УдалениеДублейПросмотрВерсий</content>
   <content>DataProcessor.ГКСК_ГрупповоеИзменениеЗаписейРегистров</content>
   <content>DataProcessor.ГКСК_ЗаменаДополнительныхРеквизитов</content>
+  <content>DataProcessor.ГКСК_ПерезаполнениеПоступлений</content>
   <subsystems>ГКСК_ВерсииОбъектов</subsystems>
 </mdclass:Subsystem>

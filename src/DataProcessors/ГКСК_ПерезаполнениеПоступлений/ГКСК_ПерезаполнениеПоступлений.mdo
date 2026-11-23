@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9c7bbc7d-29af-4aa1-b90c-264ff1c68fc8">
+  <producedTypes>
+    <objectType typeId="7581245b-1104-4912-b814-04f58d2b5ba5" valueTypeId="3bf46078-2dbf-4ddf-ab13-e94c38d88379"/>
+    <managerType typeId="4ab7b695-0069-448b-b957-5f0d310b0b91" valueTypeId="0b5b3b62-9e95-45e8-86d7-1c62a446b169"/>
+  </producedTypes>
+  <name>ГКСК_ПерезаполнениеПоступлений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перезаполнение поступлений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ГКСК_ПерезаполнениеПоступлений.Form.Форма</defaultForm>
+  <forms uuid="e7cf714c-3071-4d2c-9b1f-5e6f63d8b2e2">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перезаполнение поступлений</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

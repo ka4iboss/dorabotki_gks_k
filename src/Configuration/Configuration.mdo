@@ -29,7 +29,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.27.15</version>
+  <version>1.0.28.0</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -139,6 +139,7 @@
   <definedTypes>DefinedType.ЗначениеДоступа</definedTypes>
   <definedTypes>DefinedType.Пользователь</definedTypes>
   <definedTypes>DefinedType.ВерсионируемыеДанные</definedTypes>
+  <definedTypes>DefinedType.ДенежнаяСуммаЛюбогоЗнака</definedTypes>
   <commonCommands>CommonCommand.ППГД_ОткрытьЖурналРегистрации</commonCommands>
   <commandGroups>CommandGroup.РазделГлавное250_ОписанияПроцессов</commandGroups>
   <constants>Constant.ОграничиватьДоступНаУровнеЗаписей</constants>
@@ -159,8 +160,15 @@
   <catalogs>Catalog.Номенклатура</catalogs>
   <catalogs>Catalog.ЗначенияСвойствОбъектовИерархия</catalogs>
   <catalogs>Catalog.ЗначенияСвойствОбъектов</catalogs>
+  <catalogs>Catalog.Партнеры</catalogs>
+  <catalogs>Catalog.Склады</catalogs>
+  <catalogs>Catalog.НаправленияДеятельности</catalogs>
+  <catalogs>Catalog.Контрагенты</catalogs>
+  <catalogs>Catalog.ДоговорыКонтрагентов</catalogs>
   <documents>Document.СписаниеБезналичныхДенежныхСредств</documents>
   <documents>Document.ЗаявкаНаРасходованиеДенежныхСредств</documents>
+  <documents>Document.ЗаказПоставщику</documents>
+  <documents>Document.ПриобретениеТоваровУслуг</documents>
   <enums>Enum.СтатусыДемонстрационныхСценариев</enums>
   <enums>Enum.ТипыГруппДемонстрационныхСценариев</enums>
   <enums>Enum.СтатусыЗаявокНаРасходованиеДенежныхСредств</enums>
