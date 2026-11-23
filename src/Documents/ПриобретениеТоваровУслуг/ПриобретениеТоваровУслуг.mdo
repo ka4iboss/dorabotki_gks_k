@@ -104,4 +104,81 @@
       </typeExtension>
     </extension>
   </attributes>
+  <tabularSections uuid="dcf86721-b4d0-4989-97ad-49060f4b5b4e" extendedConfigurationObject="941aa10e-3657-48ec-8f9d-92e38e90ecbf">
+    <producedTypes>
+      <objectType typeId="78bc0e3f-8796-48dd-ae05-4bf2cfc05fc6" valueTypeId="c943c566-5f10-4132-80cd-ef0a1f3a7807"/>
+      <rowType typeId="5ef6b53d-6d2c-4e91-85f5-6cf538580c96" valueTypeId="740c0bfa-90ff-435c-ba2c-a2f8339b0636"/>
+    </producedTypes>
+    <name>Товары</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="e42409f7-1d04-4bf6-a8f1-fe79617e2561" extendedConfigurationObject="342c6a15-8850-45c1-81d3-2a5f73452841">
+    <producedTypes>
+      <objectType typeId="b0df9f8d-6500-494f-8869-8b870c243554" valueTypeId="50e85745-64ec-4f25-bc5e-dc0b21f68fd8"/>
+      <rowType typeId="3b9179d7-d2cc-4873-b843-6932ffc7fba3" valueTypeId="f9431488-348b-4631-982f-de4446e95b39"/>
+    </producedTypes>
+    <name>ДополнительныеРеквизиты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="0f82796b-c70b-4f66-a7ba-b9186b23bfae" extendedConfigurationObject="fe8e86bc-a667-4a44-bce5-642d9aeae84c">
+    <producedTypes>
+      <objectType typeId="83bc2bf6-f7db-4ccd-8ca6-35b7ba613d3d" valueTypeId="fe47e78a-3db1-4830-8086-701bd9500f0a"/>
+      <rowType typeId="2f70344a-254e-4ad5-957e-3f6f72953c4b" valueTypeId="77332dee-8739-47e0-9f9d-884c8760be15"/>
+    </producedTypes>
+    <name>РасшифровкаПлатежа</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="70594cdf-7356-4ff8-977c-acf3a3b63530" extendedConfigurationObject="81cb22ee-1906-4c63-b607-694cb85c96c6">
+    <producedTypes>
+      <objectType typeId="7b4a8038-5dca-4aa2-b481-7569edfa6f70" valueTypeId="0a3587b3-6d95-4ba0-9667-686d858498e3"/>
+      <rowType typeId="744c2fdc-2c7a-41b0-9f7f-00e8c6264c37" valueTypeId="9480f63a-a78e-4039-8a57-8e59cde2c1bb"/>
+    </producedTypes>
+    <name>Серии</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="ae30569d-7c61-47e1-b7aa-03821dadfda2" extendedConfigurationObject="56195fa7-c096-44cd-872f-03ecd8c7df5f">
+    <producedTypes>
+      <objectType typeId="7fc3586d-44df-4ea5-8722-454b0b2368c3" valueTypeId="c9e44d5d-0f27-44d3-bc96-4d6de5c5d274"/>
+      <rowType typeId="d9757e97-5719-4e04-ae4d-3a35611d5a33" valueTypeId="0305b252-5ac9-4647-9c2b-987f1ed024f6"/>
+    </producedTypes>
+    <name>ВидыЗапасов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="18358a26-6cee-410b-b014-4e7f85365263" extendedConfigurationObject="214d5e47-d4c1-405c-845f-8c8f1b9a5d82">
+    <producedTypes>
+      <objectType typeId="d3dd9575-376a-4ff5-b8ab-94438cc3bc93" valueTypeId="2698ea97-f68d-4648-910d-22fe7edaa85a"/>
+      <rowType typeId="c73581e9-587a-4b9a-99dc-2e1e030e60ec" valueTypeId="f89ab8fc-7738-4ff6-b732-de97bb851bfd"/>
+    </producedTypes>
+    <name>ЭтапыГрафикаОплаты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="eddeeb27-fac5-4e1d-9167-cb3681f6bfa4" extendedConfigurationObject="5e1e786a-da46-4359-867b-84b3a5616017">
+    <producedTypes>
+      <objectType typeId="e3eed904-0305-407d-b1ef-9b7c44e81eff" valueTypeId="8cc014b3-a9da-49cc-9690-f0fbdfb9cead"/>
+      <rowType typeId="f4fa8e2e-c548-4d54-9600-ace6122316c1" valueTypeId="994b7616-faea-4810-919b-76c547be0c55"/>
+    </producedTypes>
+    <name>ШтрихкодыУпаковок</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
 </mdclass:Document>

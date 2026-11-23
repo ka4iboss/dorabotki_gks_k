@@ -91,4 +91,37 @@
       </typeExtension>
     </extension>
   </attributes>
+  <tabularSections uuid="c1857062-071e-4a90-941c-f8070afd05e0" extendedConfigurationObject="dcee393b-d797-4bfd-be64-3bc288149128">
+    <producedTypes>
+      <objectType typeId="90090ab8-ebd8-4054-955c-36f99cc30b62" valueTypeId="df7f4096-4a09-4459-bdab-1f14cf838fe6"/>
+      <rowType typeId="0e11e3a2-0a6b-405f-a900-8466b7ed9eb8" valueTypeId="d034123f-96ae-4588-8c3a-19ad5e9b460b"/>
+    </producedTypes>
+    <name>Товары</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="f2d23cf7-6944-445e-8ac0-4083dc3a14e8" extendedConfigurationObject="01cc7512-0c6d-46a0-aeb6-5134fe2c51c8">
+    <producedTypes>
+      <objectType typeId="8712fa48-86e8-431e-9eee-a6bc112249c0" valueTypeId="1c318df3-5cc8-4bbc-b0b2-c5984726ad43"/>
+      <rowType typeId="26517008-6d46-4c80-bd7d-314b9fce4105" valueTypeId="8500cf9a-0a7d-4697-b7b6-a553d3f02fd8"/>
+    </producedTypes>
+    <name>ЭтапыГрафикаОплаты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
+  <tabularSections uuid="7174ceea-3723-4fb6-8b78-2bec2da67e90" extendedConfigurationObject="198d2c00-44f3-4d79-a5b4-d00e28331545">
+    <producedTypes>
+      <objectType typeId="3891401d-ff02-4713-b9b1-a8a963e011cf" valueTypeId="8e28de14-d365-40b3-9a50-5ea591d274a3"/>
+      <rowType typeId="8bbb2e73-dcf9-4245-ac02-3779326d815b" valueTypeId="e98feba9-01e3-4c0e-97d0-8a6bb2f05055"/>
+    </producedTypes>
+    <name>ДополнительныеРеквизиты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </tabularSections>
 </mdclass:Document>
