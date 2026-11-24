@@ -13,7 +13,6 @@
     <interfaceCompatibilityMode>Checked</interfaceCompatibilityMode>
     <compatibilityMode>Checked</compatibilityMode>
     <logo>Extended</logo>
-    <defaultRoles>Extended</defaultRoles>
   </extension>
   <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="cbda18a7-e928-4219-8dcd-f51798a71910"/>
   <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="ea973483-2e5e-42b6-99f0-e801d3494d28"/>
@@ -29,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.30.0</version>
+  <version>1.0.30.1</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
