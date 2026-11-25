@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.30.18</version>
+  <version>1.0.30.19</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -139,6 +139,8 @@
   <definedTypes>DefinedType.Пользователь</definedTypes>
   <definedTypes>DefinedType.ВерсионируемыеДанные</definedTypes>
   <definedTypes>DefinedType.ДенежнаяСуммаЛюбогоЗнака</definedTypes>
+  <definedTypes>DefinedType.РаспоряжениеНаПоступление</definedTypes>
+  <definedTypes>DefinedType.ОтправительПолучательТоваров</definedTypes>
   <commonCommands>CommonCommand.ППГД_ОткрытьЖурналРегистрации</commonCommands>
   <commandGroups>CommandGroup.РазделГлавное250_ОписанияПроцессов</commandGroups>
   <constants>Constant.ОграничиватьДоступНаУровнеЗаписей</constants>
@@ -164,6 +166,9 @@
   <catalogs>Catalog.НаправленияДеятельности</catalogs>
   <catalogs>Catalog.Контрагенты</catalogs>
   <catalogs>Catalog.ДоговорыКонтрагентов</catalogs>
+  <catalogs>Catalog.СкладскиеПомещения</catalogs>
+  <catalogs>Catalog.СкладскиеЯчейки</catalogs>
+  <catalogs>Catalog.КонтролируемыеПартии</catalogs>
   <documents>Document.СписаниеБезналичныхДенежныхСредств</documents>
   <documents>Document.ЗаявкаНаРасходованиеДенежныхСредств</documents>
   <documents>Document.ЗаказПоставщику</documents>
@@ -182,6 +187,10 @@
   <enums>Enum.НастройкиИспользованияСерийНоменклатуры</enums>
   <enums>Enum.ТочностиУказанияСрокаГодности</enums>
   <enums>Enum.ВариантОтбораДляКлючаЦен</enums>
+  <enums>Enum.СтатусыПриходныхОрдеров</enums>
+  <enums>Enum.СкладскиеОперации</enums>
+  <enums>Enum.СостоянияЗаполненияМногооборотнойТары</enums>
+  <enums>Enum.ХозяйственныеОперации</enums>
   <dataProcessors>DataProcessor.ППГД_ГенерацияГруппДоступа</dataProcessors>
   <dataProcessors>DataProcessor.ППГД_ПодборРолейДляПрофиляГруппДоступа</dataProcessors>
   <dataProcessors>DataProcessor.ППГД_ВыгрузкаЗагрузкаПрав</dataProcessors>
