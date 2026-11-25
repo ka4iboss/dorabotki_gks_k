@@ -28,7 +28,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
-  <version>1.0.30.30</version>
+  <version>1.0.30.31</version>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <logo/>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -212,6 +212,7 @@
   <informationRegisters>InformationRegister.ППГД_ЖурналЗагрузки</informationRegisters>
   <informationRegisters>InformationRegister.ППГД_ПоляВЗапросахМодулей</informationRegisters>
   <informationRegisters>InformationRegister.ГКСИ_ГруппыСценариев</informationRegisters>
+  <informationRegisters>InformationRegister.ГКСК_ЖурналАвтопривязки</informationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
   <businessProcesses>BusinessProcess.ГКСИ_СогласованиеИнструкции</businessProcesses>
   <tasks>Task.ЗадачаИсполнителя</tasks>
